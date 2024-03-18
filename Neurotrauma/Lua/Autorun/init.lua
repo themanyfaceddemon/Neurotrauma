@@ -1,9 +1,9 @@
 --if Game.IsMultiplayer and CLIENT then return end
 
 NT = {} -- Neurotrauma
-NT.Name="Neurotrauma"
-NT.Version = "A1.8.8"
-NT.VersionNum = 01080800
+NT.Name="Neurotrauma (Maintenance update)"
+NT.Version = "A1.8.8h1"
+NT.VersionNum = 01080801
 NT.Path = table.pack(...)[1]
 
 dofile(NT.Path.."/Lua/Scripts/helperfunctions.lua")

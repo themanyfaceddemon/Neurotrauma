@@ -1,14 +1,3 @@
-Timer.Wait(function()
-    NT.CheckModConflicts()
-end,1000)
-
-Hook.Add("roundStart", "NT.RoundStart.modconflicts", function()
-    Timer.Wait(function()
-        NT.CheckModConflicts()
-    end,10000)
-    
-end)
-
 NT.modconflict = false
 function NT.CheckModConflicts()
     NT.modconflict = false
@@ -19,12 +8,22 @@ function NT.CheckModConflicts()
     for prefab in ItemPrefab.Prefabs do
         if HF.TableContains(itemsToCheck,prefab.Identifier.Value) then
             local mod = prefab.ConfigElement.ContentPackage.Name
-            if mod ~= "Neurotrauma" then
+            if mod ~= NT.Name then
                 NT.modconflict = true
-                print("WARNING! mod conflict detected! Neurotrauma may not function correctly!")
+				print("Found Neurotrauma incompatibility with mod: ", mod)
+                print("WARNING! mod conflict detected! Neurotrauma may not function correctly and requires a patch!")
                 return
             end
         end
     end
 
 end
+Timer.Wait(function()
+    NT.CheckModConflicts()
+end,1000)
+Hook.Add("roundStart", "NT.RoundStart.modconflicts", function()
+    Timer.Wait(function()
+        NT.CheckModConflicts()
+    end,10000)
+    
+end)
