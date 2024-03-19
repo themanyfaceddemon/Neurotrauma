@@ -8,13 +8,7 @@ assignees: ''
 ---
 
 **Describe the bug**
-A clear and concise description of what the bug is.
-
-**To Reproduce**
-Steps to reproduce the behavior:
-1. 
-2. 
-3. 
+Write a descriptive title that explains when my bug happens and what happens.
 
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
@@ -24,4 +18,4 @@ If applicable, add screenshots to help explain your problem.
  - Expansions in use and version:
 
 **Additional information**
-Add any other information about the problem here.
+More information is usually better than less, and specific information is usually better than general or vague information. The more detail you’re able to give about what happens, and when, the easier it will be to reproduce your bug in a dev environment.
