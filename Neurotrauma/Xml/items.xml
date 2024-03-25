@@ -156,7 +156,7 @@
             <Containable items="weldingtoolfuel,oxygensource,paint"/>
         </ItemContainer>
     </Item>
-  <Item name="" identifier="autocpr" category="Equipment" tags="smallitem,clothing,medical" scale="0.40"
+  <Item name="" identifier="autocpr" category="Equipment" useinhealthinterface="True" tags="smallitem,clothing,medical" scale="0.40"
           cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
     <Upgrade gameversion="0.9.3.0" scale="0.40"/>
     <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
@@ -1929,7 +1929,7 @@
     </Wearable>
     <aitarget maxsightrange="50" />
   </Item>
-  <Item name="" identifier="stasisbag" category="Equipment" tags="provocative,mediumitem,diving" scale="0.9" fireproof="true" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft" equipconfirmationtext="stasisbagequipconfirmation">
+  <Item name="" identifier="stasisbag" category="Equipment" useinhealthinterface="True" tags="provocative,mediumitem,diving" scale="0.9" fireproof="true" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft" equipconfirmationtext="stasisbagequipconfirmation">
     <Price baseprice="1500" soldbydefault="false">
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
     </Price>
@@ -2615,6 +2615,33 @@
         <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500"/>
         <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500"/>
         <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500"/>
+      </StatusEffect>
+      <StatusEffect type="always" target="This" disabledeltatime="true" delay="2" stackable="false">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  <Item name="." identifier="ntsfx_velcro" description="." hideinmenus="true">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5"/>
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5"/>
+    <ItemComponent capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+      <StatusEffect type="OnSpawn" target="This" disabledeltatime="true" stackable="false">
+        <Sound file="%ModDir%/Sound/velcro_tape1.ogg" selectionmode="random" range="500"/>
+        <Sound file="%ModDir%/Sound/velcro_tape2.ogg" range="500"/>
+        <Sound file="%ModDir%/Sound/velcro_tape3.ogg" range="500"/>
+      </StatusEffect>
+      <StatusEffect type="always" target="This" disabledeltatime="true" delay="2" stackable="false">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  <Item name="." identifier="ntsfx_zipper" description="." hideinmenus="true">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5"/>
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5"/>
+    <ItemComponent capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+      <StatusEffect type="OnSpawn" target="This" disabledeltatime="true" stackable="false">
+        <Sound file="%ModDir%/Sound/zipper_1.ogg" selectionmode="random" range="500"/>
+        <Sound file="%ModDir%/Sound/zipper_2.ogg" range="500"/>
       </StatusEffect>
       <StatusEffect type="always" target="This" disabledeltatime="true" delay="2" stackable="false">
         <Remove/>

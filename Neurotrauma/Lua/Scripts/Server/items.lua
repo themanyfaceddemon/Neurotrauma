@@ -1300,6 +1300,27 @@ NT.ItemMethods.antibloodloss2 = function(item, usingCharacter, targetCharacter, 
 
     InfuseBloodpack(item,"ominus", usingCharacter, targetCharacter, limb)
 end
+NT.ItemMethods.stasisbag = function(item, usingCharacter, targetCharacter, limb)
+	local condition = item.Condition
+    if condition <= 0 or usingCharacter == targetCharacter then return end
+	
+	local targetInventory = targetCharacter.Inventory
+	if targetInventory~=nil then
+        if targetInventory.TryPutItem(item,4,false,true,usingCharacter,true,true) then
+			HF.GiveItem(targetCharacter,"ntsfx_zipper")
+		end
+    end
+end
+NT.ItemMethods.autocpr = function(item, usingCharacter, targetCharacter, limb)
+	local condition = item.Condition
+    if targetCharacter.InWater then return end
+	
+	local targetInventory = targetCharacter.Inventory
+	if targetInventory~=nil then
+		HF.GiveItem(targetCharacter,"ntsfx_zipper")
+        targetInventory.TryPutItem(item,4,true,true,usingCharacter,true,true)
+    end
+end
 
 -- startswith region begins
 
@@ -1397,7 +1418,17 @@ NT.ItemStartsWithMethods.wrench = function(item, usingCharacter, targetCharacter
 
         if(not HF.HasAffliction(targetCharacter,"analgesia",0.5)) then
             HF.AddAffliction(targetCharacter,"severepain",5,usingCharacter) end
-    end
+    elseif not HF.HasAffliction(targetCharacter,"sym_unconsciousness",0.1) then
+		local outerWearId = HF.GetOuterWearIdentifier(targetCharacter)
+		if outerWearId == "stasisbag" or
+			outerWearId == "bodybag" or
+			outerWearId == "autocpr" then
+			
+			HF.GiveItem(targetCharacter,"ntsfx_velcro")
+			local equippedOuterItem = HF.GetOuterWear(targetCharacter)
+			equippedOuterItem.Drop()
+		end
+	end
 end
 NT.ItemMethods.heavywrench = NT.ItemStartsWithMethods.wrench
 
