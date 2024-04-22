@@ -3,6 +3,9 @@ Neurotrauma is inspired by real life medicine. It dwells on the concepts of real
 
 ## Mod-Links
 * [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3190189044)
+* [Tutorial Map](https://steamcommunity.com/sharedfiles/filedetails/?id=2860450711)
+* [Trello Guide](https://trello.com/b/cabkctsx/neurotrauma-guide)
+* [Neurotrauma Cybernetics Guide](https://steamcommunity.com/sharedfiles/filedetails/?id=2788580908)
 
 ## Issues
 https://github.com/OlegBSTU/Neurotrauma/issues
