@@ -1,7 +1,7 @@
 --if Game.IsMultiplayer and CLIENT then return end
 
 NT = {} -- Neurotrauma
-NT.Name="Neurotrauma (Maintenance update)"
+NT.Name="Neurotrauma"
 NT.Version = "A1.8.8h3"
 NT.VersionNum = 01080803
 NT.Path = table.pack(...)[1]
