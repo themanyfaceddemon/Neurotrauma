@@ -1,4 +1,6 @@
 
+-- Spawns items inside medstartercrate
+-- Hooks XML Lua event "NT.medstartercrate.spawn" to create medstartercrate items and put them inside it
 Hook.Add("NT.medstartercrate.spawn", "NT.medstartercrate.spawn", function(effect, deltaTime, item, targets, worldPosition)
     if item == nil then return end
 

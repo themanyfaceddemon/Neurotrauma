@@ -1,4 +1,5 @@
 
+-- Hooks Lua event "changeFallDamage" to cause more damage and NT afflictions like fractures and artery cuts on extremities depending on severity
 local limbtypes = {
     LimbType.Torso,
     LimbType.Head,

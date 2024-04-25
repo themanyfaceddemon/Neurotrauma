@@ -1,3 +1,5 @@
+-- Hooks Lua event "human.CPRSuccess" to prevent fractures from ragdoll jank, and 
+-- apply NT affliction cpr_buff or cause rib fractures in Hooked Lua event "human.CPRFailed"
 Hook.Add("human.CPRSuccess", "NT.CPRSuccess", function(animcontroller)
     if animcontroller==nil or animcontroller.Character==nil or animcontroller.Character.SelectedCharacter==nil then return end
     local character = animcontroller.Character.SelectedCharacter

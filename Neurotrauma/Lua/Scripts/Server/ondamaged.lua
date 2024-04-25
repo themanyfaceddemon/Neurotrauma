@@ -1,4 +1,5 @@
 
+-- Hooks Lua event "character.applyDamage" to cause NT afflictions after attacks depending on the damaging affliction defined here in NT.OnDamagedMethods
 Hook.Add("character.applyDamage", "NT.ondamaged", function (characterHealth, attackResult, hitLimb)
     
     --print(hitLimb.HealthIndex or hitLimb ~= nil)

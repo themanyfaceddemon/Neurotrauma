@@ -1,7 +1,10 @@
--- Hooks a Lua event "roundStart" to use for applying Neurotrauma specific
--- meta affliction named "modconflict", then console message about the name
--- of incompatible mod. Done also on server startup. 
--- It's important for patch to have the word "neurotrauma" in their name (case doesnt matter)
+-- Modders, please use ModDir:Neurotrauma when taking dependencies, and 
+-- name your patches with the word "neurotrauma" (case doesnt matter)
+
+-- sets NT.modconflict to true if incompatible mod detected
+-- this applies meta affliction "modconflict" every round
+-- prints out the warning and incompatible mod on server startup
+-- Hooks Lua event "roundStart" to do the above each round
 NT.modconflict = false
 function NT.CheckModConflicts()
     NT.modconflict = false
@@ -14,7 +17,7 @@ function NT.CheckModConflicts()
             local mod = prefab.ConfigElement.ContentPackage.Name
             if not string.find(string.lower(mod), "neurotrauma") then
                 NT.modconflict = true
-				print("Found Neurotrauma incompatibility with mod: ", mod)
+                print("Found Neurotrauma incompatibility with mod: ", mod)
                 print("WARNING! mod conflict detected! Neurotrauma may not function correctly and requires a patch!")
                 return
             end

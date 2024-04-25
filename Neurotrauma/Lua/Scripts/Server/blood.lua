@@ -1,3 +1,5 @@
+-- Neurotrauma blood types functions
+-- Hooks Lua event "characterCreated" to create a randomized blood type for spawned character and sets their immunity to 100
 ---@diagnostic disable: lowercase-global, undefined-global
 NT.BLOODTYPE = { -- blood types and chance in percent
     {"ominus",7},

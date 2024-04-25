@@ -1,4 +1,6 @@
 
+-- Hooks a XML Lua event "surgerytable.update" to use for getting
+-- Neurotrauma and vanilla character data with the surgical table or hospital bed
 -- lifted and translated from betterhealthui
 local NormalHeartrate = 60
 local MaxTachycardiaHeartrate = 180;

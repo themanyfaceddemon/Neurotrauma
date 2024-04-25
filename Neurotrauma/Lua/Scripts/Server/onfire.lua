@@ -1,3 +1,4 @@
+-- Hooks Lua event "Barotrauma.Character" to apply NT onfire affliction and set a human on fire
 Hook.HookMethod("Barotrauma.Character", "ApplyStatusEffects", function (instance, ptable)
     if(ptable.actionType == ActionType.OnFire) then
         local function ApplyBurn(character,limbtype)

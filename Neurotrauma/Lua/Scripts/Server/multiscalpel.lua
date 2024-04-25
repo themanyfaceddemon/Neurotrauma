@@ -1,5 +1,8 @@
 
 
+-- NT functions for multiscalpel mode setting
+-- Hooks XML Lua events defined in the multiscalpel item.xml
+-- Hooks Lua event "roundStart" to RefreshAllMultiscalpels descriptions
 function NT.SetMultiscalpelFunction(item,func)
     if func ~= "" then
     item.Tags = "multiscalpel_"..func

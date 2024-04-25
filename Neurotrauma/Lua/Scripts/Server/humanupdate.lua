@@ -1,4 +1,7 @@
 
+-- Neurotrauma human update functions
+-- Hooks Lua event "think" to update and use for applying NT specific character data (its called 'c') with
+-- values/functions defined here in NT.UpdateHuman, NT.LimbAfflictions and NT.Afflictions
 NT.UpdateCooldown = 0
 NT.UpdateInterval = 120
 NT.Deltatime = NT.UpdateInterval/60 -- Time in seconds that transpires between updates
