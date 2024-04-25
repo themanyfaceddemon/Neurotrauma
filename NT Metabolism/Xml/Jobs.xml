@@ -46,7 +46,7 @@
       <Order identifier="extinguishfires" prioritymodifier="1" />
     </AppropriateOrders>
     <PortraitClothing>
-      <sprite name="Portrait Clothing Chef" texture="Content/Items/Jobgear/PortraitClothing.png" sheetindex="0,1"/>
+      <sprite name="Portrait Clothing Chef" texture="Content/Items/Images/PortraitClothing.png" sheetindex="0,1"/>
     </PortraitClothing>
   </Job>
 </Jobs>
