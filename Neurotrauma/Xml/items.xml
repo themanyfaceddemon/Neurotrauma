@@ -3943,10 +3943,11 @@
       <Body width="60" height="20" density="12" />
       <SuitableTreatment type="bleeding" suitability="80" />
       <SuitableTreatment type="burn" suitability="60" />
+      <SuitableTreatment type="infectedwound" suitability="100" />
       <SuitableTreatment type="damage" suitability="-1" />
       <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="10" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
         <RequiredSkill identifier="medical" level="55" />
-        <StatusEffect type="OnUse" target="This" Condition="-100.0" setvalue="true">
+        <StatusEffect type="OnUse" target="This" Condition="-12.5">
           <Sound file="Content/Items/Medical/Bandage1.ogg" range="500" />
           <Sound file="Content/Items/Medical/Bandage2.ogg" range="500" />
         </StatusEffect>
