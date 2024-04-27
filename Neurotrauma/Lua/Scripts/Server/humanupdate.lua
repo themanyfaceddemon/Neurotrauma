@@ -775,6 +775,10 @@ NT.Afflictions = {
         update=function(c,i) c.afflictions[i].strength = HF.BoolToNum(not NTC.GetSymptomFalse(c.character,i) and c.afflictions.sym_unconsciousness.strength<=0 and (NTC.GetSymptom(c.character,i)
         or c.stats.withdrawal > 20),2)end
     },
+    forceprone={
+        update=function(c,i) c.afflictions[i].strength = HF.BoolToNum(not NTC.GetSymptomFalse(c.character,i) and c.afflictions.sym_unconsciousness.strength<=0 and (NTC.GetSymptom(c.character,i)
+        or (c.stats.lockleftleg and c.stats.lockrightleg)),2)end
+    },
     pain_abdominal={
         update=function(c,i) c.afflictions[i].strength = HF.BoolToNum(not NTC.GetSymptomFalse(c.character,i) and c.afflictions.sym_unconsciousness.strength<=0 and not c.stats.sedated and (NTC.GetSymptom(c.character,i)
         or (c.afflictions.hemotransfusionshock.strength>0 and c.afflictions.hemotransfusionshock.strength < 80)
@@ -1010,6 +1014,13 @@ NT.LimbAfflictions = {
             limbaff[i].strength=HF.Clamp((limbaff.burn.strength-50)/50*100,5,100)
         end
     end},
+    infection={update=function(c,limbaff,i,type)
+        if limbaff[i].strength ~= nil then 
+            limbaff.infectedwound.strength = limbaff.infectedwound.strength + limbaff[i].strength/2
+            limbaff[i].strength=0
+        end
+    end
+    }
 }
 -- define the stats and multipliers
 NT.CharStats = {
@@ -1090,8 +1101,17 @@ NT.CharStats = {
         end
         -- leg slowdown
         if(c.stats.lockleftleg or c.stats.lockrightleg) then c.stats.speedmultiplier = c.stats.speedmultiplier*0.5 end
-        if(c.stats.lockleftleg and c.stats.lockrightleg) then c.afflictions.stun.strength = math.max(c.afflictions.stun.strength,5) end
-                
+        -- if(c.stats.lockleftleg and c.stats.lockrightleg) then c.afflictions.stun.strength = math.max(c.afflictions.stun.strength,5) end -- Heelge: finally a force prone symptom at line 775-778
+        -- okay climbing ability
+        if(c.stats.lockleftleg and c.stats.lockrightleg and c.character.IsClimbing) then
+            c.stats.speedmultiplier = c.stats.speedmultiplier*0.5
+            NTC.SetSymptomFalse(c.character,"forceprone",1)
+        end
+        local onearmProne = not NTC.GetSymptomFalse(c.character,"forceprone") and (c.stats.lockleftarm or c.stats.lockrightarm)
+        if onearmProne then
+            c.stats.speedmultiplier = c.stats.speedmultiplier*0.8
+            if c.stats.lockleftarm and c.stats.lockrightarm then c.stats.speedmultiplier = 0.05 end
+        end
         return res
     end
     },
