@@ -1007,6 +1007,13 @@ NT.LimbAfflictions = {
             limbaff[i].strength=HF.Clamp((limbaff.burn.strength-50)/50*100,5,100)
         end
     end},
+    infection={update=function(c,limbaff,i,type)
+        if limbaff[i].strength ~= nil then 
+            limbaff.infectedwound.strength = limbaff.infectedwound.strength + limbaff[i].strength/2
+            limbaff[i].strength=0
+        end
+    end
+    }
 }
 -- define the stats and multipliers
 NT.CharStats = {

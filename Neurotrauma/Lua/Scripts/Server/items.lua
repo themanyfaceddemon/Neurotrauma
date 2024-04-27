@@ -477,7 +477,8 @@ NT.ItemMethods.ointment = function(item, usingCharacter, targetCharacter, limb)
     HF.AddAfflictionLimb(targetCharacter,"burn",limbtype,-7.2-success*4.8,usingCharacter) end
     HF.AddAfflictionLimb(targetCharacter,"infectedwound",limbtype,-24-success*48,usingCharacter)
 
-    HF.RemoveItem(item)
+    -- HF.RemoveItem(item)
+    item.Condition = item.Condition - 12.5
     HF.GiveItem(targetCharacter,"ntsfx_ointment")
 end
 NT.ItemMethods.antibleeding1 = function(item, usingCharacter, targetCharacter, limb) 

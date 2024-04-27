@@ -1309,18 +1309,18 @@
   
   
   <!-- Ointment / heals infected wound -->
-  <Item name="" identifier="ointment" category="Medical" Tags="smallitem,medical" maxstacksize="32" maxstacksizecharacterinventory="8"
+  <Item name="" identifier="ointment" category="Medical" Tags="smallitem,medical" maxstacksize="8" maxstacksizecharacterinventory="1"
           useinhealthinterface="true" cargocontaineridentifier="mediccrate" scale="0.265" impactsoundtag="impact_soft">
         <PreferredContainer primary="medcab" minamount="4" maxamount="6" spawnprobability="1"/>
         <PreferredContainer primary="supplycab" minamount="1" maxamount="3" spawnprobability="0.2"/>
         <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="6" spawnprobability="0.5"/>
         <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="3" spawnprobability="0.25"/>
-        <Price baseprice="40">
+        <Price baseprice="80">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="40"/>
         </Price>
-        <Fabricate suitablefabricators="medicalfabricator" requiredtime="15" amount="4">
-            <RequiredSkill identifier="medical" level="15"/>
-            <RequiredItem identifier="stabilozine"/>
+        <Fabricate suitablefabricators="medicalfabricator" requiredtime="15">
+            <RequiredSkill identifier="medical" level="10"/>
+            <RequiredItem identifier="stabilozine" amount="2"/>
             <RequiredItem identifier="antibiotics"/>
         </Fabricate>
         <Deconstruct time="20">
@@ -1383,11 +1383,19 @@
                 <ReduceAffliction identifier="infectedwound" amount="100"/>
                 <Affliction identifier="ointmented" amount="5"/>
             </StatusEffect>
+            <!-- do broad ointment to characters -->
+            <StatusEffect type="OnSuccess" target="UseTarget">
+              <Affliction identifier="broadointment" amount="0.35" />
+            </StatusEffect>
+            <StatusEffect type="OnFailure" target="UseTarget">
+              <Affliction identifier="broadointment" amount="0.15" />
+            </StatusEffect>
         </RepairTool>
         <ItemContainer capacity="1" maxstacksize="1" hideitems="false" itempos="-35,3" containedspritedepth="0.56"
                        ItemRotation="-90" containedstateindicatorstyle="tank">
             <Containable items="antiseptic"/>
         </ItemContainer>
+        <SkillRequirementHint identifier="medical" level="40" />
     </Item>
   <Item name="" identifier="antiseptic" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate"
           description="" Tags="smallitem,chem,medical" scale="0.3">
