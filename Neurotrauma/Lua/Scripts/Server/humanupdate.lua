@@ -1094,7 +1094,7 @@ NT.CharStats = {
         end
         -- leg slowdown
         if(c.stats.lockleftleg or c.stats.lockrightleg) then c.stats.speedmultiplier = c.stats.speedmultiplier*0.5 end
-        if(c.stats.lockleftleg and c.stats.lockrightleg) then c.afflictions.stun.strength = math.max(c.afflictions.stun.strength,5) end
+        if(c.stats.lockleftleg and c.stats.lockrightleg) then NTC.SetSymptomTrue(c.character,"forceprone",2) end
                 
         return res
     end

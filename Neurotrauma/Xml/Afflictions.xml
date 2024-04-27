@@ -805,6 +805,30 @@
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="195,104,60,255" origin="0,0"/>
   </Affliction>
 
+  <!-- Forced prone
+  Invisible (yet very apparent) Status
+  -->
+  <Affliction
+      name=""
+      identifier="forceprone"
+      type="gaze"
+      isbuff="false"
+      limbspecific="false"
+      indicatorlimb="Torso"
+      activationthreshold="0"
+      maxstrength="2"
+      showinhealthscannerthreshold="10000"
+      showiconthreshold="10000"
+      healableinmedicalclinic="false">
+      <Effect minstrength="0" maxstrength="2">
+        <StatusEffect target="Character">
+          <TriggerAnimation Type="Walk" filename="HumanProneWalkProperBowthWays" priority="1" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="Run" filename="HumanProneRunProperBowthWays" priority="1" ExpectedSpecies="Human" />
+        </StatusEffect>
+      </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0"/>
+  </Affliction>
+
   <!-- Clamped arteries 
   cause gangrene if not treated-->
   <Affliction
@@ -823,7 +847,7 @@
         <ReduceAffliction identifier="bleeding" strength="0.5"/>
       </StatusEffect>
     </Effect>
-		<icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="1,4" sheetelementsize="128,128" origin="0,0"/>
+    <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="1,4" sheetelementsize="128,128" origin="0,0"/>
   </Affliction>
   <Affliction
     name=""

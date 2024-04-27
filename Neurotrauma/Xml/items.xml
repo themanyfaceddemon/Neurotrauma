@@ -1396,7 +1396,7 @@
             <Containable items="antiseptic"/>
         </ItemContainer>
         <SkillRequirementHint identifier="medical" level="40" />
-    </Item>
+  </Item>
   <Item name="" identifier="antiseptic" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate"
           description="" Tags="smallitem,chem,medical" scale="0.3">
         <Upgrade gameversion="0.10.0.0" scale="0.3"/>
