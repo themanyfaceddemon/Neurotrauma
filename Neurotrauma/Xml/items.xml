@@ -266,7 +266,7 @@
     <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="0,768,256,256" depth="0.55" origin="0.5,0.5" />
     <Body radius="60" width="60" density="15" />
     <Wearable slots="Any,OuterClothes" msg="ItemMsgEquipSelect" autoequipwhenfull="true">
-      <sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" limb="Waist" hidelimb="false" inherittexturescale="true" hideotherwearables="false" inheritorigin="false" sourcerect="0,768,256,256" inheritlimbdepth="false" depth="-0.1" /> <!-- depth="0.11504" -->
+      <sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" limb="Waist" hidelimb="false" inherittexturescale="true" hideotherwearables="false" inheritorigin="false" sourcerect="0,768,256,256" inheritlimbdepth="false" depth="0.10003" /> <!-- depth="0.11504" -->
     </Wearable>
 
     <Controller UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true">
@@ -850,14 +850,14 @@
     </MeleeWeapon>  
     <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
       <GuiFrame relativesize="0.14,0.25" anchor="CenterLeft" pivot="BottomLeft" relativeoffset="0.006,0" style="ItemUI" />
-      <Button text="multiscalpel.btn.incision"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.incision"/></StatusEffect></Button>
+      <Button text="multiscalpel.btn.incision"><StatusEffect target="This" type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.incision"/></StatusEffect></Button>
       <!--<Button text="multiscalpel.btn.kidneys"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.kidneys"/></StatusEffect></Button>-->
       <!--<Button text="multiscalpel.btn.liver"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.liver"/></StatusEffect></Button>-->
       <!--<Button text="multiscalpel.btn.lungs"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.lungs"/></StatusEffect></Button>-->
       <!--<Button text="multiscalpel.btn.heart"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.heart"/></StatusEffect></Button>-->
       <!--<Button text="multiscalpel.btn.brain"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.brain"/></StatusEffect></Button>-->
-      <Button text="multiscalpel.btn.bandage"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.bandage"/></StatusEffect></Button>
-      <Button text="multiscalpel.btn.speedflex"><StatusEffect type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.speedflex"/></StatusEffect></Button>
+      <Button text="multiscalpel.btn.bandage"><StatusEffect target="This" type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.bandage"/></StatusEffect></Button>
+      <Button text="multiscalpel.btn.speedflex"><StatusEffect target="This" type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.speedflex"/></StatusEffect></Button>
     </CustomInterface>
 
   </Item>
@@ -1381,14 +1381,7 @@
             <StatusEffect tags="medical" type="OnUse" target="Limb" disabledeltatime="true">
                 <Sound file="%ModDir%/Sound/spray.ogg" range="500"/>
                 <ReduceAffliction identifier="infectedwound" amount="100"/>
-                <Affliction identifier="ointmented" amount="5"/>
-            </StatusEffect>
-            <!-- do broad ointment to characters -->
-            <StatusEffect type="OnSuccess" target="UseTarget">
-              <Affliction identifier="broadointment" amount="0.35" />
-            </StatusEffect>
-            <StatusEffect type="OnFailure" target="UseTarget">
-              <Affliction identifier="broadointment" amount="0.15" />
+                <Affliction identifier="ointmented" amount="20"/>
             </StatusEffect>
         </RepairTool>
         <ItemContainer capacity="1" maxstacksize="1" hideitems="false" itempos="-35,3" containedspritedepth="0.56"
@@ -3359,7 +3352,6 @@
       <Deconstruct time="20">
         <Item identifier="opium" mincondition="0.9" />
         <Item identifier="adrenaline" mincondition="0.9" />
-        <Item identifier="ethanol" mincondition="0.9" />
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="320,448,64,64" origin="0.5,0.5"/>
       <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="37,0,38,69" depth="0.6" origin="0.5,0.5"/>
@@ -3380,7 +3372,7 @@
         </StatusEffect>
         <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="25">
           <Affliction identifier="opiateaddiction" amount="1"/>
-          <Affliction identifier="opiatewithdrawal" amount="4"/>
+          <ReduceAffliction identifier="opiatewithdrawal" amount="4"/>
         </StatusEffect>
         <StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="5">
           <Affliction identifier="analgesia" amount="10"/>
@@ -3393,7 +3385,7 @@
         </StatusEffect>
         <StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="25">
           <Affliction identifier="opiateaddiction" amount="1"/>
-          <Affliction identifier="opiatewithdrawal" amount="4"/>
+          <ReduceAffliction identifier="opiatewithdrawal" amount="4"/>
         </StatusEffect>
         <StatusEffect type="OnSuccess" target="UseTarget">
           <Conditional entitytype="eq Character"/>

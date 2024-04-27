@@ -30,7 +30,7 @@ function IsItemAffected(identifier)
     return false
 end
 
-local ADD_ATTACKER_DAMAGE = 100 -- Heelge: this used to max out negative rep gain, now only around 4 negative rep, any less negative rep is too forgiving.
+local ADD_ATTACKER_DAMAGE = 130 -- Heelge: this used to max out negative rep gain, now only around 4 negative rep, any less negative rep is too forgiving.
 
 ---@param aiChar Barotrauma_Character The AI character to be made hostile.
 ---@param instigator Barotrauma_Character The character to be the target of the AI's wrath.

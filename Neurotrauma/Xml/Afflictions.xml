@@ -762,49 +762,6 @@
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="195,104,60,255" origin="0,0"/>
   </Affliction>
 
-  <!-- Mass ointment on limbs
-  Invisible Status
-  -->
-  <Affliction
-    name=""
-    identifier="broadointment"
-    description=""
-    healableinmedicalclinic="false"
-    limbspecific="true"
-    type="gaze"
-    isbuff="false"
-    showiconthreshold="10"
-    showinhealthscannerthreshold="10"
-    maxstrength="2"
-    iconcolors="255,90,0,255;255,90,0,255">
-
-    <PeriodicEffect mininterval="1" maxinterval="1">
-      <StatusEffect target="Limb" disabledeltatime="true" stackable="false" delay="0.1" checkconditionalalways="false">
-        <ReduceAffliction identifier="broadointment" amount="0.2"/>
-      </StatusEffect>
-      <StatusEffect target="Character" disabledeltatime="true" stackable="false" delay="0.1" checkconditionalalways="false">
-        <Conditional inwater="true"/>
-        <ReduceAffliction identifier="broadointment" amount="1000" />
-      </StatusEffect>
-      <StatusEffect target="limb" disabledeltatime="true" stackable="false" delay="0.1" checkconditionalalways="false" comparison="and">
-        <Conditional IsRagdolled="true"/>
-        <Conditional ishuman="true"/>
-        <ReduceAffliction identifier="broadointment" amount="0.2" />
-      </StatusEffect>
-
-      <StatusEffect target="limb" checkconditionalalways="false" disabledeltatime="false" duration="1" stackable="false">
-        <Conditional broadointment="gt 1" />
-        <Affliction identifier="ointmented" amount="2" />
-      </StatusEffect>
-<!--       <StatusEffect target="limb" disabledeltatime="true" stackable="true" duration="1" checkconditionalalways="false">
-        <Conditional broadointment="gt 1" />
-        <ParticleEmitter particle="waterdrop" velocitymin="10.0" velocitymax="50.0" particlespersecond="50" />
-      </StatusEffect> -->
-    </PeriodicEffect>
-
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="195,104,60,255" origin="0,0"/>
-  </Affliction>
-
   <!-- Forced prone
   Invisible (yet very apparent) Status
   -->
