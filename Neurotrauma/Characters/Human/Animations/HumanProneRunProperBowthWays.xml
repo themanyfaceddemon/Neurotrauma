@@ -30,6 +30,6 @@
   HeadTorque="70"
   TorsoTorque="10"
   FootTorque="10"
-  AnimationType="Walk"
+  AnimationType="Run"
   ArmIKStrength="3"
   HandIKStrength="2" />

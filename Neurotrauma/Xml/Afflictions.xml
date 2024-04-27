@@ -824,6 +824,8 @@
         <StatusEffect target="Character">
           <TriggerAnimation Type="Walk" filename="HumanProneWalkProperBowthWays" priority="1" ExpectedSpecies="Human" />
           <TriggerAnimation Type="Run" filename="HumanProneRunProperBowthWays" priority="1" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="SwimSlow" filename="HumanProneSwimSlow" priority="1" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="SwimFast" filename="HumanProneSwimFast" priority="1" ExpectedSpecies="Human" />
         </StatusEffect>
       </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0"/>
