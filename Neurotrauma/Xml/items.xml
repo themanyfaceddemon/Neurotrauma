@@ -1315,13 +1315,13 @@
         <PreferredContainer primary="supplycab" minamount="1" maxamount="3" spawnprobability="0.2"/>
         <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="6" spawnprobability="0.5"/>
         <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="3" spawnprobability="0.25"/>
-        <Price baseprice="80">
+        <Price baseprice="216">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="40"/>
         </Price>
         <Fabricate suitablefabricators="medicalfabricator" requiredtime="15">
             <RequiredSkill identifier="medical" level="10"/>
             <RequiredItem identifier="stabilozine" amount="2"/>
-            <RequiredItem identifier="antibiotics"/>
+            <RequiredItem identifier="antibiotics" amount="2"/>
         </Fabricate>
         <Deconstruct time="20">
             <Item identifier="stabilozine" mincondition="0.1" outcondition="0.25"/>
