@@ -1302,24 +1302,26 @@ NT.ItemMethods.antibloodloss2 = function(item, usingCharacter, targetCharacter, 
     InfuseBloodpack(item,"ominus", usingCharacter, targetCharacter, limb)
 end
 NT.ItemMethods.stasisbag = function(item, usingCharacter, targetCharacter, limb)
-	local condition = item.Condition
+    local condition = item.Condition
     if condition <= 0 or usingCharacter == targetCharacter then return end
-	
-	local targetInventory = targetCharacter.Inventory
-	if targetInventory~=nil then
+    
+    local targetInventory = targetCharacter.Inventory
+    if targetInventory~=nil then
         if targetInventory.TryPutItem(item,4,false,true,usingCharacter,true,true) then
-			HF.GiveItem(targetCharacter,"ntsfx_zipper")
-		end
+            HF.GiveItem(targetCharacter,"ntsfx_zipper")
+        end
     end
 end
 NT.ItemMethods.autocpr = function(item, usingCharacter, targetCharacter, limb)
-	local condition = item.Condition
+    local condition = item.Condition
     if targetCharacter.InWater then return end
-	
-	local targetInventory = targetCharacter.Inventory
-	if targetInventory~=nil then
-		HF.GiveItem(targetCharacter,"ntsfx_zipper")
-        targetInventory.TryPutItem(item,4,true,true,usingCharacter,true,true)
+    
+    local targetInventory = targetCharacter.Inventory
+    if targetInventory~=nil then
+        HF.GiveItem(targetCharacter,"ntsfx_zipper")
+        if targetInventory.TryPutItem(item,4,true,true,usingCharacter,true,true) then
+            HF.GiveItem(targetCharacter,"ntsfx_zipper")
+        end
     end
 end
 

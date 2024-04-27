@@ -63,3 +63,7 @@ end
 if CLIENT then
     dofile(NT.Path.."/Lua/Scripts/Client/configgui.lua")
 end
+
+-- Consent Required Extended with adjustments
+-- mod page: https://steamcommunity.com/sharedfiles/filedetails/?id=2892602084
+dofile(NT.Path.."/Lua/ConsentRequiredExtended/init.lua")
