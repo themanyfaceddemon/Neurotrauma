@@ -1099,7 +1099,10 @@ NT.CharStats = {
         -- leg slowdown
         if(c.stats.lockleftleg or c.stats.lockrightleg) then c.stats.speedmultiplier = c.stats.speedmultiplier*0.5 end
         -- if(c.stats.lockleftleg and c.stats.lockrightleg) then c.afflictions.stun.strength = math.max(c.afflictions.stun.strength,5) end -- Heelge: finally a force prone symptom at line 775-778
-                
+        if(c.stats.lockleftleg and c.stats.lockrightleg and c.character.IsClimbing) then
+            c.stats.speedmultiplier = c.stats.speedmultiplier*0.5
+            NTC.SetSymptomFalse(c.character,"forceprone",1)
+        end
         return res
     end
     },

@@ -822,6 +822,7 @@
       healableinmedicalclinic="false">
       <Effect minstrength="0" maxstrength="2">
         <StatusEffect target="Character">
+          <TriggerAnimation Type="Crouch" filename="HumanProneCrouch" priority="1" ExpectedSpecies="Human" />
           <TriggerAnimation Type="Walk" filename="HumanProneWalkProperBowthWays" priority="1" ExpectedSpecies="Human" />
           <TriggerAnimation Type="Run" filename="HumanProneRunProperBowthWays" priority="1" ExpectedSpecies="Human" />
           <TriggerAnimation Type="SwimSlow" filename="HumanProneSwimSlow" priority="1" ExpectedSpecies="Human" />
