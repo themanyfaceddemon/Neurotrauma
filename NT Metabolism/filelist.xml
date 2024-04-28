@@ -19,15 +19,15 @@
   <Other file="%ModDir%/Images/sources.txt" />
   <Other file="%ModDir%/Images/Tools.png" />
 
-  <Other file="%ModDir%/Jobgear/chef1.png" />
-  <Other file="%ModDir%/Jobgear/Chef2Female.png" />
-  <Other file="%ModDir%/Jobgear/Chef2Male.png" />
-  <Other file="%ModDir%/Jobgear/Chef2Robotfemale.png" />
-  <Other file="%ModDir%/Jobgear/Chef2Robotmale.png" />
-  <Other file="%ModDir%/Jobgear/chefmaster1.png" />
-  <Other file="%ModDir%/Jobgear/headgears.png" />
-  <Other file="%ModDir%/Jobgear/MiscJobGear.png" />
-  <Other file="%ModDir%/Jobgear/OutfitIcons.png" />
+  <Other file="%ModDir%/Images/chef1.png" />
+  <Other file="%ModDir%/Images/Chef2Female.png" />
+  <Other file="%ModDir%/Images/Chef2Male.png" />
+  <Other file="%ModDir%/Images/Chef2Robotfemale.png" />
+  <Other file="%ModDir%/Images/Chef2Robotmale.png" />
+  <Other file="%ModDir%/Images/chefmaster1.png" />
+  <Other file="%ModDir%/Images/headgears.png" />
+  <Other file="%ModDir%/Images/MiscJobGear.png" />
+  <Other file="%ModDir%/Images/OutfitIcons.png" />
   
   <Text file="%ModDir%/Localization/English/English.xml" />
 
