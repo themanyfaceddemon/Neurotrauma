@@ -132,10 +132,10 @@
       <RequiredItem identifier="organicfiber" amount="1" />
     </Fabricate>
     <Deconstruct time="10" />
-    <Sprite name="Chef's Cap 1" texture="%ModDir%/Jobgear/headgears.png" depth="0.6" sourcerect="0,0,94,86" origin="0.5,0.5" />
+    <Sprite name="Chef's Cap 1" texture="%ModDir%/Images/headgears.png" depth="0.6" sourcerect="0,0,94,86" origin="0.5,0.5" />
     <Body width="94" height="86" density="9" />
     <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
-      <sprite name="Chef's Cap 1 Wearable" texture="%ModDir%/Jobgear/headgears.png" limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" hidelimb="false" sourcerect="0,0,94,86" origin="0.65,1.0" />
+      <sprite name="Chef's Cap 1 Wearable" texture="%ModDir%/Images/headgears.png" limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" hidelimb="false" sourcerect="0,0,94,86" origin="0.65,1.0" />
       <damagemodifier afflictionidentifiers="blunttrauma,lacerations,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.9" />
     </Wearable>
   </Item>
@@ -152,10 +152,10 @@
       <RequiredItem identifier="organicfiber" amount="1" />
     </Fabricate>
     <Deconstruct time="10" />
-    <Sprite name="Chef's Cap 2" texture="%ModDir%/Jobgear/headgears.png" depth="0.6" sourcerect="188,0,73,52" origin="0.5,0.5" />
+    <Sprite name="Chef's Cap 2" texture="%ModDir%/Images/headgears.png" depth="0.6" sourcerect="188,0,73,52" origin="0.5,0.5" />
     <Body width="94" height="86" density="9" />
     <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
-      <sprite name="Chef's Cap 2 Wearable" texture="%ModDir%/Jobgear/headgears.png" limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.75" hidelimb="false" sourcerect="188,0,73,62" origin="0.6,1.0" />
+      <sprite name="Chef's Cap 2 Wearable" texture="%ModDir%/Images/headgears.png" limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.75" hidelimb="false" sourcerect="188,0,73,62" origin="0.6,1.0" />
       <damagemodifier afflictionidentifiers="blunttrauma,lacerations,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.9" />
     </Wearable>
   </Item>
@@ -172,10 +172,10 @@
       <RequiredItem identifier="organicfiber" amount="2" />
     </Fabricate>
     <Deconstruct time="10" />
-    <Sprite name="Master Chef's Cap 1" texture="%ModDir%/Jobgear/headgears.png" depth="0.6" sourcerect="94,0,94,86" origin="0.5,0.5" />
+    <Sprite name="Master Chef's Cap 1" texture="%ModDir%/Images/headgears.png" depth="0.6" sourcerect="94,0,94,86" origin="0.5,0.5" />
     <Body width="94" height="86" density="9" />
     <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
-      <sprite name="Master Chef's Cap 1 Wearable" texture="%ModDir%/Jobgear/headgears.png" limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" hidelimb="false" sourcerect="94,0,94,86" origin="0.65,1.0" />
+      <sprite name="Master Chef's Cap 1 Wearable" texture="%ModDir%/Images/headgears.png" limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" hidelimb="false" sourcerect="94,0,94,86" origin="0.65,1.0" />
       <damagemodifier afflictionidentifiers="blunttrauma,lacerations,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.9" />
     </Wearable>
   </Item>
@@ -196,24 +196,24 @@
     <Deconstruct time="10">
       <Item identifier="organicfiber" />
     </Deconstruct>
-    <InventoryIcon name="Chef's Uniform 1 Icon" texture="%ModDir%/Jobgear/OutfitIcons.png" sourcerect="131,42,123,86" origin="0.5,0.5" />
-    <Sprite name="Chef's Uniform 1" texture="%ModDir%/Jobgear/MiscJobGear.png" sourcerect="376,227,117,56" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon name="Chef's Uniform 1 Icon" texture="%ModDir%/Images/OutfitIcons.png" sourcerect="131,42,123,86" origin="0.5,0.5" />
+    <Sprite name="Chef's Uniform 1" texture="%ModDir%/Images/MiscImages.png" sourcerect="376,227,117,56" depth="0.6" origin="0.5,0.5" />
     <Body width="117" height="50" density="15" friction="0.8" restitution="0.01" />
     <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
-      <sprite name="Chef's Uniform 1 Torso" texture="%ModDir%/Jobgear/chef1.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 1 Right Hand" texture="%ModDir%/Jobgear/chef1.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 1 Left Hand" texture="%ModDir%/Jobgear/chef1.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 1 Right Lower Arm" texture="%ModDir%/Jobgear/chef1.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 1 Left Lower Arm" texture="%ModDir%/Jobgear/chef1.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 1 Right Upper Arm" texture="%ModDir%/Jobgear/chef1.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 1 Left Upper Arm" texture="%ModDir%/Jobgear/chef1.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 1 Waist" texture="%ModDir%/Jobgear/chef1.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 1 Right Thigh" texture="%ModDir%/Jobgear/chef1.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 1 Left Thigh" texture="%ModDir%/Jobgear/chef1.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 1 Right Leg" texture="%ModDir%/Jobgear/chef1.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 1 Left Leg" texture="%ModDir%/Jobgear/chef1.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 1 Left Shoe" texture="%ModDir%/Jobgear/chef1.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 1 Right Shoe" texture="%ModDir%/Jobgear/chef1.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 1 Torso" texture="%ModDir%/Images/chef1.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 1 Right Hand" texture="%ModDir%/Images/chef1.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 1 Left Hand" texture="%ModDir%/Images/chef1.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 1 Right Lower Arm" texture="%ModDir%/Images/chef1.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 1 Left Lower Arm" texture="%ModDir%/Images/chef1.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 1 Right Upper Arm" texture="%ModDir%/Images/chef1.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 1 Left Upper Arm" texture="%ModDir%/Images/chef1.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 1 Waist" texture="%ModDir%/Images/chef1.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 1 Right Thigh" texture="%ModDir%/Images/chef1.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 1 Left Thigh" texture="%ModDir%/Images/chef1.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 1 Right Leg" texture="%ModDir%/Images/chef1.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 1 Left Leg" texture="%ModDir%/Images/chef1.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 1 Left Shoe" texture="%ModDir%/Images/chef1.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 1 Right Shoe" texture="%ModDir%/Images/chef1.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.9" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds, blunttrauma" damagemultiplier="0.95" />
     </Wearable>
@@ -233,24 +233,24 @@
     <Deconstruct time="10">
       <Item identifier="organicfiber" />
     </Deconstruct>
-    <InventoryIcon name="Chef's Uniform 2 Icon" texture="%ModDir%/Jobgear/OutfitIcons.png" sourcerect="260,42,121,86" origin="0.5,0.5" />
-    <Sprite name="Chef's Uniform 2" texture="%ModDir%/Jobgear/MiscJobGear.png" sourcerect="376,227,117,56" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon name="Chef's Uniform 2 Icon" texture="%ModDir%/Images/OutfitIcons.png" sourcerect="260,42,121,86" origin="0.5,0.5" />
+    <Sprite name="Chef's Uniform 2" texture="%ModDir%/Images/MiscImages.png" sourcerect="376,227,117,56" depth="0.6" origin="0.5,0.5" />
     <Body width="117" height="50" density="15" friction="0.8" restitution="0.01" />
     <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
-      <sprite name="Chef's Uniform 2 Torso" texture="%ModDir%/Jobgear/Chef2[GENDER].png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 2 Right Hand" texture="%ModDir%/Jobgear/Chef2[GENDER].png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 2 Left Hand" texture="%ModDir%/Jobgear/Chef2[GENDER].png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 2 Right Lower Arm" texture="%ModDir%/Jobgear/Chef2[GENDER].png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 2 Left Lower Arm" texture="%ModDir%/Jobgear/Chef2[GENDER].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 2 Right Upper Arm" texture="%ModDir%/Jobgear/Chef2[GENDER].png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 2 Left Upper Arm" texture="%ModDir%/Jobgear/Chef2[GENDER].png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 2 Waist" texture="%ModDir%/Jobgear/Chef2[GENDER].png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 2 Right Thigh" texture="%ModDir%/Jobgear/Chef2[GENDER].png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 2 Left Thigh" texture="%ModDir%/Jobgear/Chef2[GENDER].png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 2 Right Leg" texture="%ModDir%/Jobgear/Chef2[GENDER].png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 2 Left Leg" texture="%ModDir%/Jobgear/Chef2[GENDER].png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 2 Left Shoe" texture="%ModDir%/Jobgear/Chef2[GENDER].png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Chef's Uniform 2 Right Shoe" texture="%ModDir%/Jobgear/Chef2[GENDER].png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 2 Torso" texture="%ModDir%/Images/Chef2[GENDER].png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 2 Right Hand" texture="%ModDir%/Images/Chef2[GENDER].png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 2 Left Hand" texture="%ModDir%/Images/Chef2[GENDER].png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 2 Right Lower Arm" texture="%ModDir%/Images/Chef2[GENDER].png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 2 Left Lower Arm" texture="%ModDir%/Images/Chef2[GENDER].png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 2 Right Upper Arm" texture="%ModDir%/Images/Chef2[GENDER].png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 2 Left Upper Arm" texture="%ModDir%/Images/Chef2[GENDER].png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 2 Waist" texture="%ModDir%/Images/Chef2[GENDER].png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 2 Right Thigh" texture="%ModDir%/Images/Chef2[GENDER].png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 2 Left Thigh" texture="%ModDir%/Images/Chef2[GENDER].png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 2 Right Leg" texture="%ModDir%/Images/Chef2[GENDER].png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 2 Left Leg" texture="%ModDir%/Images/Chef2[GENDER].png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 2 Left Shoe" texture="%ModDir%/Images/Chef2[GENDER].png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Chef's Uniform 2 Right Shoe" texture="%ModDir%/Images/Chef2[GENDER].png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.9" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds, blunttrauma" damagemultiplier="0.95" />
     </Wearable>
@@ -270,24 +270,24 @@
     <Deconstruct time="10">
       <Item identifier="organicfiber" />
     </Deconstruct>
-    <InventoryIcon name="Master Chef's Uniform 1 Icon" texture="%ModDir%/Jobgear/OutfitIcons.png" sourcerect="2,42,123,86" origin="0.5,0.5" />
-    <Sprite name="Master Chef's Uniform 1" texture="%ModDir%/Jobgear/MiscJobGear.png" sourcerect="251,227,117,56" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon name="Master Chef's Uniform 1 Icon" texture="%ModDir%/Images/OutfitIcons.png" sourcerect="2,42,123,86" origin="0.5,0.5" />
+    <Sprite name="Master Chef's Uniform 1" texture="%ModDir%/Images/MiscImages.png" sourcerect="251,227,117,56" depth="0.6" origin="0.5,0.5" />
     <Body width="117" height="50" density="15" friction="0.8" restitution="0.01" />
     <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
-      <sprite name="Master Chef's Uniform 1 Torso" texture="%ModDir%/Jobgear/chefmaster1.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Master Chef's Uniform 1 Right Hand" texture="%ModDir%/Jobgear/chefmaster1.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Master Chef's Uniform 1 Left Hand" texture="%ModDir%/Jobgear/chefmaster1.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Master Chef's Uniform 1 Right Lower Arm" texture="%ModDir%/Jobgear/chefmaster1.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Master Chef's Uniform 1 Left Lower Arm" texture="%ModDir%/Jobgear/chefmaster1.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Master Chef's Uniform 1 Right Upper Arm" texture="%ModDir%/Jobgear/chefmaster1.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Master Chef's Uniform 1 Left Upper Arm" texture="%ModDir%/Jobgear/chefmaster1.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Master Chef's Uniform 1 Waist" texture="%ModDir%/Jobgear/chefmaster1.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Master Chef's Uniform 1 Right Thigh" texture="%ModDir%/Jobgear/chefmaster1.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Master Chef's Uniform 1 Left Thigh" texture="%ModDir%/Jobgear/chefmaster1.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Master Chef's Uniform 1 Right Leg" texture="%ModDir%/Jobgear/chefmaster1.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Master Chef's Uniform 1 Left Leg" texture="%ModDir%/Jobgear/chefmaster1.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Master Chef's Uniform 1 Left Shoe" texture="%ModDir%/Jobgear/chefmaster1.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Master Chef's Uniform 1 Right Shoe" texture="%ModDir%/Jobgear/chefmaster1.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Master Chef's Uniform 1 Torso" texture="%ModDir%/Images/chefmaster1.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Master Chef's Uniform 1 Right Hand" texture="%ModDir%/Images/chefmaster1.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Master Chef's Uniform 1 Left Hand" texture="%ModDir%/Images/chefmaster1.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Master Chef's Uniform 1 Right Lower Arm" texture="%ModDir%/Images/chefmaster1.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Master Chef's Uniform 1 Left Lower Arm" texture="%ModDir%/Images/chefmaster1.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Master Chef's Uniform 1 Right Upper Arm" texture="%ModDir%/Images/chefmaster1.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Master Chef's Uniform 1 Left Upper Arm" texture="%ModDir%/Images/chefmaster1.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Master Chef's Uniform 1 Waist" texture="%ModDir%/Images/chefmaster1.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Master Chef's Uniform 1 Right Thigh" texture="%ModDir%/Images/chefmaster1.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Master Chef's Uniform 1 Left Thigh" texture="%ModDir%/Images/chefmaster1.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Master Chef's Uniform 1 Right Leg" texture="%ModDir%/Images/chefmaster1.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Master Chef's Uniform 1 Left Leg" texture="%ModDir%/Images/chefmaster1.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Master Chef's Uniform 1 Left Shoe" texture="%ModDir%/Images/chefmaster1.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Master Chef's Uniform 1 Right Shoe" texture="%ModDir%/Images/chefmaster1.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.9" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds, blunttrauma" damagemultiplier="0.95" />
     </Wearable>
