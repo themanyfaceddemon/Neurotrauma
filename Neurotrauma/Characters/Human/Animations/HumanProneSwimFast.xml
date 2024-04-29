@@ -11,7 +11,7 @@
   FixedHeadAngle="False"
   SteerTorque="2"
   LegTorque="12"
-  MovementSpeed="0.1"
+  MovementSpeed="1.25"
   CycleSpeed="3.640148"
   HeadAngle="20"
   TorsoAngle="0"
