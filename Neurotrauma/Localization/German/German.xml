@@ -103,9 +103,7 @@
 <entitydescription.antisepticspray>Wird benutzt um Desinfektionsmittel auf Wunden aufzutragen.</entitydescription.antisepticspray>
 
 <entityname.propofol>Propofol</entityname.propofol>
-<entitydescription.propofol>Ein schnell wirkendes Medikament, welches zu einem verminderten Bewusstseinszustand und Gedächtnisverlust führt. Es wird für den Start und der Instandhaltung der generellen Amnesie.</entitydescription.propofol>
-
-<!-- CONTINUE AT PROPOFOL PRFOLE-->
+<entitydescription.propofol>Ein schnell wirkendes Medikament, welches zu einem verminderten Bewusstseinszustand und Gedächtnisverlust führt. Es wird für den Start und die Instandhaltung einer Vollnarkose genutzt.</entitydescription.propofol>
 
 
 
@@ -114,114 +112,114 @@
 <!--<entityname.bloodrefinery>Blood Refinery</entityname.bloodrefinery>-->
 <!-- <entitydescription.bloodrefinery></entitydescription.bloodrefinery> -->
 
-<entityname.emptybloodpack>Leeres Blutpaket</entityname.emptybloodpack>
-<entitydescription.emptybloodpack>An empty blood pack for the drawing of blood.</entitydescription.emptybloodpack>
+<entityname.emptybloodpack>Leerer Blutbeutel</entityname.emptybloodpack>
+<entitydescription.emptybloodpack>Ein leerer Beutel für die Entnahme von Blut.</entitydescription.emptybloodpack>
 
-<entityname.bloodpackoplus>Blutpaket O+</entityname.bloodpackoplus>
-<entitydescription.bloodpackoplus>Administerable to: O+, A+, B+, AB+</entitydescription.bloodpackoplus>
+<entityname.bloodpackoplus>Blutbeutel O+</entityname.bloodpackoplus>
+<entitydescription.bloodpackoplus>Kompatibel mit: O+, A+, B+, AB+</entitydescription.bloodpackoplus>
 
-<entityname.bloodpackominus>Blutpaket O-</entityname.bloodpackominus>
-<entitydescription.bloodpackominus>A blood pack that can be used on any patient.</entitydescription.bloodpackominus>
+<entityname.bloodpackominus>Blutbeutel O-</entityname.bloodpackominus>
+<entitydescription.bloodpackominus>Ein Blutbeutel von einem Universalspender. Kompatibel mit allen Blutgruppen.</entitydescription.bloodpackominus>
 
-<entityname.bloodpackaplus>Blutpaket A+</entityname.bloodpackaplus>
-<entitydescription.bloodpackaplus>Administerable to: A+, AB+</entitydescription.bloodpackaplus>
+<entityname.bloodpackaplus>Blutbeutel A+</entityname.bloodpackaplus>
+<entitydescription.bloodpackaplus>Kompatibel mit: A+, AB+</entitydescription.bloodpackaplus>
 
-<entityname.bloodpackbplus>Blutpaket B+</entityname.bloodpackbplus>
-<entitydescription.bloodpackbplus>Administerable to: B+, AB+</entitydescription.bloodpackbplus> -->
+<entityname.bloodpackbplus>Blutbeutel B+</entityname.bloodpackbplus>
+<entitydescription.bloodpackbplus>Kompatibel mit: B+, AB+</entitydescription.bloodpackbplus> -->
 
-<entityname.bloodpackabplus>Blutpaket AB+</entityname.bloodpackabplus>
-<entitydescription.bloodpackabplus>Administerable to: AB+</entitydescription.bloodpackabplus> -->
+<entityname.bloodpackabplus>Blutbeutel AB+</entityname.bloodpackabplus>
+<entitydescription.bloodpackabplus>Kompatibel mit: AB+</entitydescription.bloodpackabplus> -->
 
-<entityname.bloodpackaminus>Blutpaket A-</entityname.bloodpackaminus>
-<entitydescription.bloodpackaminus>Administerable to: A-, A+, AB-, AB+</entitydescription.bloodpackaminus> -->
+<entityname.bloodpackaminus>Blutbeutel A-</entityname.bloodpackaminus>
+<entitydescription.bloodpackaminus>Kompatibel mit: A-, A+, AB-, AB+</entitydescription.bloodpackaminus> -->
 
-<entityname.bloodpackbminus>Blutpaket B-</entityname.bloodpackbminus>
-<entitydescription.bloodpackbminus>Administerable to: B-, B+, AB-, AB+</entitydescription.bloodpackbminus>
+<entityname.bloodpackbminus>Blutbeutel B-</entityname.bloodpackbminus>
+<entitydescription.bloodpackbminus>Kompatibel mit: B-, B+, AB-, AB+</entitydescription.bloodpackbminus>
 
-<entityname.bloodpackabminus>Blutpaket AB-</entityname.bloodpackabminus>
-<entitydescription.bloodpackabminus>Administerable to: AB-, AB+</entitydescription.bloodpackabminus>
+<entityname.bloodpackabminus>Blutbeutel AB-</entityname.bloodpackabminus>
+<entitydescription.bloodpackabminus>Kompatibel mit: AB-, AB+</entitydescription.bloodpackabminus>
 
 <Override>
-<entityname.antibloodloss2>Blutpaket O-</entityname.antibloodloss2>
-<entitydescription.antibloodloss2>A blood pack that can be used on any patient.</entitydescription.antibloodloss2>
+<entityname.antibloodloss2>Blutbeutel O-</entityname.antibloodloss2>
+<entitydescription.antibloodloss2>Ein Blutbeutel von einem Universalspender. Kompatibel mit allen Blutgruppen.</entitydescription.antibloodloss2>
 </Override>
 
 <entityname.ominuscard>Spenderkarte O-</entityname.ominuscard>
-<entitydescription.ominuscard>Kann nehmen von: O-
-Kann geben für: Jeder</entitydescription.ominuscard>
+<entitydescription.ominuscard>Kann erhalten von: O-
+Universalspender</entitydescription.ominuscard>
 
 <entityname.opluscard>Spenderkarte O+</entityname.opluscard>
-<entitydescription.opluscard>Kann nehmen von: O-, O+
-Kann geben für: O+, A+, B+, AB+</entitydescription.opluscard>
+<entitydescription.opluscard>Kann erhalten von: O-, O+
+Kann spenden an: O+, A+, B+, AB+</entitydescription.opluscard>
 
 <entityname.aminuscard>Spenderkarte A-</entityname.aminuscard>
-<entitydescription.aminuscard>Kann nehmen von: O-, A-
-Kann geben für: A-, A+, AB-, AB+</entitydescription.aminuscard>
+<entitydescription.aminuscard>Kann erhalten von: O-, A-
+Kann spenden an: A-, A+, AB-, AB+</entitydescription.aminuscard>
 
 <entityname.apluscard>Spenderkarte A+</entityname.apluscard>
-<entitydescription.apluscard>Kann nehmen von: O-, O+, A-, A+
-Kann geben für: A+, AB+</entitydescription.apluscard>
+<entitydescription.apluscard>Kann erhalten von: O-, O+, A-, A+
+Kann spenden an: A+, AB+</entitydescription.apluscard>
 
 <entityname.bminuscard>Spenderkarte B-</entityname.bminuscard>
-<entitydescription.bminuscard>Kann nehmen von: O-, B-
-Kann geben für: B-, B+, AB-, AB+</entitydescription.bminuscard>
+<entitydescription.bminuscard>Kann erhalten von: O-, B-
+Kann spenden an: B-, B+, AB-, AB+</entitydescription.bminuscard>
 
 <entityname.bpluscard>Spenderkarte B+</entityname.bpluscard>
-<entitydescription.bpluscard>Kann nehmen von: O-, O+, B-, B+
-Kann geben für: B+, AB+</entitydescription.bpluscard>
+<entitydescription.bpluscard>Kann erhalten von: O-, O+, B-, B+
+Kann spenden an: B+, AB+</entitydescription.bpluscard>
 
 <entityname.abminuscard>Spenderkarte AB-</entityname.abminuscard>
-<entitydescription.abminuscard>Kann nehmen von: O-, A-, B-, AB-
-Kann geben für: AB-, AB+</entitydescription.abminuscard>
+<entitydescription.abminuscard>Kann erhalten von: O-, A-, B-, AB-
+Kann spenden an: AB-, AB+</entitydescription.abminuscard>
 
 <entityname.abpluscard>Spenderkarte AB+</entityname.abpluscard>
-<entitydescription.abpluscard>Kann nehmen von: Jeder
-Kann geben für: AB+</entitydescription.abpluscard>
+<entitydescription.abpluscard>Kann erhalten von: Jeder
+Kann spenden an: AB+</entitydescription.abpluscard>
 
 
 
 <!-- /// New containers /// -->
-<entityname.medtoolbox>Medizinischer Behälter</entityname.medtoolbox> 
-<entitydescription.medtoolbox>Can store medicine and medical instruments</entitydescription.medtoolbox>
+<entityname.medtoolbox>Medizinkoffer</entityname.medtoolbox> 
+<entitydescription.medtoolbox>Kann Medikamente und medizinische Geräte lagern.</entitydescription.medtoolbox>
 
-<entityname.organcrate>Tiefkühlbehälter</entityname.organcrate> 
-<entitydescription.organcrate>A place to store you precious transplant-ready organs</entitydescription.organcrate>
+<entityname.organcrate>Tiefkühlkoffer</entityname.organcrate> 
+<entitydescription.organcrate>Wird genutzt um Organe zu lagern und am Leben zu halten.</entitydescription.organcrate>
 
 <entityname.organtoolbox>Tiefkühlkiste</entityname.organtoolbox> 
-<entitydescription.organtoolbox>A place to store you precious transplant-ready organs</entitydescription.organtoolbox>
+<entitydescription.organtoolbox>Wird genutzt um Organge zu lagern und am Leben zu halten.</entitydescription.organtoolbox>
 
 <entityname.bodybag>Leichensack</entityname.bodybag>
-<entitydescription.bodybag>Lets you drag people faster.</entitydescription.bodybag>
+<entitydescription.bodybag>Lässt dich "Leute" schneller transportieren. Luft nicht inklusive.</entitydescription.bodybag>
 
 <entityname.stasisbag>Stasebeutel</entityname.stasisbag>
-<entitydescription.stasisbag>Stops most biological processes from taking place.</entitydescription.stasisbag>
+<entitydescription.stasisbag>Hält die meisten biolgischen Prozesse an.</entitydescription.stasisbag>
 
 
 
 <!-- /// Limbs and organs /// -->
 <entityname.rarm>Rechter Arm</entityname.rarm>
-<entitydescription.rarm>A severed right arm. Can be surgically reattached.</entitydescription.rarm>
+<entitydescription.rarm>Ein abgetrennter, rechter Arm. Kann operativ wieder angenäht werden.</entitydescription.rarm>
 
 <entityname.larm>Linker Arm</entityname.larm>
-<entitydescription.larm>A severed left arm. Can be surgically reattached.</entitydescription.larm>
+<entitydescription.larm>Ein abgetrennter, linker Arm. Kann operativ wieder angenäht werden.</entitydescription.larm>
 
 <entityname.rleg>Rechtes Bein</entityname.rleg>
-<entitydescription.rleg>A severed right leg. Can be surgically reattached.</entitydescription.rleg>
+<entitydescription.rleg>Ein abgetrenntes, rechtes Bein. Kann operativ wieder angenäht werden.</entitydescription.rleg>
 
 <entityname.lleg>Linkes Bein</entityname.lleg>
-<entitydescription.lleg>A severed left leg. Can be surgically reattached.</entitydescription.lleg>
+<entitydescription.lleg>Ein abgetrenntes, linkes Bein. Kann operativ wieder angenäht werden.</entitydescription.lleg>
 
-<entityname.rarmp>Right arm bionic prosthesis</entityname.rarmp>
-<entitydescription.rarmp>A bionic right arm. Can be used to treat amputation.</entitydescription.rarmp>
+<entityname.rarmp>Bionische Prothese (rechter Arm)</entityname.rarmp>
+<entitydescription.rarmp>A bionic right arm. Kann operativ angenäht werden.</entitydescription.rarmp>
 
-<entityname.larmp>Left arm bionic prosthesis</entityname.larmp>
-<entitydescription.larmp>A bionic left arm. Can be used to treat amputation.</entitydescription.larmp>
+<entityname.larmp>Bionische Prothese (linker Arm)</entityname.larmp>
+<entitydescription.larmp>A bionic left arm. Kann operativ angenäht werden.</entitydescription.larmp>
 
 <entityname.rlegp>Right leg bionic prosthesis</entityname.rlegp>
-<entitydescription.rlegp>A bionic right leg. Can be used to treat amputation.</entitydescription.rlegp>
+<entitydescription.rlegp>A bionic right leg. Kann operativ angenäht werden.</entitydescription.rlegp>
 
 <entityname.llegp>Left leg bionic prosthesis</entityname.llegp>
-<entitydescription.llegp>A bionic left leg. Can be used to treat amputation.</entitydescription.llegp>
+<entitydescription.llegp>A bionic left leg. Can Kann operativ angenäht werden.</entitydescription.llegp>
 
 <entityname.livertransplant>Liver transplant</entityname.livertransplant>
 <entityname.livertransplant_q1>Liver transplant</entityname.livertransplant_q1>
