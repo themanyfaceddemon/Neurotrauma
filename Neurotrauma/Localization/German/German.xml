@@ -78,32 +78,34 @@
 <entityname.ointment>Desinfizierendes Gel</entityname.ointment>
 <entitydescription.ointment>Ein stark antibiotisches Gel welches bei der Genesung von Verbrennungen und infizierten Wunden hilft.</entitydescription.ointment>
 
-<entityname.endovascballoon>Endovascular balloon</entityname.endovascballoon>
-<entitydescription.endovascballoon>A balloon inserted into major arteries following their rupture. It will cut off bloodflow, but it will stop the bleeding.</entitydescription.endovascballoon>
+<entityname.endovascballoon>Endovaskulärer Balloon</entityname.endovascballoon>
+<entitydescription.endovascballoon>Ein Balloon der nach einer Ruptur in die Hauptaterien eingeführt wird. Es wird den Blutfluss stoppen, jedoch somit auch die Blutung.</entitydescription.endovascballoon>
 
-<entityname.medstent>Medical stent</entityname.medstent>
-<entitydescription.medstent>A plastic tube inserted into the aorta after an endovascular ballon following aortic rupture.</entitydescription.medstent>
+<entityname.medstent>Stent</entityname.medstent>
+<entitydescription.medstent>Eine Plastikröhre die nach einem endovaskulären Ballon in die Aorta eingeführt wird.</entitydescription.medstent>
 
-<entityname.tourniquet>Aderpresse</entityname.tourniquet>
-<entitydescription.tourniquet>A device that applies pressure to a limb and thus reduces bloodflow. It is usually used in case of major bleeders on extremities. Shouldn't be used on the head.</entitydescription.tourniquet>
+<entityname.tourniquet>Tourniquet</entityname.tourniquet>
+<entitydescription.tourniquet>Übt Drück auf eine Gliedmaße aus und verringert den Blutfluss. Es wird bei Gliedmaßen mit zum Beispiel einem Arterienriss oder Gliedmaßenverlust verwendet. Sollte nicht auf dem Kopf benutzt werde.</entitydescription.tourniquet>
 
 <entityname.drainage>Drainage</entityname.drainage>
-<entitydescription.drainage>Drains air from the pleural cavity during corrective surgery for pneumothorax.</entitydescription.drainage>
+<entitydescription.drainage>Lässt Luft aus dem Brustkorb entweichen. Wird für eine Pneumothoraxoperation verwendet.</entitydescription.drainage>
 
 <entityname.needle>Nadel</entityname.needle>
-<entitydescription.needle>A needle with a decompression valve to make the air or liquid drain out of the pleural cavity or pericardium</entitydescription.needle>
+<entitydescription.needle>Eine Nadel mit einem Ventil um Luft oder Flüssigkeit aus dem Brustkorb zu entfernen.</entitydescription.needle>
 
-<entityname.ringerssolution>Ringer's solution</entityname.ringerssolution>
-<entitydescription.ringerssolution>A solution of several salts dissolved in water for the purpose of treating low blood pressure or fluid loss. Isotonic to blood.</entitydescription.ringerssolution>
+<entityname.ringerssolution>Ringerlösung</entityname.ringerssolution>
+<entitydescription.ringerssolution>Eine Lösung aus mehreren in Wasser gelösten Salzen um niedrigen Blutdruck und Blutverlust zu heilen. Isotonisch zu Blut.</entitydescription.ringerssolution>
 
 <entityname.antiseptic>Desinfektionsmittel</entityname.antiseptic>
-<!-- <entitydescription.antiseptic></entitydescription.antiseptic> -->
+<entitydescription.antiseptic>Kann mit einem Desinfektionsmittelspritzer auf infizierte Wunden aufgetragen werden um sie zu reinigen.</entitydescription.antiseptic>
 
 <entityname.antisepticspray>Desinfektionsmittelspritzer</entityname.antisepticspray>
-<!-- <entitydescription.antisepticspray></entitydescription.antisepticspray> -->
+<entitydescription.antisepticspray>Wird benutzt um Desinfektionsmittel auf Wunden aufzutragen.</entitydescription.antisepticspray>
 
 <entityname.propofol>Propofol</entityname.propofol>
-<entitydescription.propofol>A short-acting medication that results in a decreased level of consciousness and a lack of memory for events. Its uses include the starting and maintenance of general anesthesia.</entitydescription.propofol>
+<entitydescription.propofol>Ein schnell wirkendes Medikament, welches zu einem verminderten Bewusstseinszustand und Gedächtnisverlust führt. Es wird für den Start und der Instandhaltung der generellen Amnesie.</entitydescription.propofol>
+
+<!-- CONTINUE AT PROPOFOL PRFOLE-->
 
 
 
