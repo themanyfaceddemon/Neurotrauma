@@ -146,7 +146,7 @@
 
 <entityname.ominuscard>Spenderkarte O-</entityname.ominuscard>
 <entitydescription.ominuscard>Kann erhalten von: O-
-Universalspender</entitydescription.ominuscard>
+Kann spenden an: Universalspender</entitydescription.ominuscard>
 
 <entityname.opluscard>Spenderkarte O+</entityname.opluscard>
 <entitydescription.opluscard>Kann erhalten von: O-, O+
@@ -210,44 +210,44 @@ Kann spenden an: AB+</entitydescription.abpluscard>
 <entitydescription.lleg>Ein abgetrenntes, linkes Bein. Kann operativ wieder angenäht werden.</entitydescription.lleg>
 
 <entityname.rarmp>Bionische Prothese (rechter Arm)</entityname.rarmp>
-<entitydescription.rarmp>A bionic right arm. Kann operativ angenäht werden.</entitydescription.rarmp>
+<entitydescription.rarmp>Ein bionischer, rechter Arm. Kann operativ angenäht werden.</entitydescription.rarmp>
 
 <entityname.larmp>Bionische Prothese (linker Arm)</entityname.larmp>
-<entitydescription.larmp>A bionic left arm. Kann operativ angenäht werden.</entitydescription.larmp>
+<entitydescription.larmp>Ein bionischer, linker Arm. Kann operativ angenäht werden.</entitydescription.larmp>
 
-<entityname.rlegp>Right leg bionic prosthesis</entityname.rlegp>
-<entitydescription.rlegp>A bionic right leg. Kann operativ angenäht werden.</entitydescription.rlegp>
+<entityname.rlegp>Bionische Prothese (rechtes Bein)</entityname.rlegp>
+<entitydescription.rlegp>Ein bionisches, rechtes Bein. Kann operativ angenäht werden.</entitydescription.rlegp>
 
-<entityname.llegp>Left leg bionic prosthesis</entityname.llegp>
-<entitydescription.llegp>A bionic left leg. Can Kann operativ angenäht werden.</entitydescription.llegp>
+<entityname.llegp>Bionische Prothese (linkes Bein)</entityname.llegp>
+<entitydescription.llegp>Ein bionisches, linkes Bein. Can Kann operativ angenäht werden.</entitydescription.llegp>
 
-<entityname.livertransplant>Liver transplant</entityname.livertransplant>
-<entityname.livertransplant_q1>Liver transplant</entityname.livertransplant_q1>
-<entityname.livertransplant_q2>Liver transplant</entityname.livertransplant_q2>
-<entityname.livertransplant_q3>Liver transplant</entityname.livertransplant_q3>
-<entityname.livertransplant_q4>Liver transplant</entityname.livertransplant_q4>
-<entityname.livertransplant_q5>Liver transplant</entityname.livertransplant_q5>
+<entityname.livertransplant>Entnommene Leber</entityname.livertransplant>
+<entityname.livertransplant_q1>Entnommene Leber</entityname.livertransplant_q1>
+<entityname.livertransplant_q2>Entnommene Leber</entityname.livertransplant_q2>
+<entityname.livertransplant_q3>Entnommene Leber</entityname.livertransplant_q3>
+<entityname.livertransplant_q4>Entnommene Leber</entityname.livertransplant_q4>
+<entityname.livertransplant_q5>Entnommene Leber</entityname.livertransplant_q5>
 
-<entityname.lungtransplant>Lung transplant</entityname.lungtransplant>
-<entityname.lungtransplant_q1>Lung transplant</entityname.lungtransplant_q1>
-<entityname.lungtransplant_q2>Lung transplant</entityname.lungtransplant_q2>
-<entityname.lungtransplant_q3>Lung transplant</entityname.lungtransplant_q3>
-<entityname.lungtransplant_q4>Lung transplant</entityname.lungtransplant_q4>
-<entityname.lungtransplant_q5>Lung transplant</entityname.lungtransplant_q5>
+<entityname.lungtransplant>Entnommene Lunge</entityname.lungtransplant>
+<entityname.lungtransplant_q1>Entnommene Lunge</entityname.lungtransplant_q1>
+<entityname.lungtransplant_q2>Entnommene Lunge</entityname.lungtransplant_q2>
+<entityname.lungtransplant_q3>Entnommene Lunge</entityname.lungtransplant_q3>
+<entityname.lungtransplant_q4>Entnommene Lunge</entityname.lungtransplant_q4>
+<entityname.lungtransplant_q5>Entnommene Lunge</entityname.lungtransplant_q5>
 
-<entityname.kidneytransplant>Kidney transplant</entityname.kidneytransplant>
-<entityname.kidneytransplant_q1>Kidney transplant</entityname.kidneytransplant_q1>
-<entityname.kidneytransplant_q2>Kidney transplant</entityname.kidneytransplant_q2>
-<entityname.kidneytransplant_q3>Kidney transplant</entityname.kidneytransplant_q3>
-<entityname.kidneytransplant_q4>Kidney transplant</entityname.kidneytransplant_q4>
-<entityname.kidneytransplant_q5>Kidney transplant</entityname.kidneytransplant_q5>
+<entityname.kidneytransplant>Entnommene Niere</entityname.kidneytransplant>
+<entityname.kidneytransplant_q1>Entnommene Niere</entityname.kidneytransplant_q1>
+<entityname.kidneytransplant_q2>Entnommene Niere</entityname.kidneytransplant_q2>
+<entityname.kidneytransplant_q3>Entnommene Niere</entityname.kidneytransplant_q3>
+<entityname.kidneytransplant_q4>Entnommene Niere</entityname.kidneytransplant_q4>
+<entityname.kidneytransplant_q5>Entnommene Niere</entityname.kidneytransplant_q5>
 
-<entityname.hearttransplant>Heart transplant</entityname.hearttransplant>
-<entityname.hearttransplant_q1>Heart transplant</entityname.hearttransplant_q1>
-<entityname.hearttransplant_q2>Heart transplant</entityname.hearttransplant_q2>
-<entityname.hearttransplant_q3>Heart transplant</entityname.hearttransplant_q3>
-<entityname.hearttransplant_q4>Heart transplant</entityname.hearttransplant_q4>
-<entityname.hearttransplant_q5>Heart transplant</entityname.hearttransplant_q5>
+<entityname.hearttransplant>Entnommenes Herz</entityname.hearttransplant>
+<entityname.hearttransplant_q1>Entnommenes Herz</entityname.hearttransplant_q1>
+<entityname.hearttransplant_q2>Entnommenes Herz</entityname.hearttransplant_q2>
+<entityname.hearttransplant_q3>Entnommenes Herz</entityname.hearttransplant_q3>
+<entityname.hearttransplant_q4>Entnommenes Herz</entityname.hearttransplant_q4>
+<entityname.hearttransplant_q5>Entnommenes Herz</entityname.hearttransplant_q5>
 
 <entityname.armlock1>Funktionsunfähige rechte Hand</entityname.armlock1>
 <entityname.armlock2>Funktionsunfähige linke Hand</entityname.armlock2>
