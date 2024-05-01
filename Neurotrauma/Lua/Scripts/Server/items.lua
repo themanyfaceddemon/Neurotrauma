@@ -1309,6 +1309,17 @@ NT.ItemMethods.stasisbag = function(item, usingCharacter, targetCharacter, limb)
     if targetInventory~=nil then
         if targetInventory.TryPutItem(item,4,false,true,usingCharacter,true,true) then
             HF.GiveItem(targetCharacter,"ntsfx_zipper")
+        else
+            local userInventory = usingCharacter.Inventory
+            local targetItem = HF.GetOuterWear(targetCharacter)
+            local lhand = HF.GetItemInLeftHand(usingCharacter)
+            local rhand = HF.GetItemInRightHand(usingCharacter)
+            if rhand ~= nil then userInventory.TryPutItem(rhand, nil, {InvSlotType.Any}) end
+            if lhand ~= nil then userInventory.TryPutItem(lhand, nil, {InvSlotType.Any}) end
+            userInventory.TryPutItem(targetItem, 5, true, true, usingCharacter, true, true)
+            if targetInventory.TryPutItem(item,4,true,true,usingCharacter,true,true) then
+                HF.GiveItem(targetCharacter,"ntsfx_zipper")
+            end
         end
     end
 end
@@ -1318,9 +1329,19 @@ NT.ItemMethods.autocpr = function(item, usingCharacter, targetCharacter, limb)
     
     local targetInventory = targetCharacter.Inventory
     if targetInventory~=nil then
-        HF.GiveItem(targetCharacter,"ntsfx_zipper")
         if targetInventory.TryPutItem(item,4,true,true,usingCharacter,true,true) then
             HF.GiveItem(targetCharacter,"ntsfx_zipper")
+        else
+            local userInventory = usingCharacter.Inventory
+            local targetItem = HF.GetOuterWear(targetCharacter)
+            local lhand = HF.GetItemInLeftHand(usingCharacter)
+            local rhand = HF.GetItemInRightHand(usingCharacter)
+            if rhand ~= nil then userInventory.TryPutItem(rhand, nil, {InvSlotType.Any}) end
+            if lhand ~= nil then userInventory.TryPutItem(lhand, nil, {InvSlotType.Any}) end
+            userInventory.TryPutItem(targetItem, 5, true, true, usingCharacter, true, true)
+            if targetInventory.TryPutItem(item,4,true,true,usingCharacter,true,true) then
+                HF.GiveItem(targetCharacter,"ntsfx_zipper")
+            end
         end
     end
 end
@@ -1422,16 +1443,18 @@ NT.ItemStartsWithMethods.wrench = function(item, usingCharacter, targetCharacter
         if(not HF.HasAffliction(targetCharacter,"analgesia",0.5)) then
             HF.AddAffliction(targetCharacter,"severepain",5,usingCharacter) end
     elseif not HF.HasAffliction(targetCharacter,"sym_unconsciousness",0.1) then
-		local outerWearId = HF.GetOuterWearIdentifier(targetCharacter)
-		if outerWearId == "stasisbag" or
-			outerWearId == "bodybag" or
-			outerWearId == "autocpr" then
-			
-			HF.GiveItem(targetCharacter,"ntsfx_velcro")
-			local equippedOuterItem = HF.GetOuterWear(targetCharacter)
-			equippedOuterItem.Drop()
-		end
-	end
+        local outerWearId = HF.GetOuterWearIdentifier(targetCharacter)
+        if outerWearId == "stasisbag" or
+            outerWearId == "bodybag" or
+            outerWearId == "autocpr" then
+            
+            local usingInventory = usingCharacter.Inventory
+            local equippedOuterItem = HF.GetOuterWear(targetCharacter)
+            if usingInventory.TryPutItem(equippedOuterItem, nil, {InvSlotType.Any}) then
+                HF.GiveItem(targetCharacter,"ntsfx_velcro")
+            end
+        end
+    end
 end
 NT.ItemMethods.heavywrench = NT.ItemStartsWithMethods.wrench
 
