@@ -402,226 +402,226 @@ Kann spenden an: AB+</entitydescription.abpluscard>
 <afflictiondescription.needlec>Normalisiert den Druck im Brustkorb.</afflictiondescription.needlec>
 
 <!-- fractures, amputations, dislocations and bleeding arteries-->
-<afflictionname.ra_fracture>Fractured right humerus</afflictionname.ra_fracture>
-<afflictiondescription.ra_fracture>Your right arm is broken.</afflictiondescription.ra_fracture>
-<afflictionname.la_fracture>Fractured left humerus</afflictionname.la_fracture>
-<afflictiondescription.la_fracture>Your left arm is broken.</afflictiondescription.la_fracture>
-<afflictionname.rl_fracture>Fractured right femur</afflictionname.rl_fracture>
-<afflictiondescription.rl_fracture>Your right leg is broken.</afflictiondescription.rl_fracture>
-<afflictionname.ll_fracture>Fractured right femur</afflictionname.ll_fracture>
-<afflictiondescription.ll_fracture>Your left leg is broken.</afflictiondescription.ll_fracture>
-<afflictionname.t_fracture>Fractured ribs</afflictionname.t_fracture>
-<afflictiondescription.t_fracture>One or more of your ribs are broken.</afflictiondescription.t_fracture>
-<afflictionname.h_fracture>Fractured skull</afflictionname.h_fracture>
-<afflictiondescription.h_fracture>Your skull is broken.</afflictiondescription.h_fracture>
-<afflictionname.n_fracture>Fractured neck</afflictionname.n_fracture>
-<afflictiondescription.n_fracture>Your neck is broken.</afflictiondescription.n_fracture>
+<afflictionname.ra_fracture>Gebrochener, rechter Humerus</afflictionname.ra_fracture>
+<afflictiondescription.ra_fracture>Der rechte Arm ist gebrochen.</afflictiondescription.ra_fracture>
+<afflictionname.la_fracture>Gebrochener, linker Humerus</afflictionname.la_fracture>
+<afflictiondescription.la_fracture>Der linke Arm ist gebrochen.</afflictiondescription.la_fracture>
+<afflictionname.rl_fracture>Gebrochener, rechter Oberschenkelknochen</afflictionname.rl_fracture>
+<afflictiondescription.rl_fracture>Das rechte Bein ist gebrochen.</afflictiondescription.rl_fracture>
+<afflictionname.ll_fracture>Gebrochener, linker Oberschenkelknochen</afflictionname.ll_fracture>
+<afflictiondescription.ll_fracture>Das linke Bein ist gebrochen.</afflictiondescription.ll_fracture>
+<afflictionname.t_fracture>Gebrochene Rippen</afflictionname.t_fracture>
+<afflictiondescription.t_fracture>Eine oder mehrere Ripppen sind gebrochen.</afflictiondescription.t_fracture>
+<afflictionname.h_fracture>Schädelbruch</afflictionname.h_fracture>
+<afflictiondescription.h_fracture>Der Schädel ist gebrochen.</afflictiondescription.h_fracture>
+<afflictionname.n_fracture>Genickbruch</afflictionname.n_fracture>
+<afflictiondescription.n_fracture>Das Genick ist gebrochen.</afflictiondescription.n_fracture>
 
-<afflictionname.tra_amputation>Traumatic amputation</afflictionname.tra_amputation>
-<afflictiondescription.tra_amputation>Most of the tissue of the right arm was torn off.</afflictiondescription.tra_amputation>
-<afflictionname.tla_amputation>Traumatic amputation</afflictionname.tla_amputation>
-<afflictiondescription.tla_amputation>Most of the tissue of the left arm was torn off.</afflictiondescription.tla_amputation>
-<afflictionname.trl_amputation>Traumatic amputation</afflictionname.trl_amputation>
-<afflictiondescription.trl_amputation>Most of the tissue of the right leg was torn off.</afflictiondescription.trl_amputation>
-<afflictionname.tll_amputation>Traumatic amputation</afflictionname.tll_amputation>
-<afflictiondescription.tll_amputation>Most of the tissue of the left leg was torn off.</afflictiondescription.tll_amputation>
-<afflictionname.th_amputation>Traumatic amputation</afflictionname.th_amputation>
-<afflictiondescription.th_amputation>Most of the tissue of the head was torn off.</afflictiondescription.th_amputation>
+<afflictionname.tra_amputation>Traumatische Amputation</afflictionname.tra_amputation>
+<afflictiondescription.tra_amputation>Ein großer Teil des rechten Armes fehlt.</afflictiondescription.tra_amputation>
+<afflictionname.tla_amputation>Traumatische Amputation</afflictionname.tla_amputation>
+<afflictiondescription.tla_amputation>Ein großer Teil des linken Armes fehlt.</afflictiondescription.tla_amputation>
+<afflictionname.trl_amputation>Traumatische Amputation</afflictionname.trl_amputation>
+<afflictiondescription.trl_amputation>Ein großer Teil des rechten Beines fehlt.</afflictiondescription.trl_amputation>
+<afflictionname.tll_amputation>Traumatische Amputation</afflictionname.tll_amputation>
+<afflictiondescription.tll_amputation>Ein großer Teil des linken Beines fehlt.</afflictiondescription.tll_amputation>
+<afflictionname.th_amputation>Traumatische Amputation</afflictionname.th_amputation>
+<afflictiondescription.th_amputation>Ein großer Teil des Kopfes fehlt.</afflictiondescription.th_amputation>
 
 <afflictionname.sra_amputation>Amputation</afflictionname.sra_amputation>
-<afflictiondescription.sra_amputation>The right arm was surgically amputated.</afflictiondescription.sra_amputation>
+<afflictiondescription.sra_amputation>Der rechte Arm wurde operative amputiert.</afflictiondescription.sra_amputation>
 <afflictionname.sla_amputation>Amputation</afflictionname.sla_amputation>
-<afflictiondescription.sla_amputation>The left arm was surgically amputated.</afflictiondescription.sla_amputation>
+<afflictiondescription.sla_amputation>Der linke Arm wurde operative amputiert.</afflictiondescription.sla_amputation>
 <afflictionname.srl_amputation>Amputation</afflictionname.srl_amputation>
-<afflictiondescription.srl_amputation>The right leg was surgically amputated.</afflictiondescription.srl_amputation>
+<afflictiondescription.srl_amputation>Das rechte Bein wurde operative amputiert.</afflictiondescription.srl_amputation>
 <afflictionname.sll_amputation>Amputation</afflictionname.sll_amputation>
-<afflictiondescription.sll_amputation>The left leg was surgically amputated.</afflictiondescription.sll_amputation>
+<afflictiondescription.sll_amputation>Das linke Bein wurde operative amputiert.</afflictiondescription.sll_amputation>
 <afflictionname.sh_amputation>Amputation</afflictionname.sh_amputation>
-<afflictiondescription.sh_amputation>The head was surgically amputated.</afflictiondescription.sh_amputation>
+<afflictiondescription.sh_amputation>Der Kopf wurde operative amputiert.</afflictiondescription.sh_amputation>
 
-<afflictionname.t_paralysis>Spinal cord injury</afflictionname.t_paralysis>
-<afflictiondescription.t_paralysis>The patient is paralyzed and does not feel the body.</afflictiondescription.t_paralysis>
-<afflictioncauseofdeath.t_paralysis>Died of paralysis</afflictioncauseofdeath.t_paralysis>
-<afflictioncauseofdeathself.t_paralysis>You have died of paralysis.</afflictioncauseofdeathself.t_paralysis>
+<afflictionname.t_paralysis>Rückenmarkverletzung</afflictionname.t_paralysis>
+<afflictiondescription.t_paralysis>Der Patient ist paralysiert und fühlt seinen Körper nicht.</afflictiondescription.t_paralysis>
+<afflictioncauseofdeath.t_paralysis>Tod durch Paralyse</afflictioncauseofdeath.t_paralysis>
+<afflictioncauseofdeathself.t_paralysis>Du bist an einer Paralyse gestorben.</afflictioncauseofdeathself.t_paralysis>
 
 
 
-<afflictionname.dislocation1>Dislocation</afflictionname.dislocation1>
-<afflictiondescription.dislocation1>The joint isn't supposed to bend this way...</afflictiondescription.dislocation1>
-<afflictionname.dislocation2>Dislocation</afflictionname.dislocation2>
-<afflictiondescription.dislocation2>The joint isn't supposed to bend this way...</afflictiondescription.dislocation2>
-<afflictionname.dislocation3>Dislocation</afflictionname.dislocation3>
-<afflictiondescription.dislocation3>The joint isn't supposed to bend this way...</afflictiondescription.dislocation3>
-<afflictionname.dislocation4>Dislocation</afflictionname.dislocation4>
-<afflictiondescription.dislocation4>The joint isn't supposed to bend this way...</afflictiondescription.dislocation4>
+<afflictionname.dislocation1>Dislokation</afflictionname.dislocation1>
+<afflictiondescription.dislocation1>Das Gelenk sollte sicht nicht in diese Richtung biegen...</afflictiondescription.dislocation1>
+<afflictionname.dislocation2>Dislokation</afflictionname.dislocation2>
+<afflictiondescription.dislocation2>Das Gelenk sollte sicht nicht in diese Richtung biegen...</afflictiondescription.dislocation2>
+<afflictionname.dislocation3>Dislokation</afflictionname.dislocation3>
+<afflictiondescription.dislocation3>Das Gelenk sollte sicht nicht in diese Richtung biegen...</afflictiondescription.dislocation3>
+<afflictionname.dislocation4>Dislokation</afflictionname.dislocation4>
+<afflictiondescription.dislocation4>Das Gelenk sollte sicht nicht in diese Richtung biegen...</afflictiondescription.dislocation4>
 
-<afflictionname.ll_arterialcut>Femoral artery bleeding</afflictionname.ll_arterialcut>
-<afflictiondescription.ll_arterialcut>An artery has been damaged and is causing severe bloodloss.</afflictiondescription.ll_arterialcut>
-<afflictionname.rl_arterialcut>Femoral artery bleeding</afflictionname.rl_arterialcut>
-<afflictiondescription.rl_arterialcut>An artery has been damaged and is causing severe bloodloss.</afflictiondescription.rl_arterialcut>
-<afflictionname.la_arterialcut>Brachial artery bleeding</afflictionname.la_arterialcut>
-<afflictiondescription.la_arterialcut>An artery has been damaged and is causing severe bloodloss.</afflictiondescription.la_arterialcut>
-<afflictionname.ra_arterialcut>Brachial artery bleeding</afflictionname.ra_arterialcut>
-<afflictiondescription.ra_arterialcut>An artery has been damaged and is causing severe bloodloss.</afflictiondescription.ra_arterialcut>
-<afflictionname.t_arterialcut>Aortic rupture</afflictionname.t_arterialcut>
-<afflictionname.h_arterialcut>Carotid artery bleeding</afflictionname.h_arterialcut>
-<afflictiondescription.h_arterialcut>An artery has been damaged and is causing severe bloodloss.</afflictiondescription.h_arterialcut>
+<afflictionname.ll_arterialcut>Oberschenkelarterienblutung</afflictionname.ll_arterialcut>
+<afflictiondescription.ll_arterialcut>Eine Arterie wurde beschädigt und blutet extrem stark.</afflictiondescription.ll_arterialcut>
+<afflictionname.rl_arterialcut>Oberschenkelarterienblutung</afflictionname.rl_arterialcut>
+<afflictiondescription.rl_arterialcut>Eine Arterie wurde beschädigt und blutet extrem stark.</afflictiondescription.rl_arterialcut>
+<afflictionname.la_arterialcut>Brachiale Arterienblutung</afflictionname.la_arterialcut>
+<afflictiondescription.la_arterialcut>Eine Arterie wurde beschädigt und blutet extrem stark.</afflictiondescription.la_arterialcut>
+<afflictionname.ra_arterialcut>Brachiale Arterienblutung</afflictionname.ra_arterialcut>
+<afflictiondescription.ra_arterialcut>Eine Arterie wurde beschädigt und blutet extrem stark.</afflictiondescription.ra_arterialcut>
+<afflictionname.t_arterialcut>Aortaruptur</afflictionname.t_arterialcut>
+<afflictionname.h_arterialcut>Halsschlagarderblutung</afflictionname.h_arterialcut>
+<afflictiondescription.h_arterialcut>Eine Arterie wurde beschädigt und blutet extrem stark.</afflictiondescription.h_arterialcut>
 
-<afflictionname.suturedw>Stitched wound</afflictionname.suturedw>
-<afflictiondescription.suturedw>Wounds have been sutured shut.</afflictiondescription.suturedw>
+<afflictionname.suturedw>Genähte Wunde</afflictionname.suturedw>
+<afflictiondescription.suturedw>Die Wunde wurde zugenäht.</afflictiondescription.suturedw>
 
-<afflictionname.immunity>Immunity</afflictionname.immunity>
+<afflictionname.immunity>Immunität</afflictionname.immunity>
 <afflictiondescription.immunity></afflictiondescription.immunity>
 
-<afflictionname.infectedwound>Infected wound</afflictionname.infectedwound>
+<afflictionname.infectedwound>Infizierte Wunde</afflictionname.infectedwound>
 <afflictiondescription.infectedwound></afflictiondescription.infectedwound>
 
-<afflictionname.sepsis>Sepsis</afflictionname.sepsis>
+<afflictionname.sepsis>Blutvergiftung</afflictionname.sepsis>
 <afflictiondescription.sepsis></afflictiondescription.sepsis>
 
-<afflictionname.necrosis>Necrosis</afflictionname.necrosis>
+<afflictionname.necrosis>Nekrose</afflictionname.necrosis>
 <afflictiondescription.necrosis></afflictiondescription.necrosis>
-<afflictioncauseofdeath.necrosis>Died from a necrotic wound.</afflictioncauseofdeath.necrosis>
-<afflictioncauseofdeathself.necrosis>You have died from necrosis.</afflictioncauseofdeathself.necrosis>
+<afflictioncauseofdeath.necrosis>Tod durch eine nekrotische Wunde</afflictioncauseofdeath.necrosis>
+<afflictioncauseofdeathself.necrosis>Du bist an einer Nekrose gestorben.</afflictioncauseofdeathself.necrosis>
 
-<afflictionname.gangrene>Gangrene</afflictionname.gangrene>
-<afflictiondescription.gangrene>The extremity has shrinked and turned black.</afflictiondescription.gangrene>
+<afflictionname.gangrene>Gangrän</afflictionname.gangrene>
+<afflictiondescription.gangrene>Die Gliedmaße ist geschrumpft und schwarz.</afflictiondescription.gangrene>
 
-<afflictionname.afadrenaline>Adrealine</afflictionname.afadrenaline>
+<afflictionname.afadrenaline>Adrenalin</afflictionname.afadrenaline>
 <afflictiondescription.afadrenaline></afflictiondescription.afadrenaline>
 
-<afflictionname.afsaline>Saline</afflictionname.afsaline>
+<afflictionname.afsaline>Kochsalzlösung</afflictionname.afsaline>
 <afflictiondescription.afsaline></afflictiondescription.afsaline>
 
-<afflictionname.afringerssolution>Ringer's solution</afflictionname.afringerssolution>
+<afflictionname.afringerssolution>Ringerlösung</afflictionname.afringerssolution>
 <afflictiondescription.afringerssolution></afflictiondescription.afringerssolution>
 
 <afflictionname.afmannitol>Mannitol</afflictionname.afmannitol>
 <afflictiondescription.afmannitol></afflictiondescription.afmannitol>
 
-<afflictionname.afantibiotics>Antibiotics</afflictionname.afantibiotics>
+<afflictionname.afantibiotics>Antibiotika</afflictionname.afantibiotics>
 <afflictiondescription.afantibiotics></afflictiondescription.afantibiotics>
 
-<afflictionname.hemotransfusionshock>Hemotransfusion shock</afflictionname.hemotransfusionshock>
+<afflictionname.hemotransfusionshock>Blutransfusionsschock</afflictionname.hemotransfusionshock>
 <afflictiondescription.hemotransfusionshock></afflictiondescription.hemotransfusionshock>
 
-<afflictionname.foreignbody>Foreign body</afflictionname.foreignbody>
+<afflictionname.foreignbody>Fremder Körper</afflictionname.foreignbody>
 <afflictiondescription.foreignbody></afflictiondescription.foreignbody>
 
-<afflictionname.tamponade>Cardiac tamponade</afflictionname.tamponade>
+<afflictionname.tamponade>Herztamponade</afflictionname.tamponade>
 <afflictiondescription.tamponade></afflictiondescription.tamponade>
 
-<afflictionname.internalbleeding>Internal bleeding</afflictionname.internalbleeding>
+<afflictionname.internalbleeding>Interne Blutung</afflictionname.internalbleeding>
 <afflictiondescription.internalbleeding></afflictiondescription.internalbleeding>
 
 <!-- /// symptoms /// -->
 
-<afflictionname.sym_cough>Cough</afflictionname.sym_cough>
-<afflictiondescription.sym_cough>The patient is coughing periodically.</afflictiondescription.sym_cough>
+<afflictionname.sym_cough>Husten</afflictionname.sym_cough>
+<afflictiondescription.sym_cough>Der Patient hustet periodisch.</afflictiondescription.sym_cough>
 
-<afflictionname.sym_paleskin>Pale skin</afflictionname.sym_paleskin>
-<afflictiondescription.sym_paleskin>The patients skin is pale.</afflictiondescription.sym_paleskin>
+<afflictionname.sym_paleskin>Blasse Haut</afflictionname.sym_paleskin>
+<afflictiondescription.sym_paleskin>Die Haut des Patienten ist blass.</afflictiondescription.sym_paleskin>
 
-<afflictionname.sym_lightheadedness>Lightheadedness</afflictionname.sym_lightheadedness>
-<afflictiondescription.sym_lightheadedness>The patient is expressing lightheadedness.</afflictiondescription.sym_lightheadedness>
+<afflictionname.sym_lightheadedness>Benommenheit</afflictionname.sym_lightheadedness>
+<afflictiondescription.sym_lightheadedness>Der Patient wirkt benommen.</afflictiondescription.sym_lightheadedness>
 
-<afflictionname.sym_blurredvision>Blurred vision</afflictionname.sym_blurredvision>
-<afflictiondescription.sym_blurredvision>The patient is expressing blurred vision.</afflictiondescription.sym_blurredvision>
+<afflictionname.sym_blurredvision>Verschwommene Sicht</afflictionname.sym_blurredvision>
+<afflictiondescription.sym_blurredvision>Der Patient gibt an, er sehe verschwommen.</afflictiondescription.sym_blurredvision>
 
-<afflictionname.sym_confusion>Confusion</afflictionname.sym_confusion>
-<afflictiondescription.sym_confusion>The patient seems disoriented and confused.</afflictiondescription.sym_confusion>
+<afflictionname.sym_confusion>Verwirrung</afflictionname.sym_confusion>
+<afflictiondescription.sym_confusion>Der Patient wirk desorientiert und verwirrt.</afflictiondescription.sym_confusion>
 
-<afflictionname.sym_headache>Headache</afflictionname.sym_headache>
-<afflictiondescription.sym_headache>The patient is expressing a headache.</afflictiondescription.sym_headache>
+<afflictionname.sym_headache>Kopfschmerzen</afflictionname.sym_headache>
+<afflictiondescription.sym_headache>Der Patient gibt an, Kopfschmerzen zu haben.</afflictiondescription.sym_headache>
 
-<afflictionname.sym_legswelling>Leg swelling</afflictionname.sym_legswelling>
-<afflictiondescription.sym_legswelling>The patients legs are swollen.</afflictiondescription.sym_legswelling>
+<afflictionname.sym_legswelling>Geschwollenes Bein</afflictionname.sym_legswelling>
+<afflictiondescription.sym_legswelling>Die Beine des Patienten sind geschwollen.</afflictiondescription.sym_legswelling>
 
-<afflictionname.sym_weakness>Weakness</afflictionname.sym_weakness>
-<afflictiondescription.sym_weakness>The patient is expressing weakness in the extremities.</afflictiondescription.sym_weakness>
+<afflictionname.sym_weakness>Schwäche</afflictionname.sym_weakness>
+<afflictiondescription.sym_weakness>Der Patient gibt an, er fühle sich schwach.</afflictiondescription.sym_weakness>
 
-<afflictionname.sym_wheezing>Wheezing</afflictionname.sym_wheezing>
-<afflictiondescription.sym_wheezing>The patients breathing is producing a high-pitched noise.</afflictiondescription.sym_wheezing>
+<afflictionname.sym_wheezing>Keuchen</afflictionname.sym_wheezing>
+<afflictiondescription.sym_wheezing>Beim atmen kommt ein hohes Geräusch aus dem Patienten.</afflictiondescription.sym_wheezing>
 
-<afflictionname.sym_vomiting>Vomiting</afflictionname.sym_vomiting>
-<afflictiondescription.sym_vomiting>The patient is vomiting periodically.</afflictiondescription.sym_vomiting>
+<afflictionname.sym_vomiting>Erbrechen</afflictionname.sym_vomiting>
+<afflictiondescription.sym_vomiting>Der Patient muss sich periodisch übergeben.</afflictiondescription.sym_vomiting>
 
-<afflictionname.sym_hematemesis>Vomiting blood</afflictionname.sym_hematemesis>
-<afflictiondescription.sym_hematemesis>The patient is vomiting blood periodically.</afflictiondescription.sym_hematemesis>
+<afflictionname.sym_hematemesis>Bluterbrechen</afflictionname.sym_hematemesis>
+<afflictiondescription.sym_hematemesis>Der Patient erbricht periodisch Blut.</afflictiondescription.sym_hematemesis>
 
-<afflictionname.fever>Fever</afflictionname.fever>
-<afflictiondescription.fever>The patients body temperature is elevated.</afflictiondescription.fever>
+<afflictionname.fever>Fieber</afflictionname.fever>
+<afflictiondescription.fever>Die Körpertemperatur des Patienten ist erhöht.</afflictiondescription.fever>
 
-<afflictionname.sym_abdomdiscomfort>Abdominal discomfort</afflictionname.sym_abdomdiscomfort>
-<afflictiondescription.sym_abdomdiscomfort>The patient is expressing abdominal discomfort.</afflictiondescription.sym_abdomdiscomfort>
+<afflictionname.sym_abdomdiscomfort>Magenverstimmungen</afflictionname.sym_abdomdiscomfort>
+<afflictiondescription.sym_abdomdiscomfort>Der Patient gibt an, sein Bauch fühle sich komisch an.</afflictiondescription.sym_abdomdiscomfort>
 
-<afflictionname.sym_bloating>Bloating</afflictionname.sym_bloating>
-<afflictiondescription.sym_bloating>The patients abdomen is bloated.</afflictiondescription.sym_bloating>
+<afflictionname.sym_bloating>Aufgebläht</afflictionname.sym_bloating>
+<afflictiondescription.sym_bloating>Der Bauch des Patienten ist aufgebläht.</afflictiondescription.sym_bloating>
 
-<afflictionname.sym_jaundice>Jaundice</afflictionname.sym_jaundice>
-<afflictiondescription.sym_jaundice>The patients skin has turned a sickly shade of yellow.</afflictiondescription.sym_jaundice>
+<afflictionname.sym_jaundice>Gelbsucht</afflictionname.sym_jaundice>
+<afflictiondescription.sym_jaundice>Die Haut des Patienten sieht krankhaft gelb aus.</afflictiondescription.sym_jaundice>
 
-<afflictionname.sym_sweating>Sweating</afflictionname.sym_sweating>
-<afflictiondescription.sym_sweating>The patient is sweating excessively.</afflictiondescription.sym_sweating>
+<afflictionname.sym_sweating>Schwitzen</afflictionname.sym_sweating>
+<afflictiondescription.sym_sweating>Der Patienten ist stark am schwitzen.</afflictiondescription.sym_sweating>
 
-<afflictionname.sym_palpitations>Palpitations</afflictionname.sym_palpitations>
-<afflictiondescription.sym_palpitations>The patient is expressing palpitations.</afflictiondescription.sym_palpitations>
+<afflictionname.sym_palpitations>Herzklopfen</afflictionname.sym_palpitations>
+<afflictiondescription.sym_palpitations>Der Patient gibt an, er nehme seinen eigenen Herzschlag als sehr heftig wahr.</afflictiondescription.sym_palpitations>
 
-<afflictionname.sym_unconsciousness>Unconsciousness</afflictionname.sym_unconsciousness>
-<afflictiondescription.sym_unconsciousness>The patient is unconscious.</afflictiondescription.sym_unconsciousness>
+<afflictionname.sym_unconsciousness>Bewusslosigkeit</afflictionname.sym_unconsciousness>
+<afflictiondescription.sym_unconsciousness>Der Patient ist bewusstlos.</afflictiondescription.sym_unconsciousness>
 
-<afflictionname.inflammation>Inflammation</afflictionname.inflammation>
-<afflictiondescription.inflammation>The area is red, swollen and warm.</afflictiondescription.inflammation>
+<afflictionname.inflammation>Entzündung</afflictionname.inflammation>
+<afflictiondescription.inflammation>Der Bereich ist rot, geschwollen und warm.</afflictiondescription.inflammation>
 
-<afflictionname.spasm>Spasm</afflictionname.spasm>
-<afflictiondescription.spasm>The patient can't control the erratic behaviour of the limb.</afflictiondescription.spasm>
+<afflictionname.spasm>Zuckung</afflictionname.spasm>
+<afflictiondescription.spasm>Der Patient kann die Bewegungen der Gliedmaße nicht kontrollieren.</afflictiondescription.spasm>
 
-<afflictionname.sym_craving>Craving</afflictionname.sym_craving>
-<afflictiondescription.sym_craving>The patient is happy enough... so long as they get what they need.</afflictiondescription.sym_craving>
+<afflictionname.sym_craving>Verlangen</afflictionname.sym_craving>
+<afflictiondescription.sym_craving>Der Patient ist glücklich... so lange sie bekommen was sie brauchen.</afflictiondescription.sym_craving>
 
-<afflictionname.onfire>On fire!</afflictionname.onfire>
-<afflictiondescription.onfire>The patient is burning alive! Grab an extinguisher!</afflictiondescription.onfire>
+<afflictionname.onfire>In Flammen!</afflictionname.onfire>
+<afflictiondescription.onfire>Der Patient verbrennt an lebendigem Leib! Holt einen Feuerlöscher!</afflictiondescription.onfire>
 
-<afflictionname.pain_chest>Chest pain</afflictionname.pain_chest>
-<afflictiondescription.pain_chest>The patient is expressing sharp, piercing pain in their chest.</afflictiondescription.pain_chest>
+<afflictionname.pain_chest>Brustschmerzen</afflictionname.pain_chest>
+<afflictiondescription.pain_chest>Der Patient gibt an, er habe starke, stechende Schmerzen im Brutstbereich.</afflictiondescription.pain_chest>
 
-<afflictionname.pain_abdominal>Abdominal pain</afflictionname.pain_abdominal>
-<afflictiondescription.pain_abdominal>The patient is expressing persistent pain in their abdomen.</afflictiondescription.pain_abdominal>
+<afflictionname.pain_abdominal>Mauchschmerzen</afflictionname.pain_abdominal>
+<afflictiondescription.pain_abdominal>Der Patient gibt an, er habe Schmerzen im Bauchbereich.</afflictiondescription.pain_abdominal>
 
-<afflictionname.pain_extremity>Intense pain</afflictionname.pain_extremity>
-<afflictiondescription.pain_extremity>The patient is expressing intense pain in the affected area.</afflictiondescription.pain_extremity>
+<afflictionname.pain_extremity>Starke Schmerzen</afflictionname.pain_extremity>
+<afflictiondescription.pain_extremity>Der Patient gibt an, er habe starke schmerzen im betroffenen Bereich.</afflictiondescription.pain_extremity>
 
-<afflictionname.sym_nausea>Nausea</afflictionname.sym_nausea>
-<afflictiondescription.sym_nausea>The skin is clammy and the patient is nauseous.</afflictiondescription.sym_nausea>
+<afflictionname.sym_nausea>Übelkeit</afflictionname.sym_nausea>
+<afflictiondescription.sym_nausea>Der Patient gibt an, er fühle sich schlecht und als ob er sich gleich übergeben müsste.</afflictiondescription.sym_nausea>
 
 
-<afflictionname.traumaticshock>Traumatic shock</afflictionname.traumaticshock>
-<afflictiondescription.traumaticshock>The patient experiences severe pain and stress.</afflictiondescription.traumaticshock>
+<afflictionname.traumaticshock>Traumatischer Schock</afflictionname.traumaticshock>
+<afflictiondescription.traumaticshock>Der Patient ist wach! Er erfährt extreme Angst, intensive Stress und befindet sich in einem Schockzustand. Beende die Operation, sofort!</afflictiondescription.traumaticshock>
   
-<afflictionname.analgesia>Analgesia</afflictionname.analgesia>
-<afflictiondescription.analgesia>Insensitivity to pain.</afflictiondescription.analgesia>
+<afflictionname.analgesia>Analgesie</afflictionname.analgesia>
+<afflictiondescription.analgesia>Der Patient ist schmerzunempfindlich.</afflictiondescription.analgesia>
 
-<afflictionname.anesthesia>Anesthesia</afflictionname.anesthesia>
-<afflictiondescription.anesthesia>The patient has drug-induced amnesia and sedation.</afflictiondescription.anesthesia>
+<afflictionname.anesthesia>Vollnarkose</afflictionname.anesthesia>
+<afflictiondescription.anesthesia>Der Patient befindet sich in einer medikamentösen Narkose.</afflictiondescription.anesthesia>
 
 <!-- /// Surgery /// -->
 
-<afflictionname.surgeryincision>Surgery incision</afflictionname.surgeryincision>
-<afflictiondescription.surgeryincision>The patient has been cut open.</afflictiondescription.surgeryincision>
+<afflictionname.surgeryincision>Operative Inzision</afflictionname.surgeryincision>
+<afflictiondescription.surgeryincision>Ein Skalpelschnitt.</afflictiondescription.surgeryincision>
+  
+<afflictionname.clampedbleeders>Abgeklemmte Blutungen</afflictionname.clampedbleeders>
+<afflictiondescription.clampedbleeders>Blutungen die durch den Eingriff entstanden sind wurden gehemmt.</afflictiondescription.clampedbleeders>
 
-<afflictionname.clampedbleeders>Clamped bleeding</afflictionname.clampedbleeders>
-<afflictiondescription.clampedbleeders>Bleeding caused by the incision has been stopped.</afflictiondescription.clampedbleeders>
+<afflictionname.retractedskin>Zurückgezogene Haut</afflictionname.retractedskin>
+<afflictiondescription.retractedskin>Die Haut wurde durch Hautretraktoren zurückgezogen.</afflictiondescription.retractedskin>
 
-<afflictionname.retractedskin>Retracted skin</afflictionname.retractedskin>
-<afflictiondescription.retractedskin>The skin is being held open by a set of retractors.</afflictiondescription.retractedskin>
+<afflictionname.drilledbones>Aufgebohrte Knochen</afflictionname.drilledbones>
+<afflictiondescription.drilledbones>Die Knochen wurden für eine orthopädische Prozedur vorbereitet.</afflictiondescription.drilledbones>
 
-<afflictionname.drilledbones>Drilled bones</afflictionname.drilledbones>
-<afflictiondescription.drilledbones>The bones have been prepared for orthopedic procedures.</afflictiondescription.drilledbones>
+<afflictionname.suturedi>Genähte Inzision</afflictionname.suturedi>
+<afflictiondescription.suturedi>Die Inzision wurde zugenäht.</afflictiondescription.suturedi>
 
-<afflictionname.suturedi>Stitched incision</afflictionname.suturedi>
-<afflictiondescription.suturedi>An incision has been closed via sutures.</afflictiondescription.suturedi>
-
-<afflictionname.bonecut>Bones Sawed</afflictionname.bonecut>
-<afflictiondescription.bonecut>The bone has been severed.</afflictiondescription.bonecut>
+<afflictionname.bonecut>Gesägte Knochen</afflictionname.bonecut>
+<afflictiondescription.bonecut>Der Knochen wurde durchgesägt.</afflictiondescription.bonecut>
 
 </infotexts>
