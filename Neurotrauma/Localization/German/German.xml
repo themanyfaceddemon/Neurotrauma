@@ -265,141 +265,141 @@ Kann spenden an: AB+</entitydescription.abpluscard>
 
 <!-- /// Heart /// -->
 
-<afflictionname.tachycardia>Increased heartrate</afflictionname.tachycardia>
-<afflictiondescription.tachycardia>The heart is beating in an alarmingly rapid fashion.</afflictiondescription.tachycardia>
+<afflictionname.tachycardia>Erhöhte Herzfrequenz</afflictionname.tachycardia>
+<afflictiondescription.tachycardia>Das Herz schlägt alamierend schnell.</afflictiondescription.tachycardia>
 
-<afflictionname.cardiacarrest>Cardiac arrest</afflictionname.cardiacarrest>
-<afflictiondescription.cardiacarrest>No pulse.</afflictiondescription.cardiacarrest>
+<afflictionname.cardiacarrest>Herzstillstand</afflictionname.cardiacarrest>
+<afflictiondescription.cardiacarrest>Kein Puls.</afflictiondescription.cardiacarrest>
 
-<afflictionname.heartattack>Heart attack</afflictionname.heartattack>
+<afflictionname.heartattack>Herzinfarkt</afflictionname.heartattack>
 <afflictiondescription.heartattack></afflictiondescription.heartattack>
 
-<afflictionname.heartdamage>Heart damage</afflictionname.heartdamage>
+<afflictionname.heartdamage>Herzschaden</afflictionname.heartdamage>
 <afflictiondescription.heartdamage></afflictiondescription.heartdamage>
 
-<afflictionname.heartfailure>Heart failure</afflictionname.heartfailure>
+<afflictionname.heartfailure>Herzversagen</afflictionname.heartfailure>
 <afflictiondescription.heartfailure></afflictiondescription.heartfailure>
 
-<afflictionname.heartremoved>Heart removed</afflictionname.heartremoved>
-<afflictiondescription.heartremoved>The heart has been surgically removed.</afflictiondescription.heartremoved>
+<afflictionname.heartremoved>Herz entfernt</afflictionname.heartremoved>
+<afflictiondescription.heartremoved>Das Herz wurde operative entnommen.</afflictiondescription.heartremoved>
 
 <!-- /// Brain /// -->
 
 <afflictionname.cerebralhypoxia>Neurotrauma</afflictionname.cerebralhypoxia>
 <afflictiondescription.cerebralhypoxia></afflictiondescription.cerebralhypoxia>
-<afflictioncauseofdeath.cerebralhypoxia>Death by neurotrauma</afflictioncauseofdeath.cerebralhypoxia>
-<afflictioncauseofdeathself.cerebralhypoxia>You have died of neurotrauma.</afflictioncauseofdeathself.cerebralhypoxia>
+<afflictioncauseofdeath.cerebralhypoxia>Tod durch Neurotrauma</afflictioncauseofdeath.cerebralhypoxia>
+<afflictioncauseofdeathself.cerebralhypoxia>Du bist an Neurotrauma verstorben.</afflictioncauseofdeathself.cerebralhypoxia>
 
-<afflictionname.stroke>Stroke</afflictionname.stroke>
+<afflictionname.stroke>Schlaganfall</afflictionname.stroke>
 <afflictiondescription.stroke></afflictiondescription.stroke>
 
-<afflictionname.seizure>Seizure</afflictionname.seizure>
+<afflictionname.seizure>Krampfanfall</afflictionname.seizure>
 <afflictiondescription.seizure></afflictiondescription.seizure>
 
-<afflictionname.coma>Coma</afflictionname.coma>
+<afflictionname.coma>Koma</afflictionname.coma>
 <afflictiondescription.coma></afflictiondescription.coma>
 
 <!-- /// Blood /// -->
 
-<afflictionname.bloodpressure>Blood pressure</afflictionname.bloodpressure>
+<afflictionname.bloodpressure>Blutdruck</afflictionname.bloodpressure>
 <afflictiondescription.bloodpressure></afflictiondescription.bloodpressure>
 
-<afflictionname.hypoxemia>Hypoxemia</afflictionname.hypoxemia>
+<afflictionname.hypoxemia>Hypoxie</afflictionname.hypoxemia>
 <afflictiondescription.hypoxemia></afflictiondescription.hypoxemia>
 
 <!-- /// Lungs /// -->
 
-<afflictionname.respiratoryarrest>Respiratory arrest</afflictionname.respiratoryarrest>
-<afflictiondescription.respiratoryarrest>The patient is not breathing.</afflictiondescription.respiratoryarrest>
+<afflictionname.respiratoryarrest>Atemstillstand</afflictionname.respiratoryarrest>
+<afflictiondescription.respiratoryarrest>Der Patient atmet nicht.</afflictiondescription.respiratoryarrest>
 
 <afflictionname.hyperventilation>Hyperventilation</afflictionname.hyperventilation>
-<afflictiondescription.hyperventilation>The patient is breathing at an alarmingly rapid rate.</afflictiondescription.hyperventilation>
+<afflictiondescription.hyperventilation>Der Patient atmet alarmierend schnell.</afflictiondescription.hyperventilation>
 
 <afflictionname.hypoventilation>Hypoventilation</afflictionname.hypoventilation>
-<afflictiondescription.hypoventilation>The patient is breathing at an alarmingly slow rate.</afflictiondescription.hypoventilation>
+<afflictiondescription.hypoventilation>Der Patient atmet alarmierend langsam.</afflictiondescription.hypoventilation>
 
-<afflictionname.dyspnea>Shortness of breath</afflictionname.dyspnea>
-<afflictiondescription.dyspnea>The patients breathing is labored and shallow.</afflictiondescription.dyspnea>
+<afflictionname.dyspnea>Kurzatmigkeit</afflictionname.dyspnea>
+<afflictiondescription.dyspnea>Dem Patienten fällt das Atmen schwer.</afflictiondescription.dyspnea>
 
-<afflictionname.alkalosis>Alkalosis</afflictionname.alkalosis>
+<afflictionname.alkalosis>Alkalose</afflictionname.alkalosis>
 <afflictiondescription.alkalosis></afflictiondescription.alkalosis>
 
-<afflictionname.acidosis>Acidosis</afflictionname.acidosis>
+<afflictionname.acidosis>Azidose</afflictionname.acidosis>
 <afflictiondescription.acidosis></afflictiondescription.acidosis>
 
-<afflictionname.rili>Radiation induced lung injury</afflictionname.rili>
+<afflictionname.rili>Strahlungsbedingte Lungenverletzung</afflictionname.rili>
 <afflictiondescription.rili></afflictiondescription.rili>
 
 <afflictionname.pneumothorax>Pneumothorax</afflictionname.pneumothorax>
 <afflictiondescription.pneumothorax></afflictiondescription.pneumothorax>
 
-<afflictionname.lungdamage>Lung damage</afflictionname.lungdamage>
+<afflictionname.lungdamage>Lungenschaden</afflictionname.lungdamage>
 <afflictiondescription.lungdamage></afflictiondescription.lungdamage>
 
-<afflictionname.lungfailure>Lung failure</afflictionname.lungfailure>
+<afflictionname.lungfailure>Lungenversagen</afflictionname.lungfailure>
 <afflictiondescription.lungfailure></afflictiondescription.lungfailure>
 
-<afflictionname.lungremoved>Lungs removed</afflictionname.lungremoved>
-<afflictiondescription.lungremoved>The lungs have been surgically removed.</afflictiondescription.lungremoved>
+<afflictionname.lungremoved>Lungen entfernt</afflictionname.lungremoved>
+<afflictiondescription.lungremoved>Die Lungen wurden operativ entnommen.</afflictiondescription.lungremoved>
 
 <!-- /// kidneys /// -->
 
-<afflictionname.kidneydamage>Kidney damage</afflictionname.kidneydamage>
+<afflictionname.kidneydamage>Nierenschaden</afflictionname.kidneydamage>
 <afflictiondescription.kidneydamage></afflictiondescription.kidneydamage>
 
-<afflictionname.kidneyfailure>Kidney failure</afflictionname.kidneyfailure>
+<afflictionname.kidneyfailure>Nierenversagen</afflictionname.kidneyfailure>
 <afflictiondescription.kidneyfailure></afflictiondescription.kidneyfailure>
 
-<afflictionname.kidneyremoved>Kidneys removed</afflictionname.kidneyremoved>
-<afflictiondescription.kidneyremoved>The kidneys have been surgically removed.</afflictiondescription.kidneyremoved>
+<afflictionname.kidneyremoved>Nieren entfernt</afflictionname.kidneyremoved>
+<afflictiondescription.kidneyremoved>Die Nieren wurden operative entfernt.</afflictiondescription.kidneyremoved>
 
 <!-- /// bones /// -->
 
-<afflictionname.bonedamage>Bone damage</afflictionname.bonedamage>
+<afflictionname.bonedamage>Knochenschaden</afflictionname.bonedamage>
 <afflictiondescription.bone></afflictiondescription.bone>
 
-<afflictionname.bonedeath>Bone death</afflictionname.bonedeath>
+<afflictionname.bonedeath>Knochentod</afflictionname.bonedeath>
 <afflictiondescription.bonedeath></afflictiondescription.bonedeath>
 
-<afflictionname.bonegrowth>Stimulated bone growth</afflictionname.bonegrowth>
-<afflictiondescription.bonegrowth>Bone regrowth has been stimulated. To cure bone death, this affliction needs to be on every bodypart.</afflictiondescription.bonegrowth>
+<afflictionname.bonegrowth>Stimuliertes Knochenwachstum</afflictionname.bonegrowth>
+<afflictiondescription.bonegrowth>Das Knochenwachstum wurde stimuliert. Um Knochentod zu heilen, muss diese affliction auf jedem Körperteil präsent sein.</afflictiondescription.bonegrowth>
 
 <!-- /// liver /// -->
 
-<afflictionname.liverdamage>Liver damage</afflictionname.liverdamage>
+<afflictionname.liverdamage>Leberschaden</afflictionname.liverdamage>
 <afflictiondescription.liverdamage></afflictiondescription.liverdamage>
 
-<afflictionname.liverfailure>Liver failure</afflictionname.liverfailure>
+<afflictionname.liverfailure>Leberversagen</afflictionname.liverfailure>
 <afflictiondescription.liverfailure></afflictiondescription.liverfailure>
 
 <afflictionname.liverremoved>Liver removed</afflictionname.liverremoved>
-<afflictiondescription.liverremoved>The liver has been surgically removed.</afflictiondescription.liverremoved>
+<afflictiondescription.liverremoved>Die Leber wurde operative entfernt.</afflictiondescription.liverremoved>
 
 <!-- /// surgery and related /// -->
 
-<afflictionname.surgeryincision>Surgery incision</afflictionname.surgeryincision>
-<afflictiondescription.surgeryincision>An incision has been made by a scalpel.</afflictiondescription.surgeryincision>
+<afflictionname.surgeryincision>Operative Inzision</afflictionname.surgeryincision>
+<afflictiondescription.surgeryincision>Ein Skalpelschnitt.</afflictiondescription.surgeryincision>
   
-<afflictionname.clampedbleeders>Clamped bleeding</afflictionname.clampedbleeders>
-<afflictiondescription.clampedbleeders>Surgical bleeders have been staunched.</afflictiondescription.clampedbleeders>
+<afflictionname.clampedbleeders>Abgeklemmte Blutungen</afflictionname.clampedbleeders>
+<afflictiondescription.clampedbleeders>Blutungen die durch den Eingriff entstanden sind wurden gehemmt.</afflictiondescription.clampedbleeders>
 
-<afflictionname.arteriesclamp>Clamped arteries</afflictionname.arteriesclamp>
-<afflictiondescription.arteriesclamp>Bleeding from artery has been stopped, but blood flow to the extremity is severely reduced.</afflictiondescription.arteriesclamp>
+<afflictionname.arteriesclamp>Abgeklemmte Arterien</afflictionname.arteriesclamp>
+<afflictiondescription.arteriesclamp>Die Arterienblutung hat aufgehört, aber der Blutfluss in die Gliedmaße ist stark vermindert.</afflictiondescription.arteriesclamp>
 
-<afflictionname.arteriesclamp5>Ballooned aorta</afflictionname.arteriesclamp5>
-<afflictiondescription.arteriesclamp5>The aorta has stopped bleeding, but bloodflow to your extremities and organs is gone.</afflictiondescription.arteriesclamp5>
+<afflictionname.arteriesclamp5>Stabilisierte Aorta</afflictionname.arteriesclamp5>
+<afflictiondescription.arteriesclamp5>Die Aorta blutet nicht mehr, jedoch fließt auch kein Blut mehr in die Gliedmaßen und Orange.</afflictiondescription.arteriesclamp5>
 
-<afflictionname.boneclamp>Splint</afflictionname.boneclamp>
-<afflictiondescription.boneclamp>Fracture has been splinted.</afflictiondescription.boneclamp>
+<afflictionname.boneclamp>Schiene</afflictionname.boneclamp>
+<afflictiondescription.boneclamp>Die gebrochene Stelle wurde mit einer Schiene versehen.</afflictiondescription.boneclamp>
 
-<afflictionname.bandaged>Bandaged</afflictionname.bandaged>
-<afflictiondescription.bandaged>Protects from infection, stabilizes dislocations and fractures</afflictiondescription.bandaged>
+<afflictionname.bandaged>Bandagiert</afflictionname.bandaged>
+<afflictiondescription.bandaged>Schützt for Infektionen und, stabilisiert Dislokationen und Brüche.</afflictiondescription.bandaged>
 
-<afflictionname.ointmented>Ointment</afflictionname.ointmented>
-<afflictiondescription.ointmented>A layer of antibiotic gel protects and cleans the wound from any germs.</afflictiondescription.ointmented>
+<afflictionname.ointmented>Salbe</afflictionname.ointmented>
+<afflictiondescription.ointmented>Eine Schicht von antibiotischem Gel schützt und reinigt die Wunde.</afflictiondescription.ointmented>
 
-<afflictionname.needlec>Needle</afflictionname.needlec>
-<afflictiondescription.needlec>Normalizes the pressure in the pleural cavity</afflictiondescription.needlec>
+<afflictionname.needlec>Nadel</afflictionname.needlec>
+<afflictiondescription.needlec>Normalisiert den Druck im Brustkorb.</afflictiondescription.needlec>
 
 <!-- fractures, amputations, dislocations and bleeding arteries-->
 <afflictionname.ra_fracture>Fractured right humerus</afflictionname.ra_fracture>
