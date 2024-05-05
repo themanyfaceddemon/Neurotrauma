@@ -45,7 +45,7 @@ body:
         - "Neurotrauma Tutorial Map: Mercy Hospital"
         - "NT Blahaj Plus"
         - "NT Symbiote"
-        - "None"
+        - "No expansions"
     validations:
       required: true
   - type: input
