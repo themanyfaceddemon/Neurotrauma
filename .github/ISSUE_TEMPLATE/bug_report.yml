@@ -11,7 +11,7 @@ body:
       value:  >-
         For help with Neurotrauma, please use [Main page](https://github.com/OlegBSTU/Neurotrauma).
 
-        For general Neurotrauma help and support visit the [Undertow Games: baro-modding channel](https://discord.com/channels/103209684680323072/426913209602146315)
+        For general modding help and support visit the [Undertow Games: baro-modding channel](https://discord.com/channels/103209684680323072/426913209602146315).
   - type: dropdown
     id: lua-version
     attributes:
