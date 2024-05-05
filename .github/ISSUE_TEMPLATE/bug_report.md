@@ -1,21 +1,86 @@
----
-name: Bug report
-about: Create a report to help improve the mod
-title: "[BUG] "
-labels: bug
-assignees: ''
+name: Bug Report
+description: File a bug report
+title: "[Bug]: "
+labels:
+  - '[Status] Triage'
+assignees:
+  - Olegbstu
+body:
+  - type: markdown
+    attributes:
+      value:  >-
+        For help with Neurotrauma, please use [Main page](https://github.com/OlegBSTU/Neurotrauma).
 
----
-
-**Describe the bug**
-Write a descriptive title that explains when my bug happens and what happens.
-
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
-
-**Neurotrauma version and addons in use**
- - Neurotrauma version:
- - Expansions in use and version:
-
-**Additional information**
-More information is usually better than less, and specific information is usually better than general or vague information. The more detail you’re able to give about what happens, and when, the easier it will be to reproduce your bug in a dev environment.
+        For general Neurotrauma help and support visit the [Undertow Games: baro-modding channel](https://discord.com/channels/103209684680323072/426913209602146315)
+  - type: dropdown
+    id: lua-version
+    attributes:
+      label: LuaForBarotrauma version
+      options:
+        - 1.0.91
+        - 1.0.90
+        - 1.0.89
+        - 1.0.88
+        - 1.0.87
+        - 1.0.86
+        - 1.0.85
+        - 1.0.84
+        - 1.0.83
+        - 1.0.82
+        - 1.0.81
+        - 1.0.80
+        - 1.0.79
+    validations:
+      required: true
+  - type: dropdown
+    id: addons-used
+    attributes:
+      label: Expansions in use
+      multiple: true
+      options:
+        - "NT Symbiosis"
+        - "NT Cybernetics"
+        - "NT Pharmacy"
+        - "Curly's NT Surgery Plus Ultra (name Pending)"
+        - "Neurotrauma Tutorial Map: Mercy Hospital"
+        - "NT Blahaj Plus"
+        - "NT Symbiote"
+        - "None"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Neurotrauma Version
+      placeholder: "A1.9.2h1"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log or Crash Report
+      description: >-
+        If you have any logs (`crash.log`, `crash-report<side>-<date>.txt`, etc...)
+        Please upload the entire content in the log(s) to any paste site
+        *Examples:*
+         - [Github Gist](https://gist.github.com/)
+         - [Hastebin](https://hastebin.com/)
+         - [paste.gg](https://paste.gg/)
+         - [Pastebin](https://pastebin.com/)
+         - []
+        Please upload your log (latest.log and/or crash report) to [Github
+        Gist](https://gist.github.com/) then paste the gist url here, you
+        can paste as many links as needed
+      placeholder: 'http://'
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction steps
+      description: How do you trigger this bug? Please walk us through it step by step. Add relevant screenshots if needed.
+      value: |
+        1. Do this
+        2. Do that
+        3. Crash/Bug
+        ...
+    validations:
+      required: true
