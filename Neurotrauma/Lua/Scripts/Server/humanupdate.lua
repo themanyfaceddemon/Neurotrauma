@@ -1103,21 +1103,21 @@ NT.CharStats = {
             c.stats.lockleftleg = c.stats.lockleftarm
             c.stats.lockrightleg = c.stats.lockrightarm
         end
-        -- leg slowdown
+        -- leg and wheelchair slowdown
         if(c.stats.lockleftleg or c.stats.lockrightleg or res) then c.stats.speedmultiplier = c.stats.speedmultiplier*0.5 end
-        -- if(c.stats.lockleftleg and c.stats.lockrightleg) then c.afflictions.stun.strength = math.max(c.afflictions.stun.strength,5) end -- Heelge: finally a force prone symptom at line 775-778
+        local isProne = not NTC.GetSymptomFalse(c.character,"forceprone")
         -- okay climbing ability
-        if(c.stats.lockleftleg and c.stats.lockrightleg and c.character.IsClimbing) then
+        if(isProne and c.character.IsClimbing) then
             c.stats.speedmultiplier = c.stats.speedmultiplier*0.5
             NTC.SetSymptomFalse(c.character,"forceprone",1)
         end
-        -- moving with one arm or 95% slowdown when no arms
-        local onearmProne = not NTC.GetSymptomFalse(c.character,"forceprone") and (c.stats.lockleftarm or c.stats.lockrightarm)
-        if onearmProne then
+        -- moving prone with one arm or 95% slowdown when no arms
+        if isProne and c.stats.lockleftarm and c.stats.lockrightarm then
+            c.stats.speedmultiplier = 0.05
+        elseif isProne and (c.stats.lockleftarm or c.stats.lockrightarm) then
             c.stats.speedmultiplier = c.stats.speedmultiplier*0.8
-            if c.stats.lockleftarm and c.stats.lockrightarm then c.stats.speedmultiplier = 0.05 end
         end
-        -- if legslocked then
+        -- if isProne then
             -- c.character.AnimController.RagdollParams.ColliderHeightFromFloor = 4.0
         -- end - Heelge: collider adjustment scrapped for now, lets wait for proper method in Workshop
         return res
