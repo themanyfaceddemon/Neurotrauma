@@ -18,6 +18,9 @@ Hook.Add("changeFallDamage", "NT.falldamage", function(impactDamage, character, 
     -- dont apply fall damage in water
     if character.InWater then return 0 end
 
+    -- dont apply fall damage when dragged by someone
+    if character.SelectedBy ~= nil then return 0 end
+
     local velocityMagnitude = HF.Magnitude(velocity)
     velocityMagnitude = velocityMagnitude^1.5
 
