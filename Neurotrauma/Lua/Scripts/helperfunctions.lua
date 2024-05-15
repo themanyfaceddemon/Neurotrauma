@@ -466,35 +466,26 @@ function HF.GiveSkillScaled(character,skilltype,amount)
 end
 
 function HF.GiveItem(character,identifier)
-	-- hostside only
-	if Game.IsMultiplayer and CLIENT then return end
-	-- XXX: this is a workaround for a race condition where `Entity.Spawner` is
-	-- initialized after Luatrauma invokes our `<LuaHook>`s.
-	if not Entity.Spawner then
-		-- Reschedule it to run on the next frame... hopefully it will be initialized then
-		Timer.Wait(function()
-			HF.GiveItem(character,identifier)
-		end, 35)
-		return
-	end
-	
-	-- HF.GiveItem is used in items that spawn sound FX items
-	-- we will call a different overload of AddItemToSpawnQueue function 
-	-- with a character.WorldPosition argument instead of Inventory
-	if HF.StartsWith(identifier,"ntsfx_") then
-		-- This needs to be done on the next tick because Barotrauma processes
-		-- the spawn queue before the remove queue, which could result in the
-		-- item container overflowing.
-		Timer.Wait(function()
-			local prefab = ItemPrefab.GetItemPrefab(identifier)
-			Entity.Spawner.AddItemToSpawnQueue(prefab, character.WorldPosition, nil, nil, nil)
-		end,35)
-	else
-		Timer.Wait(function()
-			local prefab = ItemPrefab.GetItemPrefab(identifier)
-			Entity.Spawner.AddItemToSpawnQueue(prefab, character.Inventory, nil, nil, nil, true, true, InvSlotType.Any)
-		end,35)
-	end
+    -- hostside only
+    if Game.IsMultiplayer and CLIENT then return end
+    -- XXX: this is a workaround for a race condition where `Entity.Spawner` is
+    -- initialized after Luatrauma invokes our `<LuaHook>`s.
+    if not Entity.Spawner then
+        -- Reschedule it to run on the next frame... hopefully it will be initialized then
+        Timer.Wait(function()
+            HF.GiveItem(character,identifier)
+        end, 35)
+        return
+    end
+    -- This needs to be done on the next tick because Barotrauma processes
+    -- the spawn queue before the remove queue, which could result in the
+    -- item container overflowing.
+    Timer.Wait(function()
+        local prefab = ItemPrefab.GetItemPrefab(identifier)
+        Entity.Spawner.AddItemToSpawnQueue(prefab, character.WorldPosition, nil, nil, function(item)
+            character.Inventory.TryPutItem(item, nil, {InvSlotType.Any})
+        end)
+    end,35)
 end
 
 function HF.GiveItemAtCondition(character,identifier,condition)
