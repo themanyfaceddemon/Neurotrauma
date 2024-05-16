@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="NT Pharmacy" path="%ModDir%/filelist.xml" corepackage="false" steamworkshopid="2804655816" gameversion="0.17.15.0">
+<contentpackage name="NT Pharmacy" path="%ModDir%/filelist.xml" corepackage="false">
   <None file="%ModDir%/Images/InventoryItemIconAtlas.png" />
   <Afflictions file="%ModDir%/Xml/Afflictions.xml" />
   <Item file="%ModDir%/Xml/items.xml" />
