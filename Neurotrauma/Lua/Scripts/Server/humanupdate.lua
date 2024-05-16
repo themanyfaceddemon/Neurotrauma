@@ -1105,7 +1105,7 @@ NT.CharStats = {
         end
         -- leg and wheelchair slowdown
         if(c.stats.lockleftleg or c.stats.lockrightleg or res) then c.stats.speedmultiplier = c.stats.speedmultiplier*0.5 end
-        local isProne = not NTC.GetSymptomFalse(c.character,"forceprone")
+        local isProne = c.stats.lockleftleg and c.stats.lockrightleg
         -- okay climbing ability
         if(isProne and c.character.IsClimbing) then
             c.stats.speedmultiplier = c.stats.speedmultiplier*0.5
