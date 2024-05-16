@@ -144,10 +144,10 @@
 <entitydescription.ringerssolution>A solution of several salts dissolved in water for the purpose of treating low blood pressure or fluid loss. Isotonic to blood.</entitydescription.ringerssolution>
 
 <entityname.antiseptic>Antiseptic</entityname.antiseptic>
-<!-- <entitydescription.antiseptic></entitydescription.antiseptic> -->
+<entitydescription.antiseptic>Can be used to treat infected wounds using an antiseptic spray.</entitydescription.antiseptic>
 
 <entityname.antisepticspray>Antiseptic spray</entityname.antisepticspray>
-<!-- <entitydescription.antisepticspray></entitydescription.antisepticspray> -->
+<entitydescription.antisepticspray>Used to apply antiseptic to infected wounds.</entitydescription.antisepticspray>
 
 <entityname.propofol>Propofol</entityname.propofol>
 <entitydescription.propofol>A short-acting medication that results in a decreased level of consciousness and a lack of memory for events. Its uses include the starting and maintenance of general anesthesia.</entitydescription.propofol>
