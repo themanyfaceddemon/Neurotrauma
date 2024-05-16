@@ -104,6 +104,7 @@ function NTP.TryCraftPills(chemmaster,user,dontreporterrors)
     -- we had errors, report them and abort
     if #errors > 0 then
         if not dontreporterrors then
+            HF.GiveItem(user,"ntpsfx_chemerror")
             local client = HF.CharacterToClient(user)
             if CLIENT or client ~= nil then
                 local errorstring=TextManager.Get("lua.chemerror.header").Value.."\n"
@@ -134,6 +135,7 @@ function NTP.TryCraftPills(chemmaster,user,dontreporterrors)
         end
     end
 
+    if not dontreporterrors then HF.GiveItem(user,"ntpsfx_chemaccept") end
     return true
 end
 
@@ -207,6 +209,7 @@ Hook.Add("NTP.ChemMaster.makeall", "NTP.ChemMaster.makeall", function (effect, d
             if NTP.TryCraftPills(item,user,dontReportErrors) then
                 recursiveUse(true)
             else
+                HF.GiveItem(user,"ntpsfx_chemfinish")
                 -- craftall finished, remove from craftalls
                 for index, value in ipairs(NTP.ActiveChemCraftalls) do
                     if value == item then

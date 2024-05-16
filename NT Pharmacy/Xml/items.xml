@@ -140,10 +140,10 @@
     <CustomInterface canbeselected="true" allowuioverlap="true">
       <GuiFrame relativesize="0.2,0.2" anchor="CenterRight" pivot="CenterLeft" relativeoffset="0.36,0.001" style="ItemUI" linkuitocomponent="ItemContainer"/>
       <Button text="label.cm_makeone">
-        <StatusEffect type="OnUse"><LuaHook name="NTP.ChemMaster.makeone" /></StatusEffect>
+        <StatusEffect target="This" type="OnUse"><LuaHook name="NTP.ChemMaster.makeone" /></StatusEffect>
       </Button>
       <Button text="label.cm_makeall">
-        <StatusEffect type="OnUse"><LuaHook name="NTP.ChemMaster.makeall" /></StatusEffect>
+        <StatusEffect target="This" type="OnUse"><LuaHook name="NTP.ChemMaster.makeall" /></StatusEffect>
       </Button>
       <TextBox text="label.cm_description" propertyname="OriginalOutpost" maxtextlength="64"/>
     </CustomInterface>
@@ -455,4 +455,44 @@
     </ItemContainer>
   </Item>
 
+  <Item name="." identifier="ntpsfx_chemaccept" description="." hideinmenus="true">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5"/>
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5"/>
+    <ItemComponent capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+      <StatusEffect type="OnSpawn" target="This" disabledeltatime="true" stackable="false">
+        <Sound file="%ModDir%/Sound/chemaccept.ogg" range="400" volume="0.5" />
+      </StatusEffect>
+      <StatusEffect type="always" target="This" disabledeltatime="true" delay="1" stackable="false">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+
+  <Item name="." identifier="ntpsfx_chemerror" description="." hideinmenus="true">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5"/>
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5"/>
+    <ItemComponent capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+      <StatusEffect type="OnSpawn" target="This" disabledeltatime="true" stackable="false">
+        <Sound file="%ModDir%/Sound/chemerror.ogg" range="400" volume="0.5" />
+      </StatusEffect>
+      <StatusEffect type="always" target="This" disabledeltatime="true" delay="1" stackable="false">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+
+  <Item name="." identifier="ntpsfx_chemfinish" description="." hideinmenus="true">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5"/>
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5"/>
+    <ItemComponent capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+      <StatusEffect type="OnSpawn" target="This" disabledeltatime="true" stackable="false">
+        <Sound file="%ModDir%/Sound/chemfinish1.ogg" range="400" volume="0.5" selectionmode="Random" />
+        <Sound file="%ModDir%/Sound/chemfinish2.ogg" />
+        <Sound file="%ModDir%/Sound/chemfinish3.ogg" />
+      </StatusEffect>
+      <StatusEffect type="always" target="This" disabledeltatime="true" delay="1" stackable="false">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
 </Items>
