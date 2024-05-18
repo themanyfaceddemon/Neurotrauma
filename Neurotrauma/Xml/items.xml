@@ -365,8 +365,8 @@
       <Fabricate suitablefabricators="fabricator">
         <RequiredSkill identifier="medical" level="20"/>
         <RequiredSkill identifier="mechanical" level="15"/>
-          <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
-          <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
+        <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
+        <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
       </Fabricate>
       <Deconstruct>
           <Item identifier="zinc" mincondition="0.1" outcondition="0.25"/>
@@ -391,9 +391,9 @@
         <PreferredContainer primary="locker"/>
         <Fabricate suitablefabricators="fabricator">
           <RequiredSkill identifier="medical" level="20"/>
-        <RequiredSkill identifier="mechanical" level="15"/>
-            <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
-            <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
+          <RequiredSkill identifier="mechanical" level="15"/>
+          <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
+          <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
         </Fabricate>
         <Deconstruct>
             <Item identifier="zinc" mincondition="0.1" outcondition="0.25"/>
@@ -507,8 +507,8 @@
     <PreferredContainer primary="toxcontainer" spawnprobability="1"/>
     <PreferredContainer primary="locker"/>
     <Fabricate suitablefabricators="fabricator">
-      <RequiredSkill identifier="medical" level="30"/>
-      <RequiredSkill identifier="mechanical" level="30"/>
+      <RequiredSkill identifier="medical" level="20"/>
+      <RequiredSkill identifier="mechanical" level="15"/>
       <RequiredItem identifier="steel" mincondition="0.25" usecondition="true"/>
       <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
     </Fabricate>
