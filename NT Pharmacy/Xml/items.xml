@@ -495,4 +495,87 @@
       </StatusEffect>
     </ItemComponent>
   </Item>
+  <!-- Courtesy of Dornam's NT pill containers mod -->
+  <Item name="Pill container" identifier="pilltoolbox" category="Equipment" tags="mediumitem,mobilecontainer,tool,toolbox,medical" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.70" fireproof="true" impactsoundtag="impact_metal_heavy" RequireAimToUse="True" description="Pill box with numerous small compartments for holding stacks of pills">
+    <PreferredContainer primary="medcab" />
+    <PreferredContainer secondary="locker" />
+    <Deconstruct time="10">
+      <Item identifier="steel" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="mechanical" level="20" />
+      <Item identifier="steel" amount="2" />
+    </Fabricate>
+    <Price baseprice="25">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="3" />
+    </Price>
+    <Sprite texture="%ModDir%/images/pillbox.png" sourcerect="0,0,59,47" origin="0.5,0.5" depth="0.6" />
+    <Body width="90" height="60" density="20" />
+    <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+      <Attack structuredamage="0" itemdamage="5" targetimpulse="2">
+        <Affliction identifier="blunttrauma" strength="2" />
+        <Affliction identifier="stun" strength="0.6" />
+        <Sound file="Content/Items/Weapons/Smack2.ogg" range="800" />
+      </Attack>
+    </MeleeWeapon>
+    <ItemContainer capacity="24" keepopenwhenequipped="true" movableframe="true">
+      <Containable items="pill,chemalyzer" />
+    </ItemContainer>
+    <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+  </Item>
+  <Item name="Multi-pill bottle" identifier="multi-pillbottle" category="Equipment" tags="smallitem,medical" showcontentsintooltip="true" Scale="0.4" fireproof="true" impactsoundtag="impact_soft" RequireAimToUse="True" description="Pill bottle that holds numberous individual pills">
+    <PreferredContainer primary="medcab" />
+    <PreferredContainer secondary="locker" />
+    <Deconstruct time="10">
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="mechanical" level="20" />
+      <Item identifier="plastic" amount="2" />
+    </Fabricate>
+    <Price baseprice="25">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="3" />
+    </Price>
+    <Sprite texture="%ModDir%/images/multipillbottle.png" sourcerect="0,0,47,72" origin="0.5,0.5" depth="0.6" />
+    <Body width="90" height="60" density="20" />
+    <MeleeWeapon slots="RightHand,LeftHand,Any" controlpose="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+      <Attack structuredamage="0" itemdamage="5" targetimpulse="2">
+        <Affliction identifier="blunttrauma" strength="2" />
+        <Affliction identifier="stun" strength="0.6" />
+        <Sound file="Content/Items/Weapons/Smack2.ogg" range="800" />
+      </Attack>
+    </MeleeWeapon>
+    <ItemContainer capacity="30" MaxStackSize="1" keepopenwhenequipped="true" movableframe="true">
+      <Containable items="pill" />
+    </ItemContainer>
+    <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+  </Item>
+  <Item name="Pill bottle" identifier="pillbottle" category="Equipment" tags="smallitem,medical" showcontentsintooltip="true" Scale="0.4" fireproof="true" impactsoundtag="impact_soft" RequireAimToUse="True" description="Pill bottle that holds several stacks of pills">
+    <PreferredContainer primary="medcab" />
+    <PreferredContainer secondary="locker" />
+    <Deconstruct time="10">
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="mechanical" level="20" />
+      <Item identifier="plastic" amount="2" />
+    </Fabricate>
+    <Price baseprice="25">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="3" />
+    </Price>
+    <Sprite texture="%ModDir%/images/pillbottle.png" sourcerect="0,0,47,72" origin="0.5,0.5" depth="0.6" />
+    <Body width="90" height="60" density="20" />
+    <MeleeWeapon slots="RightHand,LeftHand,Any" controlpose="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+      <Attack structuredamage="0" itemdamage="5" targetimpulse="2">
+        <Affliction identifier="blunttrauma" strength="2" />
+        <Affliction identifier="stun" strength="0.6" />
+        <Sound file="Content/Items/Weapons/Smack2.ogg" range="800" />
+      </Attack>
+    </MeleeWeapon>
+    <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true">
+      <Containable items="pill" />
+    </ItemContainer>
+    <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+  </Item>
+
 </Items>
