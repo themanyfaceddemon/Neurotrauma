@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sounds>
+  <impact_pillbottle file="%ModDir%/Sound/plasticimpact1.ogg" range="500" />
+  <impact_pillbottle file="%ModDir%/Sound/plasticimpact2.ogg" range="500" />
+  <impact_pillbottle file="%ModDir%/Sound/plasticimpact3.ogg" range="500" />
+  <impact_pillbottle file="%ModDir%/Sound/plasticimpact4.ogg" range="500" />
+  <impact_pillbottle file="%ModDir%/Sound/plasticimpact5.ogg" range="500" />
+  <impact_pill file="%ModDir%/Sound/pilldrop1.ogg" range="500" />
+  <impact_tabletpill file="%ModDir%/Sound/tabletpilldrop1.ogg" range="500" />
+  <impact_horsepill file="%ModDir%/Sound/horsepilldrop1.ogg" range="500" />
+  <impact_horsepill file="%ModDir%/Sound/horsepilldrop2.ogg" range="500" />
+</sounds>

@@ -41,6 +41,11 @@
 	<entitydescription.custompill>Who knows what effects this pill could have?</entitydescription.custompill>
 	<entitydescription.custompill_horsepill>Quite big for you to haphazardly shove into your mouth.</entitydescription.custompill_horsepill>
 	<entitydescription.custompill_tablets>It can't be that bad, right?</entitydescription.custompill_tablets>
+
+	<entityname.multi-pillbottle>Prescription Bottle</entityname.multi-pillbottle>
+	<entitydescription.multi-pillbottle>A plastic prescription bottle for storing pills.</entitydescription.multi-pillbottle>
+	<entityname.pillbottle>Advanced Pill Bottle</entityname.pillbottle>
+	<entitydescription.pillbottle>A large plastic bottle used to store various pills. It's fitted with a child proof lid that is impossible to open without medical education. Perfect for keeping grabby hands out of harm's way.</entitydescription.pillbottle>
 	
 	<!-- containers -->
 	<entityname.antidotetoolbox>Antidote container</entityname.antidotetoolbox>

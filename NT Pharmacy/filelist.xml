@@ -3,6 +3,7 @@
   <None file="%ModDir%/Images/InventoryItemIconAtlas.png" />
   <Afflictions file="%ModDir%/Xml/Afflictions.xml" />
   <Item file="%ModDir%/Xml/items.xml" />
+  <Sounds file="%ModDir%/Xml/sounds.xml" />
   <Text file="%ModDir%/Localization/English/English.xml" />
   <Text file="%ModDir%/Localization/Russian/Russian.xml" />
   <Text file="%ModDir%/Localization/Polish/Polish.xml" />
