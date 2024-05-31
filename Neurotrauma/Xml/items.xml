@@ -931,7 +931,7 @@
     <PreferredContainer primary="medcab" minamount="10" maxamount="16" spawnprobability="1"/>
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="3" spawnprobability="0.5"/>
     <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25"/>
-    <Fabricate suitablefabricators="medicalfabricator" amount="4" requiredtime="10">
+    <Fabricate suitablefabricators="medicalfabricator" amount="8" requiredtime="10">
       <RequiredSkill identifier="medical" level="25"/>
       <RequiredItem identifier="aluminium" mincondition="0.25" usecondition="true"/>
       <RequiredItem identifier="organicfiber"/>
@@ -945,12 +945,12 @@
     <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="256,128,128,128"
             depth="0.55" origin="0.5,0.5"/>
     <Body width="65" height="45" density="50"/>
-    <SuitableTreatment identifier="lacerations" suitability="70"/>
-    <SuitableTreatment identifier="bitewounds" suitability="70"/>
-    <SuitableTreatment identifier="explosiondamage" suitability="70"/>
-    <SuitableTreatment identifier="gunshotwound" suitability="70"/>
-    <SuitableTreatment identifier="bleeding" suitability="30"/>
-    <SuitableTreatment identifier="retractedskin" suitability="50"/>
+    <SuitableTreatment identifier="lacerations" suitability="20"/>
+    <SuitableTreatment identifier="bitewounds" suitability="20"/>
+    <SuitableTreatment identifier="explosiondamage" suitability="20"/>
+    <SuitableTreatment identifier="gunshotwound" suitability="20"/>
+    <SuitableTreatment identifier="bleeding" suitability="40"/>
+    <SuitableTreatment identifier="surgeryincision" suitability="100"/>
     <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true"/>
       <StatusEffect type="OnUse" tags="medical" target="This, Limb">

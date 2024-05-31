@@ -13,7 +13,6 @@ AffectedItems = {
 "antidama1", --吗啡
 "antidama2", --芬太尼
 "antibleeding3", --抗生素凝膠
-"paralyzant", -- 麻痹剂
 "propofol", -- 异丙酚
 "mannitol", -- 甘露醇
 "pressuremeds", -- 压力药物
@@ -56,7 +55,8 @@ AffectedItems = {
 "custompill_horsepill", -- 大药丸
 "custompill_tablets", -- 药片
 -- vanilla 原版
-"toyhammer" -- 玩具锤子
+"toyhammer", -- 玩具锤子
+"paralyzant" -- 麻痹剂
 }
 
 --------- Stop editing here ---------
