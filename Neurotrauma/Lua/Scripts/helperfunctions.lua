@@ -775,7 +775,7 @@ function HF.PutItemInsideItem(container,identifier,index)
 end
 
 function HF.CanPerformSurgeryOn(character)
-    return HF.HasAffliction(character,"analgesia",1) or HF.HasAffliction(character,"sym_unconsciousness",0.1)
+    return HF.HasAffliction(character,"analgesia",1) or HF.HasAffliction(character,"sym_unconsciousness",0.1) or HF.HasAffliction(character,"afadrenaline",1)
 end
 
 -- converts thighs, feet, forearms and hands into legs and arms

@@ -776,7 +776,7 @@ NT.Afflictions = {
         or c.stats.withdrawal > 20),2)end
     },
     forceprone={
-        update=function(c,i) c.afflictions[i].strength = HF.BoolToNum(not NTC.GetSymptomFalse(c.character,i) and c.afflictions.sym_unconsciousness.strength<=0 and (NTC.GetSymptom(c.character,i)
+        update=function(c,i) c.afflictions[i].strength = HF.BoolToNum(not NTC.GetSymptomFalse(c.character,i) and c.afflictions.sym_unconsciousness.strength<=0 and not c.character.IsClimbing and (NTC.GetSymptom(c.character,i)
         or (c.stats.lockleftleg and c.stats.lockrightleg and not c.stats.wheelchaired)),2)end
     },
     onwheelchair={
@@ -1048,7 +1048,7 @@ NT.CharStats = {
 
     bloodamount={getter=function(c) return HF.Clamp(100-c.afflictions.bloodloss.strength,0,100) end},
     stasis={getter=function(c) return c.afflictions.stasis.strength>0 end},
-    sedated={getter=function(c) return c.afflictions.analgesia.strength > 0 or c.afflictions.anesthesia.strength > 10 or c.afflictions.drunk.strength > 30 or c.stats.stasis end},
+    sedated={getter=function(c) return c.afflictions.analgesia.strength > 0 or c.afflictions.anesthesia.strength > 10 or c.afflictions.afadrenaline.strength > 0 or c.afflictions.drunk.strength > 30 or c.stats.stasis end},
     withdrawal={getter=function(c) return math.max(
         c.afflictions.opiatewithdrawal.strength,
         c.afflictions.chemwithdrawal.strength,
@@ -1107,12 +1107,10 @@ NT.CharStats = {
         if(c.stats.lockleftleg or c.stats.lockrightleg or res) then c.stats.speedmultiplier = c.stats.speedmultiplier*0.5 end
         local isProne = c.stats.lockleftleg and c.stats.lockrightleg
         -- okay climbing ability
-        if(isProne and c.character.IsClimbing) then
-            c.stats.speedmultiplier = c.stats.speedmultiplier*0.5
-            NTC.SetSymptomFalse(c.character,"forceprone",1)
+        if(isProne and c.character.IsClimbing) then c.stats.speedmultiplier = c.stats.speedmultiplier*0.5
         end
         -- moving prone with one arm or 95% slowdown when no arms
-        if isProne and c.stats.lockleftarm and c.stats.lockrightarm then
+        if (isProne or res) and c.stats.lockleftarm and c.stats.lockrightarm then
             c.stats.speedmultiplier = 0.05
         elseif isProne and (c.stats.lockleftarm or c.stats.lockrightarm) then
             c.stats.speedmultiplier = c.stats.speedmultiplier*0.8
