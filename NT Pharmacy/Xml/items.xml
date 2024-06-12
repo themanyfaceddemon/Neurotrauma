@@ -177,13 +177,13 @@
     <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
       <GuiFrame relativesize="0.2,0.2" anchor="CenterLeft" pivot="BottomLeft" relativeoffset="0.006,-0.05" style="ItemUI" />
       <Button text="label.ca_analyze">
-        <StatusEffect type="OnUse"><LuaHook name="NTP.Chemalyzer.analyze" /></StatusEffect>
+        <StatusEffect target="This" type="OnUse"><LuaHook name="NTP.Chemalyzer.analyze" /></StatusEffect>
       </Button>
       <Button text="label.ca_rename">
-        <StatusEffect type="OnUse"><LuaHook name="NTP.Chemalyzer.rename" /></StatusEffect>
+        <StatusEffect target="This" type="OnUse"><LuaHook name="NTP.Chemalyzer.rename" /></StatusEffect>
       </Button>
       <Button text="missiontype.scanalienruins">
-        <StatusEffect type="OnUse"><LuaHook name="NTP.Chemalyzer.automatic" /></StatusEffect>
+        <StatusEffect target="This" type="OnUse"><LuaHook name="NTP.Chemalyzer.automatic" /></StatusEffect>
       </Button>
       <TextBox text="label.cm_description" propertyname="OriginalOutpost" maxtextlength="64"/>
     </CustomInterface>
@@ -524,7 +524,7 @@
     <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
   </Item>
   <!-- Courtesy of Grass's Pill bottles mod -->
-  <Item name="" identifier="multi-pillbottle" category="Equipment" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="medicalcrate" tags="smallitem,medical,tool" Scale="0.5" showcontentsintooltip="true" waterproof="true" impacttolerance="0.1" impactsoundtag="impact_pillbottle">
+  <Item name="" identifier="pillbottleregular" category="Equipment" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="medicalcrate" tags="smallitem,medical,tool" Scale="0.5" showcontentsintooltip="true" waterproof="true" impacttolerance="0.1" impactsoundtag="impact_pillbottle">
     <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.1" />
     <PreferredContainer secondary="outposttrashcan" amount="1" spawnprobability="0.08" />
     <PreferredContainer primary="medcab" secondary="medcontainer" />
@@ -559,7 +559,7 @@
     </ItemContainer>
     <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
   </Item>
-  <Item name="" identifier="pillbottle" category="Equipment" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="medicalcrate" tags="smallitem,medical,tool,locker,container,securecontainer" HideConditionBar="true" Scale="0.6" waterproof="true" impacttolerance="0.1" impactsoundtag="impact_pillbottle">
+  <Item name="" identifier="pillbottleadvanced" category="Equipment" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="medicalcrate" tags="smallitem,medical,tool,locker,container,securecontainer" HideConditionBar="true" Scale="0.6" waterproof="true" impacttolerance="0.1" impactsoundtag="impact_pillbottle">
     <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.1" />
     <PreferredContainer secondary="outposttrashcan" amount="1" spawnprobability="0.05" />
     <PreferredContainer primary="medcab" secondary="medcontainer" />

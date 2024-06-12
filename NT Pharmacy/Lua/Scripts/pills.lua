@@ -903,32 +903,16 @@ function NTP.RefreshPillDescription(item)
 
     local identifier = item.Prefab.Identifier.Value
     if config.sprite~=nil then identifier="custompill_"..config.sprite end
-    local prefab = ItemPrefab.GetItemPrefab(identifier)
+    local itemposition = item.worldPosition
     local targetinventory = item.ParentInventory
     local targetslot = 0
     if targetinventory ~= nil then targetslot = targetinventory.FindIndex(item) end
 
-
-    local function SpawnFunc(newpillitem,targetinventory)
-        if targetinventory~=nil then
-            targetinventory.TryPutItem(newpillitem, targetslot,true,true,nil)
-        end
-        newpillitem.Description = config.description
-        NTP.SetPillFromConfig(newpillitem,config)
-    end
-
-    if SERVER then
-        item.Drop()
-        Entity.Spawner.AddItemToSpawnQueue(prefab, item.WorldPosition, nil, nil, function(newpillitem)
-            HF.RemoveItem(item)
-            SpawnFunc(newpillitem,targetinventory)
-        end)
-    else
-        -- use client spawn method
-        HF.RemoveItem(item)
-        local newpillitem = Item(prefab, item.WorldPosition)
-        SpawnFunc(newpillitem,targetinventory)
-    end
+    HF.RemoveItem(item)
+    HF.SpawnItemPlusFunction(identifier,function(params)
+        params.item.Description = config.description
+        NTP.SetPillFromConfig(params.item,config)
+    end,nil,targetinventory,targetslot,itemposition)
 end
 
 Hook.Add("NTP.OnPillSpawned", "NTP.OnPillSpawned", function (effect, deltaTime, item, targets, worldPosition)
@@ -946,31 +930,18 @@ Hook.Add("NTP.OnPillSpawned", "NTP.OnPillSpawned", function (effect, deltaTime, 
 
     local config = GetRandomPillConfig()
 
-    local SpawnFunc = function(newpillitem,targetinventory)
-        NTP.SetPillFromConfig(newpillitem,config)
-    end
-
     local identifier = item.Prefab.Identifier.Value
+    local itemposition = item.worldPosition
     if config.sprite~=nil then identifier="custompill_"..config.sprite end
     local prefab = ItemPrefab.GetItemPrefab(identifier)
     local targetinventory = item.ParentInventory
-
-    if SERVER then
-        Entity.Spawner.AddItemToSpawnQueue(prefab, item.WorldPosition, nil, nil, function(newpillitem)
-            HF.RemoveItem(item)
-            if targetinventory~=nil then
-                targetinventory.TryPutItem(newpillitem, nil, {InvSlotType.Any})
-            end
-            SpawnFunc(newpillitem,targetinventory)
-        end)
-    else
-        HF.RemoveItem(item)
-        local newpillitem = Item(prefab, item.WorldPosition)
+    HF.RemoveItem(item)
+    HF.SpawnItemPlusFunction(identifier,function(params)
+        NTP.SetPillFromConfig(params.item,config)
         if targetinventory~=nil then
-            targetinventory.TryPutItem(newpillitem, nil, {InvSlotType.Any})
+            targetinventory.TryPutItem(params.item, nil, {InvSlotType.Any})
         end
-        SpawnFunc(newpillitem,targetinventory)
-    end
+    end,nil,nil,nil,itemposition)
     
 end)
 
