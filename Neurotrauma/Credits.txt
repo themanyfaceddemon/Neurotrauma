@@ -11,3 +11,4 @@ JellyQoo - Korean localization
 MEI - Portuguese localization
 Oskar - Spanish localization
 mefy - Turkish localization
+profole - German localization
