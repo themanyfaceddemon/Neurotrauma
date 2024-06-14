@@ -5,20 +5,21 @@ Hook.Add("NT.medstartercrate.spawn", "NT.medstartercrate.spawn", function(effect
     if item == nil then return end
 
     -- check if the item already got populated before
+    -- got broken somehow and is no longer needed, handled with oneshot="true" for the StatusEffect inside the medstartercrate item that calls this hook on spawn
 
-    local populated = item.HasTag("used")
-    if populated then return end
+    -- local populated = item.HasTag("used")
+    -- if populated then return end
 
     -- add used tag
 
-    local tags = HF.SplitString(item.Tags,",")
-    table.insert(tags,"used")
-    local tagstring = ""
-    for index, value in ipairs(tags) do
-        tagstring = tagstring..value
-        if index < #tags then tagstring=tagstring.."," end
-    end
-    item.Tags = tagstring
+    -- local tags = HF.SplitString(item.Tags,",")
+    -- table.insert(tags,"used")
+    -- local tagstring = ""
+    -- for index, value in ipairs(tags) do
+        -- tagstring = tagstring..value
+        -- if index < #tags then tagstring=tagstring.."," end
+    -- end
+    -- item.Tags = tagstring
 
     -- populate with goodies!!
 
