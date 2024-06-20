@@ -1,7 +1,7 @@
 NTConfig = {Entries={},Expansions={}} -- contains all config options, their default, type, valid ranges, difficulty influence
 
-local configDirectoryPath = Game.SaveFolder.."\\ModConfigs"
-local configFilePath = configDirectoryPath.."\\Neurotrauma.json"
+local configDirectoryPath = Game.SaveFolder.."/ModConfigs"
+local configFilePath = configDirectoryPath.."/Neurotrauma.json"
 
 -- this is the function that gets used in other mods to add their own settings to the config
 function NTConfig.AddConfigOptions(expansion)
