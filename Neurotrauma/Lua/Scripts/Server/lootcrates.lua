@@ -2,6 +2,7 @@
 -- Spawns items inside medstartercrate
 -- Hooks XML Lua event "NT.medstartercrate.spawn" to create medstartercrate items and put them inside it
 Hook.Add("NT.medstartercrate.spawn", "NT.medstartercrate.spawn", function(effect, deltaTime, item, targets, worldPosition)
+    Timer.Wait(function()
     if item == nil then return end
 
     -- check if the item already got populated before
@@ -23,6 +24,8 @@ Hook.Add("NT.medstartercrate.spawn", "NT.medstartercrate.spawn", function(effect
 
     -- populate with goodies!!
 
+    if item.Scale == 0.5 then return end
+    item.Scale = 0.5
     HF.SpawnItemPlusFunction("medtoolbox",function(params)
         HF.SpawnItemPlusFunction("defibrillator",nil,nil,params.item.OwnInventory,0)
         HF.SpawnItemPlusFunction("autocpr",nil,nil,params.item.OwnInventory,1)
@@ -60,5 +63,5 @@ Hook.Add("NT.medstartercrate.spawn", "NT.medstartercrate.spawn", function(effect
 
     HF.SpawnItemPlusFunction("bloodanalyzer",nil,nil,item.OwnInventory,6)
     HF.SpawnItemPlusFunction("healthscanner",nil,nil,item.OwnInventory,7)
-    
+    end,35)
 end)

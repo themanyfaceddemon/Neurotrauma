@@ -1862,7 +1862,7 @@
     </ItemContainer>
     <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
   </Item>
-  <Item name="" identifier="medstartercrate" tags="crate" scale="0.5" linkable="true" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy" waterproof="true" fireproof="true"
+  <Item name="" identifier="medstartercrate" tags="crate" scale="0.4" linkable="true" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy" waterproof="true" fireproof="true"
         description="">
     <Price baseprice="150">
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="8"/>
@@ -1883,7 +1883,8 @@
       <Containable items="medtoolbox,medical,surgerytoolbox" excludeditems="cargoscooter" />
     </ItemContainer>
     <ItemComponent>
-      <StatusEffect type="OnSpawn" target="this" disabledeltatime="true" oneshot="true">
+      <StatusEffect type="OnSpawn" target="This" disabledeltatime="true">
+        <Conditional scale="0.4" />
         <LuaHook name="NT.medstartercrate.spawn" />
       </StatusEffect>
     </ItemComponent>
