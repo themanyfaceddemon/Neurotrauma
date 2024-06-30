@@ -1,5 +1,26 @@
 
 -- Hooks Lua event "character.applyDamage" to cause NT afflictions after attacks depending on the damaging affliction defined here in NT.OnDamagedMethods
+local function getCalculatedConcussionReduction(armor,strength)
+    if armor == nil then return 0 end
+    local reduction = 0
+
+    if armor.HasTag("deepdiving") or armor.HasTag("deepdivinglarge") then
+        local modifiers = armor.GetComponentString("Wearable").DamageModifiers
+        for modifier in modifiers do
+            if string.find(modifier.AfflictionIdentifiers,"concussion") ~= nil then
+                reduction = strength - strength*modifier.DamageMultiplier
+            end
+        end
+    elseif armor.HasTag("smallitem") then
+        local modifiers = armor.GetComponentString("Wearable").DamageModifiers
+        for modifier in modifiers do
+            if string.find(modifier.AfflictionIdentifiers,"concussion") ~= nil then
+                reduction = strength - strength*modifier.DamageMultiplier
+            end
+        end
+	end
+    return reduction
+end
 Hook.Add("character.applyDamage", "NT.ondamaged", function (characterHealth, attackResult, hitLimb)
     
     --print(hitLimb.HealthIndex or hitLimb ~= nil)
@@ -143,8 +164,11 @@ NT.OnDamagedMethods.explosiondamage = function(character,strength,limbtype)
 
     -- head
     if strength >= 1 and limbtype==LimbType.Head then
+        local armor1 = character.Inventory.GetItemInLimbSlot(InvSlotType.OuterClothes)
+        local armor2 = character.Inventory.GetItemInLimbSlot(InvSlotType.Head)
+        local reduceddmg = math.max(10 - getCalculatedConcussionReduction(armor1,10,limbtype) - getCalculatedConcussionReduction(armor2,10,limbtype),0)
         if strength >= 15 and HF.Chance(math.min(strength/60,0.7)) then
-            HF.AddAfflictionResisted(character,"concussion",10) end
+            HF.AddAfflictionResisted(character,"concussion",reduceddmg) end
         if strength >= 15 and HF.Chance(math.min(strength/60,0.7)*NTC.GetMultiplier(character,"anyfracturechance")*NTConfig.Get("NT_fractureChance",1)) then
             NT.BreakLimb(character,limbtype) end
         if strength >= 15 and HF.Chance(math.min(strength/60,0.7)*NTC.GetMultiplier(character,"anyfracturechance")*NTConfig.Get("NT_fractureChance",1)) then
@@ -180,8 +204,11 @@ NT.OnDamagedMethods.bitewounds = function(character,strength,limbtype)
 
     -- head
     if strength >= 1 and limbtype==LimbType.Head then
+        local armor1 = character.Inventory.GetItemInLimbSlot(InvSlotType.OuterClothes)
+        local armor2 = character.Inventory.GetItemInLimbSlot(InvSlotType.Head)
+        local reduceddmg = math.max(10 - getCalculatedConcussionReduction(armor1,10,limbtype) - getCalculatedConcussionReduction(armor2,10,limbtype),0)
         if strength >= 15 and HF.Chance(math.min(strength/60,0.7)) then
-            HF.AddAfflictionResisted(character,"concussion",10) end
+            HF.AddAfflictionResisted(character,"concussion",reduceddmg) end
         if strength >= 15 and HF.Chance(math.min((strength-10)/60,0.7)*NTC.GetMultiplier(character,"anyfracturechance")*NTConfig.Get("NT_fractureChance",1)) then
             NT.BreakLimb(character,limbtype) end
     end
@@ -249,8 +276,11 @@ NT.OnDamagedMethods.blunttrauma = function(character,strength,limbtype)
 
     -- head
     if not fractureImmune and strength >= 1 and limbtype==LimbType.Head then
+        local armor1 = character.Inventory.GetItemInLimbSlot(InvSlotType.OuterClothes)
+        local armor2 = character.Inventory.GetItemInLimbSlot(InvSlotType.Head)
+        local reduceddmg = math.max(10 - getCalculatedConcussionReduction(armor1,10,limbtype) - getCalculatedConcussionReduction(armor2,10,limbtype),0)
         if strength >= 15 and HF.Chance(math.min(strength/60,0.7)) then
-            HF.AddAfflictionResisted(character,"concussion",10) end
+            HF.AddAfflictionResisted(character,"concussion",reduceddmg) end
         if strength >= 15 and HF.Chance(math.min((strength-10)/60,0.7)*NTC.GetMultiplier(character,"anyfracturechance")*NTConfig.Get("NT_fractureChance",1)) then
             NT.BreakLimb(character,limbtype) end
         if strength >= 15 and HF.Chance(math.min((strength-10)/60,0.7)*NTC.GetMultiplier(character,"anyfracturechance")*NTConfig.Get("NT_fractureChance",1)) then
@@ -291,8 +321,11 @@ NT.OnDamagedMethods.internaldamage = function(character,strength,limbtype)
 
     -- head
     if strength >= 1 and limbtype==LimbType.Head then
+        local armor1 = character.Inventory.GetItemInLimbSlot(InvSlotType.OuterClothes)
+        local armor2 = character.Inventory.GetItemInLimbSlot(InvSlotType.Head)
+        local reduceddmg = math.max(10 - getCalculatedConcussionReduction(armor1,10,limbtype) - getCalculatedConcussionReduction(armor2,10,limbtype),0)
         if strength >= 15 and HF.Chance(math.min(strength/60,0.7)) then
-            HF.AddAfflictionResisted(character,"concussion",10) end
+            HF.AddAfflictionResisted(character,"concussion",reduceddmg) end
         if strength >= 15 and HF.Chance(math.min((strength-5)/60,0.7)*NTC.GetMultiplier(character,"anyfracturechance")*NTConfig.Get("NT_fractureChance",1)) then
             NT.BreakLimb(character,limbtype) end
         if strength >= 15 and HF.Chance(math.min((strength-5)/60,0.7)*NTC.GetMultiplier(character,"anyfracturechance")*NTConfig.Get("NT_fractureChance",1)) then

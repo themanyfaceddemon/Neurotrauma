@@ -978,6 +978,7 @@ NT.LimbAfflictions = {
     end
     },
     pain_extremity={max=10,update=function(c,limbaff,i,type)
+        if c.afflictions.sym_unconsciousness.strength>0 then limbaff[i].strength = 0 return end
         limbaff[i].strength = limbaff[i].strength + (
         -0.5
         + HF.BoolToNum(type ~= LimbType.Torso

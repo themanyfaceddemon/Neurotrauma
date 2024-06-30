@@ -10,6 +10,82 @@ local limbtypes = {
 }
 local function HasLungs(c) return not HF.HasAffliction(c,"lungremoved") end
 
+local function getCalculatedReductionSuit(armor,strength,limbtype)
+    if armor == nil then return 0 end
+    local reduction = 0
+    
+    if armor.HasTag("deepdivinglarge") or armor.HasTag("deepdiving") then
+        local modifiers = armor.GetComponentString("Wearable").DamageModifiers
+        for modifier in modifiers do
+            if string.find(modifier.AfflictionIdentifiers,"blunttrauma") ~= nil then
+                reduction = strength - strength*modifier.DamageMultiplier
+            end
+        end
+    elseif armor.HasTag("clothing") and armor.HasTag("smallitem") and limbtype == LimbType.Torso then
+        local modifiers = armor.GetComponentString("Wearable").DamageModifiers
+        for modifier in modifiers do
+            if string.find(modifier.AfflictionIdentifiers,"blunttrauma") ~= nil then
+                reduction = strength - strength*modifier.DamageMultiplier
+            end
+        end
+    end
+    return reduction
+end
+local function getCalculatedReductionClothes(armor,strength,limbtype)
+    if armor == nil then return 0 end
+    local reduction = 0
+    if armor.HasTag("deepdiving") or armor.HasTag("diving") then
+        local modifiers = armor.GetComponentString("Wearable").DamageModifiers
+        for modifier in modifiers do
+            if string.find(modifier.AfflictionIdentifiers,"blunttrauma") ~= nil then
+                reduction = strength - strength*modifier.DamageMultiplier
+            end
+        end
+    elseif armor.HasTag("clothing") and armor.HasTag("smallitem") then
+        local modifiers = armor.GetComponentString("Wearable").DamageModifiers
+        for modifier in modifiers do
+            if string.find(modifier.AfflictionIdentifiers,"blunttrauma") ~= nil then
+                reduction = strength - strength*modifier.DamageMultiplier
+            end
+        end
+    end
+    return reduction
+end
+local function getCalculatedReductionHelmet(armor,strength)
+    if armor == nil then return 0 end
+    local reduction = 0
+
+    if armor.HasTag("smallitem") then
+        local modifiers = armor.GetComponentString("Wearable").DamageModifiers
+        for modifier in modifiers do
+            if string.find(modifier.AfflictionIdentifiers,"blunttrauma") ~= nil then
+                reduction = strength - strength*modifier.DamageMultiplier
+            end
+        end
+    end
+    return reduction
+end
+local function getCalculatedConcussionReduction(armor,strength)
+    if armor == nil then return 0 end
+    local reduction = 0
+
+    if armor.HasTag("deepdiving") or armor.HasTag("deepdivinglarge") then
+        local modifiers = armor.GetComponentString("Wearable").DamageModifiers
+        for modifier in modifiers do
+            if string.find(modifier.AfflictionIdentifiers,"concussion") ~= nil then
+                reduction = strength - strength*modifier.DamageMultiplier
+            end
+        end
+    elseif armor.HasTag("smallitem") then
+        local modifiers = armor.GetComponentString("Wearable").DamageModifiers
+        for modifier in modifiers do
+            if string.find(modifier.AfflictionIdentifiers,"concussion") ~= nil then
+                reduction = strength - strength*modifier.DamageMultiplier
+            end
+        end
+	end
+    return reduction
+end
 Hook.Add("changeFallDamage", "NT.falldamage", function(impactDamage, character, impactPos, velocity)
 
     -- dont bother with creatures
@@ -82,6 +158,14 @@ Hook.Add("changeFallDamage", "NT.falldamage", function(impactDamage, character, 
 end)
 NT.CauseFallDamage = function(character,limbtype,strength)
 
+    local armor1 = character.Inventory.GetItemInLimbSlot(InvSlotType.OuterClothes)
+    local armor2 = character.Inventory.GetItemInLimbSlot(InvSlotType.InnerClothes)
+    if limbtype ~= LimbType.Head then 
+        strength = math.max(strength - getCalculatedReductionSuit(armor1,strength,limbtype) - getCalculatedReductionClothes(armor2,strength,limbtype),0)
+    else
+        armor2 = character.Inventory.GetItemInLimbSlot(InvSlotType.Head)
+        strength = math.max(strength - getCalculatedReductionSuit(armor1,strength,limbtype) - getCalculatedReductionHelmet(armor2,strength,limbtype),0)
+    end
     HF.AddAfflictionLimb(character,"blunttrauma",limbtype,strength)
 
     local fractureImmune = false
@@ -102,7 +186,7 @@ NT.CauseFallDamage = function(character,limbtype,strength)
     -- head
     if not fractureImmune and strength >= 1 and limbtype==LimbType.Head then
         if strength >= 15 and HF.Chance(math.min(strength/100,0.7)) then
-            HF.AddAfflictionResisted(character,"concussion",10) end
+            HF.AddAfflictionResisted(character,"concussion",math.max(10 - getCalculatedConcussionReduction(armor1,10,limbtype) - getCalculatedConcussionReduction(armor2,10,limbtype),0)) end
         if strength >= 15 and HF.Chance(math.min((strength-15)/100,0.7)*NTC.GetMultiplier(character,"anyfracturechance")*NTConfig.Get("NT_fractureChance",1)*injuryChanceMultiplier) then
             NT.BreakLimb(character,limbtype) end
         if strength >= 15 and HF.Chance(math.min((strength-15)/100,0.7)*NTC.GetMultiplier(character,"anyfracturechance")*NTConfig.Get("NT_fractureChance",1)*injuryChanceMultiplier) then
