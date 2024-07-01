@@ -151,13 +151,13 @@
 <entitydescription.bloodpackaplus>Administrable a: A+, AB+</entitydescription.bloodpackaplus>
 
 <entityname.bloodpackbplus>Paquete de sangre B+</entityname.bloodpackbplus>
-<entitydescription.bloodpackbplus>Administrable a: B+, AB+</entitydescription.bloodpackbplus> -->
+<entitydescription.bloodpackbplus>Administrable a: B+, AB+</entitydescription.bloodpackbplus>
 
 <entityname.bloodpackabplus>Paquete de sangre AB+</entityname.bloodpackabplus>
-<entitydescription.bloodpackabplus>Administrable a: AB+</entitydescription.bloodpackabplus> -->
+<entitydescription.bloodpackabplus>Administrable a: AB+</entitydescription.bloodpackabplus>
 
 <entityname.bloodpackaminus>Paquete de sangre A-</entityname.bloodpackaminus>
-<entitydescription.bloodpackaminus>Administrable a: A-, A+, AB-, AB+</entitydescription.bloodpackaminus> -->
+<entitydescription.bloodpackaminus>Administrable a: A-, A+, AB-, AB+</entitydescription.bloodpackaminus>
 
 <entityname.bloodpackbminus>Paquete de sangre B-</entityname.bloodpackbminus>
 <entitydescription.bloodpackbminus>Administrable a: B-, B+, AB-, AB+</entitydescription.bloodpackbminus>
