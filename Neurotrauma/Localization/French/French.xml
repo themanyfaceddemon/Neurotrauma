@@ -151,13 +151,13 @@
 <entitydescription.bloodpackaplus>Peut être donné à: A+, AB+</entitydescription.bloodpackaplus>
 
 <entityname.bloodpackbplus>Poche de sang B+</entityname.bloodpackbplus>
-<entitydescription.bloodpackbplus>Peut être donné à: B+, AB+</entitydescription.bloodpackbplus> -->
+<entitydescription.bloodpackbplus>Peut être donné à: B+, AB+</entitydescription.bloodpackbplus>
 
 <entityname.bloodpackabplus>Poche de sang AB+</entityname.bloodpackabplus>
-<entitydescription.bloodpackabplus>Peut être donné à: AB+</entitydescription.bloodpackabplus> -->
+<entitydescription.bloodpackabplus>Peut être donné à: AB+</entitydescription.bloodpackabplus>
 
 <entityname.bloodpackaminus>Poche de sang A-</entityname.bloodpackaminus>
-<entitydescription.bloodpackaminus>Peut être donné à: A-, A+, AB-, AB+</entitydescription.bloodpackaminus> -->
+<entitydescription.bloodpackaminus>Peut être donné à: A-, A+, AB-, AB+</entitydescription.bloodpackaminus>
 
 <entityname.bloodpackbminus>Poche de sang B-</entityname.bloodpackbminus>
 <entitydescription.bloodpackbminus>Peut être donné à: B-, B+, AB-, AB+</entitydescription.bloodpackbminus>

@@ -100,11 +100,11 @@
 <entityname.bloodpackaplus>Bolsa de Sanguek A+</entityname.bloodpackaplus>
 <entitydescription.bloodpackaplus>Administrado para: A+, AB+</entitydescription.bloodpackaplus>
 <entityname.bloodpackbplus>Bolsa de Sangue B+</entityname.bloodpackbplus>
-<entitydescription.bloodpackbplus>Administrado para: B+, AB+</entitydescription.bloodpackbplus> -->
+<entitydescription.bloodpackbplus>Administrado para: B+, AB+</entitydescription.bloodpackbplus>
 <entityname.bloodpackabplus>Bolsa de Sangue AB+</entityname.bloodpackabplus>
-<entitydescription.bloodpackabplus>Administrado para: AB+</entitydescription.bloodpackabplus> -->
+<entitydescription.bloodpackabplus>Administrado para: AB+</entitydescription.bloodpackabplus>
 <entityname.bloodpackaminus>Bolsa de Sangue A-</entityname.bloodpackaminus>
-<entitydescription.bloodpackaminus>Administrado para: A-, A+, AB-, AB+</entitydescription.bloodpackaminus> -->
+<entitydescription.bloodpackaminus>Administrado para: A-, A+, AB-, AB+</entitydescription.bloodpackaminus>
 <entityname.bloodpackbminus>Bolsa de Sangue B-</entityname.bloodpackbminus>
 <entitydescription.bloodpackbminus>Administrado para: B-, B+, AB-, AB+</entitydescription.bloodpackbminus>
 <entityname.bloodpackabminus>Bolsa de Sangue AB-</entityname.bloodpackabminus>

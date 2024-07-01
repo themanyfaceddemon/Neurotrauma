@@ -101,13 +101,13 @@
   <entityname.bloodpackaplus>A+ 혈액 팩</entityname.bloodpackaplus>
   <entitydescription.bloodpackaplus>수혈 가능한 환자의 혈액형: A+, AB+</entitydescription.bloodpackaplus>
   <entityname.bloodpackbplus>B+ 혈액 팩</entityname.bloodpackbplus>
-  <entitydescription.bloodpackbplus>수혈 가능한 환자의 혈액형: B+, AB+</entitydescription.bloodpackbplus> --&gt;
+  <entitydescription.bloodpackbplus>수혈 가능한 환자의 혈액형: B+, AB+</entitydescription.bloodpackbplus>
 
 <entityname.bloodpackabplus>AB+ 혈액 팩</entityname.bloodpackabplus>
-<entitydescription.bloodpackabplus>수혈 가능한 환자의 혈액형: AB+</entitydescription.bloodpackabplus> --&gt;
+<entitydescription.bloodpackabplus>수혈 가능한 환자의 혈액형: AB+</entitydescription.bloodpackabplus>
 
 <entityname.bloodpackaminus>A- 혈액 팩</entityname.bloodpackaminus>
-<entitydescription.bloodpackaminus>수혈 가능한 환자의 혈액형: A-, A+, AB-, AB+</entitydescription.bloodpackaminus> --&gt;
+<entitydescription.bloodpackaminus>수혈 가능한 환자의 혈액형: A-, A+, AB-, AB+</entitydescription.bloodpackaminus>
 
 <entityname.bloodpackbminus>B- 혈액 팩</entityname.bloodpackbminus>
 <entitydescription.bloodpackbminus>수혈 가능한 환자의 혈액형: B-, B+, AB-, AB+</entitydescription.bloodpackbminus>

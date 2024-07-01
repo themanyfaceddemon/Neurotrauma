@@ -144,13 +144,13 @@
 <entitydescription.bloodpackaplus>Можно переливать: A+, AB+</entitydescription.bloodpackaplus>
 
 <entityname.bloodpackbplus>Пакет с кровью B+</entityname.bloodpackbplus>
-<entitydescription.bloodpackbplus>Можно переливать: B+, AB+</entitydescription.bloodpackbplus> -->
+<entitydescription.bloodpackbplus>Можно переливать: B+, AB+</entitydescription.bloodpackbplus>
 
 <entityname.bloodpackabplus>Пакет с кровью AB+</entityname.bloodpackabplus>
-<entitydescription.bloodpackabplus>Можно переливать: AB+</entitydescription.bloodpackabplus> -->
+<entitydescription.bloodpackabplus>Можно переливать: AB+</entitydescription.bloodpackabplus>
 
 <entityname.bloodpackaminus>Пакет с кровью A-</entityname.bloodpackaminus>
-<entitydescription.bloodpackaminus>Можно переливать: A-, A+, AB-, AB+</entitydescription.bloodpackaminus> -->
+<entitydescription.bloodpackaminus>Можно переливать: A-, A+, AB-, AB+</entitydescription.bloodpackaminus>
 
 <entityname.bloodpackbminus>Пакет с кровью B-</entityname.bloodpackbminus>
 <entitydescription.bloodpackbminus>Можно переливать: B-, B+, AB-, AB+</entitydescription.bloodpackbminus>

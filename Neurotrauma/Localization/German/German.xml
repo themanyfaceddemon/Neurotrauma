@@ -127,13 +127,13 @@
 <entitydescription.bloodpackaplus>Kompatibel mit: A+, AB+</entitydescription.bloodpackaplus>
 
 <entityname.bloodpackbplus>Blutbeutel B+</entityname.bloodpackbplus>
-<entitydescription.bloodpackbplus>Kompatibel mit: B+, AB+</entitydescription.bloodpackbplus> -->
+<entitydescription.bloodpackbplus>Kompatibel mit: B+, AB+</entitydescription.bloodpackbplus>
 
 <entityname.bloodpackabplus>Blutbeutel AB+</entityname.bloodpackabplus>
-<entitydescription.bloodpackabplus>Kompatibel mit: AB+</entitydescription.bloodpackabplus> -->
+<entitydescription.bloodpackabplus>Kompatibel mit: AB+</entitydescription.bloodpackabplus>
 
 <entityname.bloodpackaminus>Blutbeutel A-</entityname.bloodpackaminus>
-<entitydescription.bloodpackaminus>Kompatibel mit: A-, A+, AB-, AB+</entitydescription.bloodpackaminus> -->
+<entitydescription.bloodpackaminus>Kompatibel mit: A-, A+, AB-, AB+</entitydescription.bloodpackaminus>
 
 <entityname.bloodpackbminus>Blutbeutel B-</entityname.bloodpackbminus>
 <entitydescription.bloodpackbminus>Kompatibel mit: B-, B+, AB-, AB+</entitydescription.bloodpackbminus>

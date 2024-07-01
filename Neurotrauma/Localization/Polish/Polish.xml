@@ -151,13 +151,13 @@
 <entitydescription.bloodpackaplus>Biorcy: A+, AB+</entitydescription.bloodpackaplus>
 
 <entityname.bloodpackbplus>Worek krwi B+</entityname.bloodpackbplus>
-<entitydescription.bloodpackbplus>Biorcy: B+, AB+</entitydescription.bloodpackbplus> -->
+<entitydescription.bloodpackbplus>Biorcy: B+, AB+</entitydescription.bloodpackbplus>
 
 <entityname.bloodpackabplus>Worek Krwi AB+</entityname.bloodpackabplus>
-<entitydescription.bloodpackabplus>Biorcy: AB+</entitydescription.bloodpackabplus> -->
+<entitydescription.bloodpackabplus>Biorcy: AB+</entitydescription.bloodpackabplus>
 
 <entityname.bloodpackaminus>Worek krwi A-</entityname.bloodpackaminus>
-<entitydescription.bloodpackaminus>Biorcy: A-, A+, AB-, AB+</entitydescription.bloodpackaminus> -->
+<entitydescription.bloodpackaminus>Biorcy: A-, A+, AB-, AB+</entitydescription.bloodpackaminus>
 
 <entityname.bloodpackbminus>Worek krwi B-</entityname.bloodpackbminus>
 <entitydescription.bloodpackbminus>Biorcy: B-, B+, AB-, AB+</entitydescription.bloodpackbminus>

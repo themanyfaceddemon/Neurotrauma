@@ -151,13 +151,13 @@
 <entitydescription.bloodpackaplus>Administerable to: A+, AB+</entitydescription.bloodpackaplus>
 
 <entityname.bloodpackbplus>Blood Pack B+</entityname.bloodpackbplus>
-<entitydescription.bloodpackbplus>Administerable to: B+, AB+</entitydescription.bloodpackbplus> -->
+<entitydescription.bloodpackbplus>Administerable to: B+, AB+</entitydescription.bloodpackbplus>
 
 <entityname.bloodpackabplus>Blood Pack AB+</entityname.bloodpackabplus>
-<entitydescription.bloodpackabplus>Administerable to: AB+</entitydescription.bloodpackabplus> -->
+<entitydescription.bloodpackabplus>Administerable to: AB+</entitydescription.bloodpackabplus>
 
 <entityname.bloodpackaminus>Blood Pack A-</entityname.bloodpackaminus>
-<entitydescription.bloodpackaminus>Administerable to: A-, A+, AB-, AB+</entitydescription.bloodpackaminus> -->
+<entitydescription.bloodpackaminus>Administerable to: A-, A+, AB-, AB+</entitydescription.bloodpackaminus>
 
 <entityname.bloodpackbminus>Blood Pack B-</entityname.bloodpackbminus>
 <entitydescription.bloodpackbminus>Administerable to: B-, B+, AB-, AB+</entitydescription.bloodpackbminus>
