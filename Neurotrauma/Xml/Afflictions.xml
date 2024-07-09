@@ -4789,6 +4789,10 @@ thats what the vomiting symptom is for -->
       minfacetint="255,0,0,0"
       maxfacetint="255,0,0,50">
       <StatusEffect target="Character">
+        <conditional ishuman="true"/>
+        <ReduceAffliction identifier="alcoholwithdrawal" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character">
         <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="4" ExpectedSpecies="Human" />
         <TriggerAnimation Type="Run" filename="DrunkenRun" priority="4" ExpectedSpecies="Human" />
       </StatusEffect>
@@ -4810,6 +4814,10 @@ thats what the vomiting symptom is for -->
       minfacetint="255,0,0,50"
       maxfacetint="255,0,0,100">
       <StatusEffect target="Character">
+        <conditional ishuman="true"/>
+        <ReduceAffliction identifier="alcoholwithdrawal" amount="2" />
+      </StatusEffect>
+      <StatusEffect target="Character">
         <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="4" ExpectedSpecies="Human" />
         <TriggerAnimation Type="Run" filename="DrunkenRun" priority="4" ExpectedSpecies="Human" />
       </StatusEffect>
@@ -4830,6 +4838,10 @@ thats what the vomiting symptom is for -->
       dialogflag="DrunkHigh"
       minfacetint="255,0,0,150"
       maxfacetint="255,0,0,150">
+      <StatusEffect target="Character">
+        <conditional ishuman="true"/>
+        <ReduceAffliction identifier="alcoholwithdrawal" amount="2" />
+      </StatusEffect>
       <StatusEffect target="Character">
         <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="4" ExpectedSpecies="Human" />
         <TriggerAnimation Type="Run" filename="DrunkenRun" priority="4" ExpectedSpecies="Human" />
