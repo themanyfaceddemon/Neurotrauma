@@ -83,7 +83,7 @@
         <Containable items="mobilebattery"/>
     </ItemContainer>
   </Item>
-  
+
   <Item name="" identifier="bvm" category="Equipment" cargocontaineridentifier="mediccrate"
           Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.370">
         <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
@@ -280,8 +280,8 @@
     </Controller>
     <aitarget maxsightrange="50" />
   </Item>
-  
-  
+
+
   <!-- /// Surgery /// -->
 
   <Item name="" identifier="operatingtable" scale="0.4" Tags="" maxstacksize="1" category="medical"
@@ -329,7 +329,7 @@
       <limbposition limb="LeftFoot" position="380,-20" allowusinglimb="true"/>
       <limbposition limb="RightHand" position="234,-10" allowusinglimb="false"/>
       <limbposition limb="LeftHand" position="234,-10" allowusinglimb="false"/>
-      
+
       <!--
       <StatusEffect type="Always" target="NearbyCharacters" range="100">
         <Conditional sym_unconsciousness="gt 0.1"/>
@@ -651,7 +651,7 @@
     <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,203,122,8"
             depth="0.55" origin="0.5,0.5"/>
     <Body width="65" height="15" density="50"/>
-    
+
     <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-7,-5" holdangle="60" reload="1.0">
       <!-- extracting organ -->
       <StatusEffect tags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
@@ -665,7 +665,7 @@
       </StatusEffect>
     </MeleeWeapon>
     <SkillRequirementHint identifier="medical" level="40"/>
-  
+
   </Item>
   <Item name="" identifier="organscalpel_kidneys" category="Equipment" cargocontaineridentifier="mediccrate"
           Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
@@ -688,7 +688,7 @@
     <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,203,122,8"
             depth="0.55" origin="0.5,0.5"/>
     <Body width="65" height="15" density="50"/>
-    
+
     <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-7,-5" holdangle="60" reload="1.0">
       <!-- extracting organ -->
       <StatusEffect tags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
@@ -702,7 +702,7 @@
       </StatusEffect>
     </MeleeWeapon>
     <SkillRequirementHint identifier="medical" level="30"/>
-  
+
   </Item>
   <Item name="" identifier="organscalpel_lungs" category="Equipment" cargocontaineridentifier="mediccrate"
           Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
@@ -725,7 +725,7 @@
     <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,203,122,8"
             depth="0.55" origin="0.5,0.5"/>
     <Body width="65" height="15" density="50"/>
-    
+
     <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-7,-5" holdangle="60" reload="1.0">
       <!-- extracting organ -->
       <StatusEffect tags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
@@ -739,7 +739,7 @@
       </StatusEffect>
     </MeleeWeapon>
     <SkillRequirementHint identifier="medical" level="50"/>
-  
+
   </Item>
   <Item name="" identifier="organscalpel_heart" category="Equipment" cargocontaineridentifier="mediccrate"
           Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
@@ -762,7 +762,7 @@
     <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,203,122,8"
             depth="0.55" origin="0.5,0.5"/>
     <Body width="65" height="15" density="50"/>
-    
+
     <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-7,-5" holdangle="60" reload="1.0">
       <!-- extracting organ -->
       <StatusEffect tags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
@@ -776,7 +776,7 @@
       </StatusEffect>
     </MeleeWeapon>
     <SkillRequirementHint identifier="medical" level="60"/>
-  
+
   </Item>
   <Item name="" identifier="organscalpel_brain" category="Equipment" cargocontaineridentifier="mediccrate"
           Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
@@ -801,7 +801,7 @@
     <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,203,122,8"
             depth="0.55" origin="0.5,0.5"/>
     <Body width="65" height="15" density="50"/>
-    
+
     <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-7,-5" holdangle="60" reload="1.0">
       <!-- extracting organ -->
       <StatusEffect tags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
@@ -815,7 +815,7 @@
       </StatusEffect>
     </MeleeWeapon>
      <SkillRequirementHint identifier="medical" level="100"/>
-  
+
   </Item>
 
   <Item name="" identifier="multiscalpel" category="Equipment" cargocontaineridentifier="mediccrate"
@@ -842,12 +842,12 @@
     <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="131,218,122,8"
             depth="0.55" origin="0.5,0.5"/>
     <Body width="65" height="15" density="50"/>
-    
+
     <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-7,-5" holdangle="60" reload="1.0">
       <!-- extracting organ -->
       <StatusEffect tags="medical" type="OnUse" target="This,Limb" comparison="and" disabledeltatime="true">
       </StatusEffect>
-    </MeleeWeapon>  
+    </MeleeWeapon>
     <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
       <GuiFrame relativesize="0.14,0.25" anchor="CenterLeft" pivot="BottomLeft" relativeoffset="0.006,0" style="ItemUI" />
       <Button text="multiscalpel.btn.incision"><StatusEffect target="This" type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.incision"/></StatusEffect></Button>
@@ -891,7 +891,7 @@
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
-      </StatusEffect>  
+      </StatusEffect>
     </MeleeWeapon>
     <SkillRequirementHint identifier="medical" level="45"/>
   </Item>
@@ -963,8 +963,8 @@
     <SkillRequirementHint identifier="medical" level="30"/>
   </Item>
 
-  
-  
+
+
   <!-- /// First aid /// -->
 
   <!-- Tourniquet / clamps bleeding arteries / causes gangrene if left on for too long -->
@@ -1000,7 +1000,7 @@
     </MeleeWeapon>
     <SkillRequirementHint identifier="medical" level="30"/>
   </Item>
-  
+
   <!-- Needle / prevents pneuomothorax from worsening -->
   <Item name="" identifier="needle" category="Medical" cargocontaineridentifier="mediccrate"
           Tags="smallitem,medical,syringe,surgerytool"
@@ -1038,7 +1038,7 @@
   </Item>
 
 
-  
+
   <!-- /// Chemicals /// -->
 
   <!-- Ringer's solution / a better version of saline -->
@@ -1306,8 +1306,8 @@
     </MeleeWeapon>
     <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="false" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon" />
   </Item>
-  
-  
+
+
   <!-- Ointment / heals infected wound -->
   <Item name="" identifier="ointment" category="Medical" Tags="smallitem,medical" maxstacksize="8" maxstacksizecharacterinventory="1"
           useinhealthinterface="true" cargocontaineridentifier="mediccrate" scale="0.265" impactsoundtag="impact_soft">
@@ -1451,10 +1451,10 @@
     <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="false" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon" />
   </Item>
 
-  
-  
+
+
   <!-- /// Blood stuff /// -->
-  
+
   <Override>
     <Item name="" identifier="antibloodloss2" nameidentifier="bloodpackominus" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8"
           cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true"
@@ -1553,7 +1553,7 @@
     </Price>
   </Item>
 
-	
+
   <Item name="" identifier="emptybloodpack" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate"
           Tags="smallitem,chem,medical" useinhealthinterface="true" description="" scale="0.5"
           impactsoundtag="impact_soft">
@@ -1719,8 +1719,8 @@
     </Holdable>
   </Item>
 
-  
-  
+
+
   <!-- /// new containers /// -->
 
   <Item name="" identifier="organcrate" tags="crate,refrigerated" scale="0.5" linkable="true" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy" waterproof="true" fireproof="true"
@@ -1989,7 +1989,7 @@
     <aitarget maxsightrange="50" />
   </Item>
 
-  
+
 
   <!-- /// Limbs and organs /// -->
 
@@ -2018,7 +2018,7 @@
         </Holdable>
     </Item>
 
-  <Item name="" identifier="rarm" description="" category="Medical" scale="0.4" useinhealthinterface="True" Tags="smallitem,organ,petfood1,petfood2,petfood3">
+  <Item name="" identifier="rarm" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="organcrate" Tags="smallitem,organ,petfood1,petfood2,petfood3">
         <InventoryIcon texture="%ModDir%/Images/limbs.png" sourcerect="0,0,46,90" origin="0.5,0.5"/>
         <Sprite texture="%ModDir%/Images/limbs.png" sourcerect="0,0,46,90" depth="0.6" origin="0.5,0.5"/>
         <Body width="46" height="90" density="20"/>
@@ -2041,7 +2041,7 @@
             <Conditional hastag="refrigerated" targetcontainer="true" />
           </StatusEffect>
           <StatusEffect type="OnFire" target="This" Condition="-25.0" />
-          <!-- yuck! severed limbs on the floor! 
+          <!-- yuck! severed limbs on the floor!
           <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
             <Affliction identifier="nausea" amount="0.2"/>
           </StatusEffect>-->
@@ -2050,7 +2050,7 @@
           </StatusEffect>
         </Throwable>
     </Item>
-  <Item name="" identifier="larm" description="" category="Medical" scale="0.4" useinhealthinterface="True" Tags="smallitem,organ,petfood1,petfood2,petfood3">
+  <Item name="" identifier="larm" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="organcrate" Tags="smallitem,organ,petfood1,petfood2,petfood3">
         <InventoryIcon texture="%ModDir%/Images/limbs.png" sourcerect="0,0,46,90" origin="0.5,0.5"/>
         <Sprite texture="%ModDir%/Images/limbs.png" sourcerect="0,0,46,90" depth="0.6" origin="0.5,0.5"/>
         <Body width="46" height="90" density="20"/>
@@ -2073,7 +2073,7 @@
             <Conditional hastag="refrigerated" targetcontainer="true" />
           </StatusEffect>
           <StatusEffect type="OnFire" target="This" Condition="-25.0" />
-          <!-- yuck! severed limbs on the floor! 
+          <!-- yuck! severed limbs on the floor!
           <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
             <Affliction identifier="nausea" amount="0.2"/>
           </StatusEffect>-->
@@ -2082,7 +2082,7 @@
           </StatusEffect>
         </Throwable>
     </Item>
-  <Item name="" identifier="rleg" description="" category="Medical" scale="0.4" useinhealthinterface="True" Tags="smallitem,organ,petfood1,petfood2,petfood3">
+  <Item name="" identifier="rleg" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="organcrate" Tags="smallitem,organ,petfood1,petfood2,petfood3">
         <InventoryIcon texture="%ModDir%/Images/limbs.png" sourcerect="57,0,60,90" origin="0.5,0.5"/>
         <Body width="60" height="90" density="20"/>
         <Sprite texture="%ModDir%/Images/limbs.png" sourcerect="57,0,60,90" depth="0.6" origin="0.5,0.5"/>
@@ -2105,7 +2105,7 @@
             <Conditional hastag="refrigerated" targetcontainer="true" />
           </StatusEffect>
           <StatusEffect type="OnFire" target="This" Condition="-25.0" />
-          <!-- yuck! severed limbs on the floor! 
+          <!-- yuck! severed limbs on the floor!
           <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
             <Affliction identifier="nausea" amount="0.2"/>
           </StatusEffect>-->
@@ -2114,7 +2114,7 @@
           </StatusEffect>
         </Throwable>
     </Item>
-  <Item name="" identifier="lleg" description="" category="Medical" scale="0.4" useinhealthinterface="True" Tags="smallitem,organ,petfood1,petfood2,petfood3">
+  <Item name="" identifier="lleg" description="" category="Medical" scale="0.4" useinhealthinterface="True" cargocontaineridentifier="organcrate" Tags="smallitem,organ,petfood1,petfood2,petfood3">
         <InventoryIcon texture="%ModDir%/Images/limbs.png" sourcerect="57,0,60,90" origin="0.5,0.5"/>
         <Sprite texture="%ModDir%/Images/limbs.png" sourcerect="57,0,60,90" depth="0.6" origin="0.5,0.5"/>
         <Body width="60" height="90" density="20"/>
@@ -2217,7 +2217,7 @@
     <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="5,479,79,52" depth="0.6" origin="0.5,0.5"/>
     <Body width="39" height="18" density="10"/>
     <Deconstruct/>
-    
+
     <Throwable characterusable="true" slots="Any,RightHand,LeftHand"
                throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
@@ -2251,7 +2251,7 @@
       <Price storeidentifier="merchantmedical" sold="false"/>
     </Price>
   </Item>
-  
+
   <Item name="" identifier="lungtransplant" description="" category="Medical" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ,petfood1,petfood2,petfood3">
     <Price baseprice="2000" soldbydefault="false">
       <Price locationtype="research" multiplier="1" sold="true" minavailable="2"/>
@@ -2385,7 +2385,7 @@
     <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="272,480,78,60" depth="0.6" origin="0.5,0.5"/>
     <Body width="39" height="25" density="10"/>
     <Deconstruct/>
-    
+
     <Throwable characterusable="true" slots="Any,RightHand,LeftHand"
                throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
@@ -2416,7 +2416,7 @@
       </StatusEffect>
     </Throwable>
     <SkillRequirementHint identifier="medical" level="100"/>
-  
+
   </Item>
 
   <!-- other -->
@@ -2651,9 +2651,9 @@
     </ItemComponent>
   </Item>
 
-              
 
-  
+
+
 
   <!-- /// VFX items (same as above, but visual!) ///-->
 
@@ -2770,7 +2770,7 @@
         <StatusEffect type="OnUse" target="Contained" Condition="-1.0">
           <RequiredItem excludedidentifiers="batterycell,fulguriumbatterycell" type="Contained" />
         </StatusEffect>
-        
+
         <StatusEffect type="OnUse" target="NearbyCharacters" range="50">
           <Affliction identifier="radiationsickness" amount="0.5"/>
         </StatusEffect>
@@ -3436,7 +3436,7 @@
         <StatusEffect type="OnFailure" target="This" Condition="-100.0" setvalue="true"/>
         <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="30.0">
           <ReduceAffliction identifier="opiatewithdrawal" amount="2.0" />
-          <ReduceAffliction identifier="opiateoverdose" amount="2.0" />	
+          <ReduceAffliction identifier="opiateoverdose" amount="2.0" />
           <ReduceAffliction identifier="opiateaddiction" amount="2.0" />
           <ReduceAffliction identifier="analgesia" amount="2.0" />
         </StatusEffect>
@@ -3548,9 +3548,8 @@
         <Price storeidentifier="merchantmine" sold="false" multiplier="1.1" />
         <Price storeidentifier="merchantmedical" multiplier="0.9" minavailable="4" />
       </Price>
-      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="384,768,64,64" origin="0.5,0.5"/>
-      <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="379,452,27,58" depth="0.55"
-              origin="0.5,0.5"/>
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="129,448,62,64" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="301,209,37,72" depth="0.6" origin="0.5,0.5" />
       <Body width="25" height="55" density="10.2" waterdragcoefficient="1"/>
       <SuitableTreatment identifier="cardiacarrest" suitability="100"/>
       <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5"
@@ -3788,7 +3787,7 @@
         <Price storeidentifier="merchantmedical" multiplier="0.9" minavailable="4" />
       </Price>
       <PreferredContainer primary="medcab" secondary="medcontainer"/>
-      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="2" spawnprobability="0.1" />  
+      <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="2" spawnprobability="0.1" />
       <SuitableTreatment identifier="hypoxemia" suitability="100" />
       <SuitableTreatment identifier="organdamage" suitability="-15" />
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="704,640,64,64" origin="0.5,0.5" />
@@ -4368,7 +4367,7 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" Condition="0.0" setvalue="true"/>
         <StatusEffect tags="medical" type="OnUse" target="UseTarget" disabledeltatime="true" allowwhenbroken="true">
-          <Affliction identifier="durationincrease" amount="300" />  
+          <Affliction identifier="durationincrease" amount="300" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />

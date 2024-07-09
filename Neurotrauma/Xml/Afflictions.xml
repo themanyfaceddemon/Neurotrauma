@@ -4769,6 +4769,81 @@ thats what the vomiting symptom is for -->
     </Affliction>
   <!-- Vanilla affliction override end -->
   <!-- Vanilla affliction override start -->
+  <Affliction
+    identifier="drunknodebuffs"
+    type="debuff"
+    translationoverride="drunk"
+    limbspecific="false"
+    indicatorlimb="Head"
+    activationthreshold="20"
+    maxstrength="100"
+    affectmachines="false">
+
+    <!-- no effects at this point -->
+    <Effect minstrength="0" maxstrength="20" strengthchange="-0.1" />
+    
+    <Effect minstrength="20" maxstrength="40"
+      minscreendistort="0"
+      maxscreendistort="0.1"
+      strengthchange="-0.1"
+      minfacetint="255,0,0,0"
+      maxfacetint="255,0,0,50">
+      <StatusEffect target="Character">
+        <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="4" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Run" filename="DrunkenRun" priority="4" ExpectedSpecies="Human" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional ishuman="true" analgesia="lte 5"/>
+        <Affliction identifier="analgesia" amount="1"/>
+      </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="40" maxstrength="80"
+      minscreendistort="0.1"
+      maxscreendistort="1.0"
+      minscreenblur="0.1"
+      maxscreenblur="0.5"
+      strengthchange="-0.2"
+      minradialdistort="0.0"
+      maxradialdistort="2.0"
+      dialogflag="DrunkMedium"
+      minfacetint="255,0,0,50"
+      maxfacetint="255,0,0,100">
+      <StatusEffect target="Character">
+        <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="4" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Run" filename="DrunkenRun" priority="4" ExpectedSpecies="Human" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional ishuman="true" analgesia="lte 5"/>
+        <Affliction identifier="analgesia" amount="1"/>
+      </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="80" maxstrength="100"
+      minscreendistort="1.0"
+      maxscreendistort="3.0"
+      minscreenblur="0.5"
+      maxscreenblur="1.0"
+      strengthchange="-0.2"
+      minradialdistort="2.0"
+      maxradialdistort="3.0"
+      dialogflag="DrunkHigh"
+      minfacetint="255,0,0,150"
+      maxfacetint="255,0,0,150">
+      <StatusEffect target="Character">
+        <TriggerAnimation Type="Walk" filename="DrunkenWalk" priority="4" ExpectedSpecies="Human" />
+        <TriggerAnimation Type="Run" filename="DrunkenRun" priority="4" ExpectedSpecies="Human" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional ishuman="true" analgesia="lte 5"/>
+        <Affliction identifier="analgesia" amount="1"/>
+      </StatusEffect>
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,640,128,128" color="170,194,147,255" origin="0,0"/>
+  </Affliction>
+  <!-- Vanilla affliction override end -->
+  <!-- Vanilla affliction override start -->
     <Affliction
       name=""
       identifier="radiationsickness"

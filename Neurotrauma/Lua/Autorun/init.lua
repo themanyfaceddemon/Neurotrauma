@@ -2,8 +2,8 @@
 
 NT = {} -- Neurotrauma
 NT.Name="Neurotrauma"
-NT.Version = "A1.9.4"
-NT.VersionNum = 01090400
+NT.Version = "A1.9.4h1"
+NT.VersionNum = 01090401
 NT.Path = table.pack(...)[1]
 
 dofile(NT.Path.."/Lua/Scripts/helperfunctions.lua")
