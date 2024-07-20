@@ -1431,7 +1431,7 @@ NT.ItemStartsWithMethods.wrench = function(item, usingCharacter, targetCharacter
     if(NT.LimbIsDislocated(targetCharacter,limbtype)) then
 
         local skillrequired = 60
-        if(HF.HasAffliction(targetCharacter,"analgesia",0.5)) then skillrequired = skillrequired-30 end
+        if(HF.HasAffliction(targetCharacter,"analgesia",0.5) or HF.HasAffliction(targetCharacter,"afadrenaline",0.5)) then skillrequired = skillrequired-30 end
 
         if(HF.GetSkillRequirementMet(usingCharacter,"medical",skillrequired)) then 
             NT.DislocateLimb(targetCharacter,limbtype,-1000)
