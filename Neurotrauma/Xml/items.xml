@@ -1311,9 +1311,9 @@
   <!-- Ointment / heals infected wound -->
   <Item name="" identifier="ointment" category="Medical" Tags="smallitem,medical" maxstacksize="8" maxstacksizecharacterinventory="1"
           useinhealthinterface="true" cargocontaineridentifier="mediccrate" scale="0.265" impactsoundtag="impact_soft">
-        <PreferredContainer primary="medcab" minamount="4" maxamount="6" spawnprobability="1"/>
-        <PreferredContainer primary="supplycab" minamount="1" maxamount="3" spawnprobability="0.2"/>
-        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="6" spawnprobability="0.5"/>
+        <PreferredContainer primary="medcab" minamount="1" maxamount="3" spawnprobability="1"/>
+        <PreferredContainer primary="supplycab" minamount="1" maxamount="2" spawnprobability="0.1"/>
+        <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="3" spawnprobability="0.12"/>
         <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="3" spawnprobability="0.25"/>
         <Price baseprice="216">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="40"/>

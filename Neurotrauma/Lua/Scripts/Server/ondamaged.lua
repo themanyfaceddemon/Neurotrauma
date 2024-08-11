@@ -174,6 +174,11 @@ NT.OnDamagedMethods.explosiondamage = function(character,strength,limbtype)
         if strength >= 15 and HF.Chance(math.min(strength/60,0.7)*NTC.GetMultiplier(character,"anyfracturechance")*NTConfig.Get("NT_fractureChance",1)) then
             HF.AddAffliction(character,"n_fracture",5) end
         if strength >= 25 and HF.Chance(0.25) then
+            -- drop previously held item
+            local previtem = character.Inventory.GetItemAt(LimbType.Head)
+            if(previtem ~= nil) then
+                previtem.Drop(character,true)
+            end
             HF.AddAfflictionLimb(character,"gate_ta_h",limbtype,5) end
     end
 
