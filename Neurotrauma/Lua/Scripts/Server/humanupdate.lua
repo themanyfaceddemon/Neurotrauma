@@ -1049,7 +1049,7 @@ NT.CharStats = {
 
     bloodamount={getter=function(c) return HF.Clamp(100-c.afflictions.bloodloss.strength,0,100) end},
     stasis={getter=function(c) return c.afflictions.stasis.strength>0 end},
-    sedated={getter=function(c) return c.afflictions.analgesia.strength > 0 or c.afflictions.anesthesia.strength > 10 or c.afflictions.afadrenaline.strength > 0 or c.afflictions.drunk.strength > 30 or c.stats.stasis end},
+    sedated={getter=function(c) return c.afflictions.analgesia.strength > 0 or c.afflictions.anesthesia.strength > 10 or c.afflictions.drunk.strength > 30 or c.stats.stasis end},
     withdrawal={getter=function(c) return math.max(
         c.afflictions.opiatewithdrawal.strength,
         c.afflictions.chemwithdrawal.strength,
