@@ -189,7 +189,7 @@ NT.CauseFallDamage = function(character,limbtype,strength)
             HF.AddAfflictionResisted(character,"concussion",math.max(10 - getCalculatedConcussionReduction(armor1,10,limbtype) - getCalculatedConcussionReduction(armor2,10,limbtype),0)) end
         if strength >= 15 and HF.Chance(math.min((strength-15)/100,0.7)*NTC.GetMultiplier(character,"anyfracturechance")*NTConfig.Get("NT_fractureChance",1)*injuryChanceMultiplier) then
             NT.BreakLimb(character,limbtype) end
-        if strength >= 15 and HF.Chance(math.min((strength-15)/100,0.7)*NTC.GetMultiplier(character,"anyfracturechance")*NTConfig.Get("NT_fractureChance",1)*injuryChanceMultiplier) then
+        if strength >= 55 and HF.Chance(math.min((strength-55)/100,0.7)*NTC.GetMultiplier(character,"anyfracturechance")*NTConfig.Get("NT_fractureChance",1)*injuryChanceMultiplier) then
             HF.AddAffliction(character,"n_fracture",5) end
         if strength >= 5 and HF.Chance(0.7) then
             HF.AddAffliction(character,"cerebralhypoxia",strength*HF.RandomRange(0.1,0.4)) end
