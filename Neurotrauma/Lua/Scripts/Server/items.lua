@@ -1350,6 +1350,17 @@ NT.ItemMethods.autocpr = function(item, usingCharacter, targetCharacter, limb)
         end
     end
 end
+NT.ItemMethods.gelipack = function(item, usingCharacter, targetCharacter, limb)
+    if item.Condition <= 30 then
+        return
+    end
+    local limbtype = limb.type
+    local success = HF.BoolToNum(HF.GetSkillRequirementMet(usingCharacter,"medical",5),1)
+    HF.AddAfflictionLimb(targetCharacter,"iced",limbtype,5+success*100,usingCharacter)
+    HF.GiveItem(targetCharacter,"ntsfx_bandage")
+
+    item.Condition = item.Condition - 35
+end
 
 -- startswith region begins
 

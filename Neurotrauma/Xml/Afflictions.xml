@@ -922,6 +922,23 @@
 		<icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="0,4" sheetelementsize="128,128" origin="0,0"/>
   </Affliction>
 
+  <!-- Iced
+  Exposed, boosts regeneration for blunt force trauma !and! progression of infected wounds -->
+  <Affliction
+    name=""
+    identifier="iced"
+    description=""
+    healableinmedicalclinic="false"
+    targets="human"
+    limbspecific="true"
+    maxstrength="100"
+    type="resistance"
+    showiconthreshold="0.1"
+    showinhealthscannerthreshold="200"
+    isbuff="true">
+		<icon texture="%ModDir%/Images/AfflictionIcons2.png" sheetindex="0,2" sheetelementsize="128,128" origin="0,0"/>
+  </Affliction>
+
   <!-- Dirty bandage
   Exposed, infects wounds if severe enough -->
   <Affliction

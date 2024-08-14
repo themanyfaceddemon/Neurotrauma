@@ -842,6 +842,17 @@ NT.LimbAfflictions = {
     end
     },
     dirtybandage={},-- for bandage dirtifaction logic see above 
+    iced={update=function(c,limbaff,i,type)
+        -- over time skin temperature goes up again
+        if limbaff[i].strength > 0 then 
+            limbaff[i].strength=limbaff[i].strength-1.7*NT.Deltatime 
+        end
+        -- iced slowdown
+        if limbaff[i].strength > 0 then
+            c.stats.speedmultiplier = c.stats.speedmultiplier*0.95
+        end
+    end
+    },
     gypsumcast={update=function(c,limbaff,i,type)
         -- gypsum slowdown and fracture healing
         if limbaff[i].strength > 0 then
@@ -897,7 +908,7 @@ NT.LimbAfflictions = {
     end
     },
     blunttrauma={max=200,update=function(c,limbaff,i)
-        limbaff[i].strength = limbaff[i].strength - (c.afflictions.immunity.prev/8000 + HF.Clamp(limbaff.bandaged.strength,0,1)*0.1)*c.stats.healingrate*NT.Deltatime
+        limbaff[i].strength = limbaff[i].strength - (c.afflictions.immunity.prev/8000 + HF.Clamp(limbaff.bandaged.strength,0,1)*0.1 + HF.Clamp(limbaff.iced.strength,0,1)*0.65)*c.stats.healingrate*NT.Deltatime
     end
     },
     internaldamage={max=200,update=function(c,limbaff,i,type)
@@ -938,7 +949,7 @@ NT.LimbAfflictions = {
         end
 
         if infectindex > 0 then
-            infectindex = infectindex * NTConfig.Get("NT_infectionRate",1)
+            infectindex = infectindex * NTConfig.Get("NT_infectionRate",1) * HF.Clamp(limbaff.iced.strength,1,10)
         end
 
         limbaff[i].strength = limbaff[i].strength + infectindex/5

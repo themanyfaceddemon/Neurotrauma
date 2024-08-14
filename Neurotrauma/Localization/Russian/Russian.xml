@@ -84,6 +84,25 @@
 <entityname.organscalpel_brain>Скальпель для извлечения: мозг</entityname.organscalpel_brain>
 <entitydescription.organscalpel_brain>Специализированный скальпель для удаления мозга.</entitydescription.organscalpel_brain>
 
+<entityname.multiscalpel>Универсальный скальпель</entityname.multiscalpel>
+<entitydescription.multiscalpel>Скальпель для выполнения надрезов, извлечения органов, снятия бинтов / гипсовых слепков или небрежной медицинской практики.</entitydescription.multiscalpel>
+<multiscalpel.incision>Режим: Хирургический надрез.</multiscalpel.incision>
+<multiscalpel.kidneys>Режим: Извлечь почки</multiscalpel.kidneys>
+<multiscalpel.liver>Режим: Извлечь печень</multiscalpel.liver>
+<multiscalpel.lungs>Режим: Извлечь легкие</multiscalpel.lungs>
+<multiscalpel.heart>Режим: Извлечь сердце</multiscalpel.heart>
+<multiscalpel.brain>Режим: Извлечь мозг</multiscalpel.brain>
+<multiscalpel.bandage>Режим: Снять бинт, гипсовый слепок, небрежная практика.</multiscalpel.bandage>
+<multiscalpel.speedflex>Режим: Адаптивное извлечение органов. Применение на голове извлекает мозг, левая рука - почки, торс - печень, правая рука - сердце, левая нога - легкие.</multiscalpel.speedflex>
+
+<multiscalpel.btn.incision>Надрез</multiscalpel.btn.incision>
+<multiscalpel.btn.kidneys>Почки</multiscalpel.btn.kidneys>
+<multiscalpel.btn.liver>Печень</multiscalpel.btn.liver>
+<multiscalpel.btn.lungs>Легкие</multiscalpel.btn.lungs>
+<multiscalpel.btn.heart>Сердце</multiscalpel.btn.heart>
+<multiscalpel.btn.brain>Мозг</multiscalpel.btn.brain>
+<multiscalpel.btn.bandage>Бинт, гипсовые слепки, небрежная практика</multiscalpel.btn.bandage>
+<multiscalpel.btn.speedflex>Адаптивное извлечение органов</multiscalpel.btn.speedflex>
 
 <!-- /// Средства /// -->
 <entityname.mannitol>Маннитол</entityname.mannitol>
@@ -124,6 +143,9 @@
 
 <entityname.gypsum>Гипс</entityname.gypsum>
 <entitydescription.gypsum>Мелкозернистый минеральный порошок, используемый для покрытия и фиксации переломов конечностей. Сначала наложите бинт.</entitydescription.gypsum>
+
+<entityname.gelipack>Гелевый охладительный пакет</entityname.gelipack>
+<entitydescription.gelipack>Многоразовый охлаждающий пакет с органическим гелем. Теряет эффективность охлаждающего действия вне холодильника.</entitydescription.gelipack>
 
 
 <!-- /// Кровь /// -->
@@ -439,6 +461,9 @@
 
 <afflictionname.needlec>Игла</afflictionname.needlec>
 <afflictiondescription.needlec>Нормализует давление в плевральной полости</afflictiondescription.needlec>
+
+<afflictionname.iced>Охлаждено</afflictionname.iced>
+<afflictiondescription.iced>Лечит сильные ушибы. Замедляет движение.</afflictiondescription.iced>
 
 <!-- Переломы, ампутации, вывихи и кровоточащие артерии-->
 <afflictionname.ra_fracture>Перелом правой плечевой кости</afflictionname.ra_fracture>

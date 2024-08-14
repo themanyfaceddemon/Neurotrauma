@@ -155,6 +155,9 @@
 <entityname.gypsum>Gypsum</entityname.gypsum>
 <entitydescription.gypsum>A fine mineral powder that is used to encase fractures in extremeties in a cast. Apply a bandage first.</entitydescription.gypsum>
 
+<entityname.gelipack>Gel ice pack</entityname.gelipack>
+<entitydescription.gelipack>A reusable cooling pack filled with organic gel that never expires. Loses its effectiveness without refrigeration.</entitydescription.gelipack>
+
 
 <!-- /// Blood stuff /// -->
 
@@ -472,6 +475,9 @@ Can give blood to: AB+</entitydescription.abpluscard>
 
 <afflictionname.needlec>Needle</afflictionname.needlec>
 <afflictiondescription.needlec>Normalizes the pressure in the pleural cavity</afflictiondescription.needlec>
+
+<afflictionname.iced>Chilled</afflictionname.iced>
+<afflictiondescription.iced>Heals bruises. Movement is slowed.</afflictiondescription.iced>
 
 <!-- fractures, amputations, dislocations and bleeding arteries-->
 <afflictionname.ra_fracture>Fractured right humerus</afflictionname.ra_fracture>
