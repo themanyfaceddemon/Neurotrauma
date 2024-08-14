@@ -296,7 +296,7 @@ NT.ItemMethods.suture = function(item, usingCharacter, targetCharacter, limb)
                 not NT.LimbIsAmputated(targetCharacter,limbtype)
                 and not HF.HasAfflictionLimb(targetCharacter,"gangrene",limbtype,15)
             -- drop previously held item
-            local previtem = character.Inventory.GetItemAt(LimbType.Head)
+            local previtem = HF.GetHeadWear(targetCharacter)
             if(previtem ~= nil and limbtype == LimbType.Head) then
                 previtem.Drop(character,true)
             end

@@ -175,7 +175,7 @@ NT.OnDamagedMethods.explosiondamage = function(character,strength,limbtype)
             HF.AddAffliction(character,"n_fracture",5) end
         if strength >= 25 and HF.Chance(0.25) then
             -- drop previously held item
-            local previtem = character.Inventory.GetItemAt(LimbType.Head)
+            local previtem = HF.GetHeadWear(character)
             if(previtem ~= nil) then
                 previtem.Drop(character,true)
             end
