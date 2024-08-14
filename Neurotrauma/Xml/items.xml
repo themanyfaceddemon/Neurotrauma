@@ -1968,6 +1968,9 @@
       <sprite texture="%ModDir%\Images/Suits/bodybag.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
       <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
       <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" SpeedMultiplier="0.8" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true" />
+      <StatusEffect type="OnWearing" target="Character" disabledeltatime="true" stackable="false" duration="1">
+        <Affliction identifier="bodybagoverlay" amount="3"/>
+      </StatusEffect>
       <StatusEffect type="OnWearing" target="NearbyCharacters" range="100" stackable="true" setvalue="true">
         <Conditional ishuman="true"/>
         <Affliction identifier="stretchers" amount="100" />
@@ -2016,6 +2019,7 @@
       <StatusEffect type="OnWearing" target="Character" disabledeltatime="true" stackable="false" duration="1">
         <!--<Affliction identifier="givein" amount="10" />-->
         <Affliction identifier="stasis" amount="3"/>
+        <Affliction identifier="stasisbagoverlay" amount="3"/>
       </StatusEffect>
       <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" PressureProtection="10000.0" SpeedMultiplier="0" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
         <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" />
@@ -2797,7 +2801,7 @@
               depth="0.6" origin="0.5,0.5"/>
       <Body width="112" height="96" density="25"/>
 
-      <Holdable slots="Any,RightHand,LeftHand" holdpos="30,-15" aimpos="100,0" handle1="-13,0" handle2="-13,0" msg="ItemMsgPickUpSelect">
+      <Holdable slots="Any,RightHand,LeftHand" holdpos="30,-23" aimpos="100,0" handle1="-33,-4" handle2="-33,-4" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnUse" target="This" Voltage="1.0" setvalue="true">
           <RequiredItem items="mobilebattery" type="Contained"/>
         </StatusEffect>
