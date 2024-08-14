@@ -1351,7 +1351,7 @@ NT.ItemMethods.autocpr = function(item, usingCharacter, targetCharacter, limb)
     end
 end
 NT.ItemMethods.gelipack = function(item, usingCharacter, targetCharacter, limb)
-    if item.Condition <= 30 then
+    if item.Condition <= 25 then
         return
     end
     local limbtype = limb.type
