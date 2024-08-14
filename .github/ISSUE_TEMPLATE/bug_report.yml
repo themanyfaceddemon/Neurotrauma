@@ -52,7 +52,7 @@ body:
     id: version
     attributes:
       label: Neurotrauma Version
-      placeholder: "A1.9.4h1"
+      placeholder: "A1.9.5"
     validations:
       required: true
   - type: textarea
