@@ -1047,7 +1047,7 @@
                         spawnprobability="0.35"/>
     <PreferredContainer secondary="outpostmedcab" amount="1" spawnprobability="0.5" />
     <PreferredContainer secondary="outpostmedcompartment" amount="1" spawnprobability="0.2" />
-    <Price baseprice="210">
+    <Price baseprice="100">
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="3"/>
     </Price>
     <Fabricate suitablefabricators="medicalfabricator" requiredtime="15">
