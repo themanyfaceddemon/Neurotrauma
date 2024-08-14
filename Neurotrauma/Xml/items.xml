@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
 
   <!-- /// Gear /// -->
@@ -1037,16 +1037,18 @@
     <SkillRequirementHint identifier="medical" level="20"/>
   </Item>
 
-  <!-- Gel ice pack / a better version of bandage for blunt force trauma -->
+  <!-- Gel ice pack / a better version of bandage for blunt force trauma / worsens infection on open wounds -->
   <Item name="" identifier="gelipack" category="Medical" maxstacksize="8" maxstacksizecharacterinventory="1"
           cargocontaineridentifier="organcrate" Tags="smallitem,chem,medical"
           useinhealthinterface="true" description="" scale="0.275" impactsoundtag="impact_soft">
     <Upgrade gameversion="0.10.0.0" scale="0.5"/>
-    <PreferredContainer primary="medcab" minamount="5" maxamount="6"/>
-    <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="6"
+    <PreferredContainer primary="medcab" minamount="2" maxamount="3"/>
+    <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2"
                         spawnprobability="0.35"/>
+    <PreferredContainer secondary="outpostmedcab" amount="1" spawnprobability="0.5" />
+    <PreferredContainer secondary="outpostmedcompartment" amount="1" spawnprobability="0.2" />
     <Price baseprice="210">
-      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="12"/>
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="3"/>
     </Price>
     <Fabricate suitablefabricators="medicalfabricator" requiredtime="15">
       <RequiredSkill identifier="medical" level="40"/>
