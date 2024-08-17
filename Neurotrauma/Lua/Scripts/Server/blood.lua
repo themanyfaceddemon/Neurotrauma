@@ -60,7 +60,7 @@ function NT.GetBloodtype(character)
         local conditional = character.CharacterHealth.GetAffliction(affliction[1])
 
         if (conditional ~= nil and conditional.Strength > 0) then
-            return affliction[1]
+            return affliction[1] -- TODO: give out abplus (AB+) to enemy team for blood infusions
         end
     end
 

@@ -1,5 +1,5 @@
 -- Modders, please use ModDir:Neurotrauma when taking dependencies, and 
--- name your patches with the word "neurotrauma" (case doesnt matter)
+-- name your patches with the word "neurotrauma" (letter case doesnt matter)
 
 -- sets NT.modconflict to true if incompatible mod detected
 -- this applies meta affliction "modconflict" every round

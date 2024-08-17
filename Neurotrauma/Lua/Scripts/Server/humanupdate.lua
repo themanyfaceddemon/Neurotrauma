@@ -1266,7 +1266,7 @@ function NT.UpdateMonster(character)
         HF.AddAffliction(character,"organdamage",bloodloss*2)
         HF.SetAffliction(character,"bloodloss",0)
     end
-
+    -- TOOD: oxygen low conversion
 end
 
 -- gets run every tick, shouldnt be used unless necessary
