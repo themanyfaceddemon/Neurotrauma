@@ -30,6 +30,7 @@
     <SuitableTreatment identifier="fibrillation" suitability="50"/>
     <SuitableTreatment identifier="cardiacarrest" suitability="10"/>
 
+    <!-- TODO: improvements: must aim it on the person to successfully apply the effect, remove code for application from health UI and might need use of a Lua XML hook -->
     <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="9.0">
       <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired"/>
 
@@ -69,6 +70,7 @@
     <SuitableTreatment identifier="fibrillation" suitability="60"/>
     <SuitableTreatment identifier="cardiacarrest" suitability="15"/>
 
+    <!-- TODO: improvements: must aim it on the person to successfully apply the effect, remove code for application from health UI and might need use of a Lua XML hook -->
     <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="9.0">
       <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired"/>
 
@@ -106,6 +108,7 @@
         <Body width="90" height="80" density="20"/>
         <SuitableTreatment identifier="oxygenlow" suitability="50"/>
 
+        <!-- TODO: improvements: must aim it on the person to successfully apply the effect, remove code for application from health UI and might need use of a Lua XML hook-->
         <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
           <RequiredItems identifier="weldingtoolfuel,oxygensource,paint" type="Contained" msg="ItemMsgOxygenTankRequired"/>
           <StatusEffect type="OnUse" target="UseTarget">
@@ -168,6 +171,7 @@
       <Item identifier="plastic" outcondition="0.5"/>
       <Item identifier="steel" outcondition="0.5"/>
     </Deconstruct>
+    <!-- TODO: remove all of this when defibs get better -->
     <Fabricate suitablefabricators="fabricator" requiredtime="30">
       <RequiredSkill identifier="medical" level="40"/>
       <RequiredItem identifier="plastic" mincondition="0.5" usecondition="true"/>
@@ -1082,6 +1086,7 @@
     <SkillRequirementHint identifier="medical" level="5"/>
   </Item>
 
+<!-- TODO: add mobile stretchers that you lie down onto for surgeries / stabilizes fractures to avoid complications -->
 
   <!-- /// Chemicals /// -->
 
