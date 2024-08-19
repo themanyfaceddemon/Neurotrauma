@@ -1043,7 +1043,7 @@
 
   <!-- Gel ice pack / a better version of bandage for blunt force trauma / worsens infection on open wounds -->
   <Item name="" identifier="gelipack" category="Medical" maxstacksize="8" maxstacksizecharacterinventory="1"
-          cargocontaineridentifier="organcrate" Tags="smallitem,chem,medical"
+          cargocontaineridentifier="organcrate" Tags="smallitem,chem,medical,canexpire"
           useinhealthinterface="true" description="" scale="0.275" impactsoundtag="impact_soft">
     <Upgrade gameversion="0.10.0.0" scale="0.5"/>
     <PreferredContainer primary="medcab" minamount="2" maxamount="3"/>
