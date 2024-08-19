@@ -310,7 +310,7 @@ NT.ItemMethods.suture = function(item, usingCharacter, targetCharacter, limb)
                 limbtoitem[LimbType.LeftArm] = "larm"
                 if limbtoitem[limbtype] ~= nil then
                     HF.GiveItem(usingCharacter,limbtoitem[limbtype])
-                    if NTSP ~= nil and NTConfig.Get("NTSP_enableSurgerySkill",true) then HF.GiveSkill(usingCharacter,"surgery",0.5) end
+                    HF.GiveSurgerySkill(usingCharacter,0.5)
                 end
             end
         end
@@ -320,22 +320,14 @@ NT.ItemMethods.suture = function(item, usingCharacter, targetCharacter, limb)
             if HF.HasAfflictionLimb(targetCharacter,affidentifier,limbtype) then
                 HF.SetAfflictionLimb(targetCharacter,affidentifier,limbtype,0,usingCharacter)
 
-                if NTSP ~= nil and NTConfig.Get("NTSP_enableSurgerySkill",true) then 
-                    HF.GiveSkill(usingCharacter,"surgery",skillgain)
-                else 
-                    HF.GiveSkill(usingCharacter,"medical",skillgain/4)
-                end
+                HF.GiveSurgerySkill(usingCharacter,skillgain)
             end
         end
         local function removeAfflictionNonLimbSpecificPlusGainSkill(affidentifier,skillgain)
             if HF.HasAffliction(targetCharacter,affidentifier) then
                 HF.SetAffliction(targetCharacter,affidentifier,0,usingCharacter)
 
-                if NTSP ~= nil and NTConfig.Get("NTSP_enableSurgerySkill",true) then 
-                    HF.GiveSkill(usingCharacter,"surgery",skillgain)
-                else 
-                    HF.GiveSkill(usingCharacter,"medical",skillgain/4)
-                end
+                HF.GiveSurgerySkill(usingCharacter,skillgain)
             end
         end
 
