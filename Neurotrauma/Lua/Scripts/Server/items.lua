@@ -1487,3 +1487,25 @@ Hook.Add("NT.RotOrgan", "NT.RotOrgan", function(effect, deltaTime, item, targets
     if item then NT.RotOrgan(item) end
 end)
 function NT.RotOrgan(item) HF.RemoveItem(item) end
+NT.FixCondition = {
+    "healthscanner",
+    "bloodanalyzer",
+    "defibrillator",
+    "bvm",
+    "autocpr"
+}
+function NT.RefreshCondition() 
+    for item in Item.ItemList do
+        if HF.TableContains(NT.FixCondition, item.Prefab.Identifier.Value) then 
+            item.Condition = 100
+        end
+    end
+end
+Timer.Wait(function()
+    NT.RefreshCondition()
+end, 1000)
+Hook.Add("roundStart", "NT.RoundStart.ConditionItems", function()
+    Timer.Wait(function()
+        NT.RefreshCondition()
+    end, 10000)
+end)
