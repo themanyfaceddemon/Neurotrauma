@@ -278,6 +278,7 @@ NT.ItemMethods.suture = function(item, usingCharacter, targetCharacter, limb)
         healeddamage = healeddamage + HF.Clamp(HF.GetAfflictionStrengthLimb(targetCharacter,limbtype,"explosiondamage",0),0,20)
         healeddamage = healeddamage + HF.Clamp(HF.GetAfflictionStrengthLimb(targetCharacter,limbtype,"gunshotwound",0),0,20)
         healeddamage = healeddamage + HF.Clamp(HF.GetAfflictionStrengthLimb(targetCharacter,limbtype,"bleeding",0)/10,0,40)
+        healeddamage = healeddamage + HF.Clamp(HF.GetAfflictionStrengthLimb(targetCharacter,limbtype,"bleedingnonstop",0)/10,0,40)
 
         HF.AddAfflictionLimb(targetCharacter,"lacerations",limbtype,-20,usingCharacter)
         HF.AddAfflictionLimb(targetCharacter,"bitewounds",limbtype,-20,usingCharacter)
