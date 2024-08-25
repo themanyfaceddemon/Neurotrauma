@@ -79,7 +79,7 @@
                     stackable="false"/>
 
     </MeleeWeapon>
-    <Pickable msg="ItemMsgPickUpSelect"/>
+    <!--<Pickable msg="ItemMsgPickUpSelect"/>-->
 
     <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
         <Containable items="mobilebattery"/>
