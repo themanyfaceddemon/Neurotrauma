@@ -52,7 +52,8 @@ end
 ---@param target Barotrauma_Character The character who gives consent
 ---@return boolean consent True if consent is given, false otherwise.
 function hasConsent(user, target)
-    return isOnSameTeam(user, target) or target.IsEscorted or target.Info.CrewListIndex ~= -1
+    if user.IsPlayer and CLIENT then return isOnSameTeam(user, target) or target.IsEscorted or target.Info.CrewListIndex ~= -1
+    else return isOnSameTeam(user, target) or target.IsEscorted end -- Heelge: Function call is shared so it must return something, CLIENT does the correct consent decision.
 end
 
 ---@param aiChar Barotrauma_Character The (AI but not necessarily) character whose sight is being tested.
