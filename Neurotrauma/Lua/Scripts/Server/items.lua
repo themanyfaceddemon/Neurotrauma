@@ -1493,6 +1493,7 @@ NT.FixCondition = {
     "healthscanner",
     "bloodanalyzer",
     "defibrillator",
+    "antisepticspray",
     "bvm",
     "autocpr"
 }
