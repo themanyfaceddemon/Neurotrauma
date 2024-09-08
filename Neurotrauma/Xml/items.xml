@@ -2086,7 +2086,7 @@
                 <Sound file="%ModDir%/Sound/severed.ogg" range="500"/>
             </StatusEffect>
           <!-- making the limb go kaputt if left outside of refrigeration -->
-          <StatusEffect type="Always" target="This" condition="-0.2">
+          <StatusEffect type="Always" target="This" condition="-0.2" conditionalComparison="And">
             <Conditional hastag="neq refrigerated" targetcontainer="true" />
 			<Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
           </StatusEffect>
@@ -2119,7 +2119,7 @@
                 <Sound file="%ModDir%/Sound/severed.ogg" range="500"/>
             </StatusEffect>
           <!-- making the limb go kaputt if left outside of refrigeration -->
-          <StatusEffect type="Always" target="This" condition="-0.2">
+          <StatusEffect type="Always" target="This" condition="-0.2" conditionalComparison="And">
             <Conditional hastag="neq refrigerated" targetcontainer="true" />
 			<Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
           </StatusEffect>
@@ -2152,7 +2152,7 @@
                 <Sound file="%ModDir%/Sound/severed.ogg" range="500"/>
             </StatusEffect>
           <!-- making the limb go kaputt if left outside of refrigeration -->
-          <StatusEffect type="Always" target="This" condition="-0.2">
+          <StatusEffect type="Always" target="This" condition="-0.2" conditionalComparison="And">
             <Conditional hastag="neq refrigerated" targetcontainer="true" />
 			<Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
           </StatusEffect>
@@ -2185,7 +2185,7 @@
                 <Sound file="%ModDir%/Sound/severed.ogg" range="500"/>
             </StatusEffect>
           <!-- making the limb go kaputt if left outside of refrigeration -->
-          <StatusEffect type="Always" target="This" condition="-0.2">
+          <StatusEffect type="Always" target="This" condition="-0.2" conditionalComparison="And">
             <Conditional hastag="neq refrigerated" targetcontainer="true" />
 			<Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
           </StatusEffect>
@@ -2284,7 +2284,7 @@
         <Remove />
       </StatusEffect>
       <!-- making the organ go kaputt if left outside of refrigeration -->
-      <StatusEffect type="Always" target="This" condition="-0.5">
+      <StatusEffect type="Always" target="This" condition="-0.5" conditionalComparison="And">
         <Conditional hastag="neq refrigerated" targetcontainer="true" />
 		<Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
       </StatusEffect>
@@ -2327,7 +2327,7 @@
         <Remove />
       </StatusEffect>
       <!-- making the organ go kaputt if left outside of refrigeration -->
-      <StatusEffect type="Always" target="This" condition="-0.5">
+      <StatusEffect type="Always" target="This" condition="-0.5" conditionalComparison="And">
         <Conditional hastag="neq refrigerated" targetcontainer="true" />
 		<Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
       </StatusEffect>
@@ -2370,7 +2370,7 @@
         <Remove />
       </StatusEffect>
       <!-- making the organ go kaputt if left outside of refrigeration -->
-      <StatusEffect type="Always" target="This" condition="-0.5">
+      <StatusEffect type="Always" target="This" condition="-0.5" conditionalComparison="And">
         <Conditional hastag="neq refrigerated" targetcontainer="true" />
 		<Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
       </StatusEffect>
@@ -2413,7 +2413,7 @@
         <Remove />
       </StatusEffect>
       <!-- making the organ go kaputt if left outside of refrigeration -->
-      <StatusEffect type="Always" target="This" condition="-0.5">
+      <StatusEffect type="Always" target="This" condition="-0.5" conditionalComparison="And">
         <Conditional hastag="neq refrigerated" targetcontainer="true" />
 		<Conditional hastag="neq medicalfabricator" Locked="neq true" targetitemcomponent="ItemContainer" targetcontainer="true" />
       </StatusEffect>
