@@ -1,8 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Items>
 
   <!-- /// Gear /// -->
-
+  <!-- TODO: add "bundled" items for looting medicine via deconstruct instead of giving items a spawn percentage -->
+  <!-- and give deconstructions a set percentage to give a full condition item wherever applicable -->
   <Item name="" identifier="defibrillator" category="Equipment" cargocontaineridentifier="mediccrate"
         Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.3">
     <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
