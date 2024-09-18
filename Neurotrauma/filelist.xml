@@ -124,6 +124,7 @@
   <Other file="%ModDir%/Sound/BHUI/ecg2.ogg" />
   <Other file="%ModDir%/Sound/BHUI/flatline1.ogg" />
   <Other file="%ModDir%/Sound/BHUI/flatline2.ogg" />
+  <Other file="%ModDir%/Sound/silent.ogg" />
 
   <Character file="%ModDir%/Characters/Human/Human.xml" />
   <Other     file="%ModDir%/Characters/Human/Ragdolls/HumanDefaultRagdoll.xml" />
