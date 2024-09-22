@@ -1201,7 +1201,7 @@ NT.ItemMethods.braintransplant = function(item, usingCharacter, targetCharacter,
     local conditionmodifier = 0
     if (not HF.GetSurgerySkillRequirementMet(usingCharacter,100)) then conditionmodifier = -40 end
     local workcondition = HF.Clamp(item.Condition+conditionmodifier,0,100)
-    if(HF.HasAffliction(targetCharacter,"brainremoved",1) and limbtype == LimbType.Head and HF.HasAfflictionLimb(targetCharacter,"retractedskin",limbtype) then
+    if HF.HasAffliction(targetCharacter,"brainremoved",1) and limbtype == LimbType.Head and HF.HasAfflictionLimb(targetCharacter,"retractedskin",limbtype) then
         HF.AddAffliction(targetCharacter,"cerebralhypoxia",-(workcondition),usingCharacter)
         HF.SetAffliction(targetCharacter,"brainremoved",0,usingCharacter)
 
