@@ -1985,7 +1985,7 @@
   <Item name="" identifier="stasisbag" category="Equipment" useinhealthinterface="True" tags="provocative,mediumitem,diving" scale="0.9" fireproof="true" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft" equipconfirmationtext="stasisbagequipconfirmation">
     <Price baseprice="1500" soldbydefault="false">
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
-    </Price><!-- TODO: make this item combinable -->
+    </Price>
     <Fabricate suitablefabricators="medicalfabricator" requiredtime="50">
       <RequiredSkill identifier="medical" level="50" />
       <RequiredItem identifier="plastic" />
@@ -2038,6 +2038,7 @@
       </StatusEffect>
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bloodloss,hypoxemia,cerebralhypoxia,organdamage,gangrene,sepsis,psychosis" damagemultiplier="0.0" damagesound="LimbArmor" />
     </Wearable>
+    <Holdable canBeCombined="true" slots="Any" handle1="0,0" msg="ItemMsgPickUpSelect" />
     <aitarget maxsightrange="50" />
   </Item>
 
