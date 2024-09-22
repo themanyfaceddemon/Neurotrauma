@@ -908,7 +908,7 @@ NT.LimbAfflictions = {
     end
     },
     blunttrauma={max=200,update=function(c,limbaff,i)
-        limbaff[i].strength = limbaff[i].strength - (c.afflictions.immunity.prev/8000 + HF.Clamp(limbaff.bandaged.strength,0,1)*0.1 + HF.Clamp(limbaff.iced.strength,0,1)*0.65)*c.stats.healingrate*NT.Deltatime
+        limbaff[i].strength = limbaff[i].strength - (c.afflictions.immunity.prev/8000 + HF.Clamp(limbaff.bandaged.strength,0,1)*0.1 + HF.Clamp(limbaff.iced.strength,0,1)*0.33)*c.stats.healingrate*NT.Deltatime
     end
     },
     internaldamage={max=200,update=function(c,limbaff,i,type)
