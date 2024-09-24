@@ -1,3 +1,5 @@
+--original code by Evil Factory, 
+--adapted to NT
 local easySettings = {}
 
 easySettings.Settings = {}
