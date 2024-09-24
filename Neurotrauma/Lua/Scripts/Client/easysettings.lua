@@ -46,7 +46,7 @@ easySettings.AddMenu = function (name, onOpen)
 end
 
 easySettings.BasicList = function (parent, size)
-    local menuContent = GUI.Frame(GUI.RectTransform(size or Vector2(0.6, 0.6), parent.RectTransform, GUI.Anchor.Center))
+    local menuContent = GUI.Frame(GUI.RectTransform(size or Vector2(0.3, 0.6), parent.RectTransform, GUI.Anchor.Center))
     local menuList = GUI.ListBox(GUI.RectTransform(Vector2(1, 0.95), menuContent.RectTransform, GUI.Anchor.TopCenter))
 
 	easySettings.SaveButton(menuContent)

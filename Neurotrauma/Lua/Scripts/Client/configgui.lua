@@ -83,7 +83,7 @@ easySettings.AddMenu("Neurotrauma", function (parent)
             local rect = GUI.RectTransform(Vector2(1, 0.05), list.Content.RectTransform)
             local textBlock = GUI.TextBlock(rect, entry.name.." ("..minrange.."-"..maxrange..")", Color(230,230,170), nil, GUI.Alignment.Center, true, nil, Color(0,0,0))
             if entry.description then textBlock.ToolTip = entry.description end
-            local scalar = GUI.NumberInput(GUI.RectTransform(Vector2(1, 0.1), list.Content.RectTransform), NumberType.Float)
+            local scalar = GUI.NumberInput(GUI.RectTransform(Vector2(1, 0.08), list.Content.RectTransform), NumberType.Float)
             local key2 = key
             scalar.valueStep = 0.1
             scalar.MinValueFloat = 0
