@@ -19,8 +19,20 @@ function NTConfig.SaveConfig()
     local tableToSave = {}
     for key,entry in pairs(NTConfig.Entries) do
         tableToSave[key] = entry.value
-    end 
+    end
     File.Write(configFilePath, json.serialize(tableToSave))
+end
+
+function NTConfig.ResetConfig()
+    File.CreateDirectory(configDirectoryPath)
+	
+	local tableToSave = {}
+	for key,entry in pairs(NTConfig.Entries) do
+        tableToSave[key] = entry.default
+        NTConfig.Entries[key] = entry
+        NTConfig.Entries[key].value = entry.default
+    end
+	File.Write(configFilePath, json.serialize(tableToSave))
 end
 
 function NTConfig.LoadConfig()
@@ -51,29 +63,29 @@ end
 NT.ConfigData = {
     NT_header1 =                        {name="Neurotrauma",type="category"},
 
-    NT_dislocationChance =              {name="dislocation chance",default=1,range={0,100},type="float",                difficultyCharacteristics={max=5}},
-    NT_fractureChance =                 {name="fracture chance",default=1,range={0,100},type="float",                   difficultyCharacteristics={multiplier=2,max=5}},
-    NT_pneumothoraxChance =             {name="pneumothorax chance",default=1,range={0,100},type="float",               difficultyCharacteristics={max=5}},
-    NT_tamponadeChance =                {name="tamponade chance",default=1,range={0,100},type="float",                  difficultyCharacteristics={max=3}},
-    NT_heartattackChance =              {name="heart attack chance",default=1,range={0,100},type="float",               difficultyCharacteristics={multiplier=0.5,max=1}},
-    NT_strokeChance =                   {name="stroke chance",default=1,range={0,100},type="float",                     difficultyCharacteristics={multiplier=0.5,max=1}},
-    NT_infectionRate =                  {name="infection rate",default=1,range={0,100},type="float",                    difficultyCharacteristics={multiplier=1.5,max=5}},
+    NT_dislocationChance =              {name="Dislocation chance",default=1,range={0,100},type="float",                difficultyCharacteristics={max=5}},
+    NT_fractureChance =                 {name="Fracture chance",default=1,range={0,100},type="float",                   difficultyCharacteristics={multiplier=2,max=5}},
+    NT_pneumothoraxChance =             {name="Pneumothorax chance",default=1,range={0,100},type="float",               difficultyCharacteristics={max=5}},
+    NT_tamponadeChance =                {name="Tamponade chance",default=1,range={0,100},type="float",                  difficultyCharacteristics={max=3}},
+    NT_heartattackChance =              {name="Heart attack chance",default=1,range={0,100},type="float",               difficultyCharacteristics={multiplier=0.5,max=1}},
+    NT_strokeChance =                   {name="Stroke chance",default=1,range={0,100},type="float",                     difficultyCharacteristics={multiplier=0.5,max=1}},
+    NT_infectionRate =                  {name="Infection rate",default=1,range={0,100},type="float",                    difficultyCharacteristics={multiplier=1.5,max=5}},
     NT_CPRFractureChance =              {name="CPR fracture chance",default=1,range={0,100},type="float",               difficultyCharacteristics={multiplier=0.5,max=1}},
-    NT_traumaticAmputationChance =      {name="traumatic amputation chance",default=1,range={0,100},type="float",       difficultyCharacteristics={max=3}},
-    NT_neurotraumaGain =                {name="neurotrauma gain",default=1,range={0,100},type="float",                  difficultyCharacteristics={multiplier=3,max=10}},
-    NT_organDamageGain =                {name="organ damage gain",default=1,range={0,100},type="float",                 difficultyCharacteristics={multiplier=2,max=8}},
-    NT_fibrillationSpeed =              {name="fibrillation rate",default=1,range={0,100},type="float",                 difficultyCharacteristics={multiplier=1.5,max=8}},
-    NT_gangrenespeed =                  {name="gangrene rate",default=1,range={0,100},type="float",                     difficultyCharacteristics={multiplier=0.5,max=5}},
-    NT_falldamage =                     {name="falldamage",default=1,range={0,100},type="float",                        difficultyCharacteristics={multiplier=0.5,max=5}},
-    NT_falldamageSeriousInjuryChance =  {name="falldamage serious injury chance",default=1,range={0,100},type="float",  difficultyCharacteristics={multiplier=0.5,max=5}},
+    NT_traumaticAmputationChance =      {name="Traumatic amputation chance",default=1,range={0,100},type="float",       difficultyCharacteristics={max=3}},
+    NT_neurotraumaGain =                {name="Neurotrauma gain",default=1,range={0,100},type="float",                  difficultyCharacteristics={multiplier=3,max=10}},
+    NT_organDamageGain =                {name="Organ damage gain",default=1,range={0,100},type="float",                 difficultyCharacteristics={multiplier=2,max=8}},
+    NT_fibrillationSpeed =              {name="Fibrillation rate",default=1,range={0,100},type="float",                 difficultyCharacteristics={multiplier=1.5,max=8}},
+    NT_gangrenespeed =                  {name="Gangrene rate",default=1,range={0,100},type="float",                     difficultyCharacteristics={multiplier=0.5,max=5}},
+    NT_falldamage =                     {name="Falldamage",default=1,range={0,100},type="float",                        difficultyCharacteristics={multiplier=0.5,max=5}},
+    NT_falldamageSeriousInjuryChance =  {name="Falldamage serious injury chance",default=1,range={0,100},type="float",  difficultyCharacteristics={multiplier=0.5,max=5}},
 
-    NT_vanillaSkillCheck =              {name="vanilla skill check formula",default=false,type="bool",description="changes the chance to succeed a lua skillcheck from skill/requiredskill to 100-(requiredskill-skill))/100"},
-    NT_disableBotAlgorithms =           {name="disable bot treatment algorithms",default=true,type="bool",description="prevents bots from attempting to treat afflictions. This is desireable, because bots suck at treating things, and their bad attempts lag out the game immensely."},
-    NT_screams =                        {name="screams",default=true,type="bool",description="makes much pain much loud"},
-    NT_ignoreModConflicts =             {name="ignore mod conflicts",default=false,type="bool",description="prevent the mod conflict affliction from showing up"},
+    NT_vanillaSkillCheck =              {name="Vanilla skill check formula",default=false,type="bool",description="Changes the chance to succeed a lua skillcheck from skill/requiredskill to 100-(requiredskill-skill))/100"},
+    NT_disableBotAlgorithms =           {name="Disable bot treatment algorithms",default=true,type="bool",description="Prevents bots from attempting to treat afflictions.\nThis is desireable, because bots suck at treating things, and their bad attempts lag out the game immensely."},
+    NT_screams =                        {name="Screams",default=true,type="bool",description="Characters scream when in pain."},
+    NT_ignoreModConflicts =             {name="Ignore mod conflicts",default=false,type="bool",description="Prevent the mod conflict affliction from showing up."},
 
-    NT_organRejection =                 {name="organ rejection",default=false,type="bool",          difficultyCharacteristics={multiplier=0.5},description="when transplanting an organ, there is a chance that the organ gets rejected. The higher the patients immunity at the time of the transplant, the higher the chance."},
-    NT_fracturesRemoveCasts =           {name="fractures remove casts",default=true,type="bool",    difficultyCharacteristics={multiplier=0.5},description="when receiving damage that would cause a fracture, remove plaster casts on the limb"},
+    NT_organRejection =                 {name="Organ rejection",default=false,type="bool",          difficultyCharacteristics={multiplier=0.5},description="When transplanting an organ, there is a chance that the organ gets rejected.\nThe higher the patients immunity at the time of the transplant, the higher the chance."},
+    NT_fracturesRemoveCasts =           {name="Fractures remove casts",default=true,type="bool",    difficultyCharacteristics={multiplier=0.5},description="When receiving damage that would cause a fracture, remove plaster casts on the limb"},
 }
 NTConfig.AddConfigOptions(NT)
 
