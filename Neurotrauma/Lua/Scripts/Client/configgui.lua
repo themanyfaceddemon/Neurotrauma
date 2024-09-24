@@ -67,10 +67,21 @@ easySettings.AddMenu("Neurotrauma", function (parent)
     -- procedurally construct config UI
     for key,entry in pairs(NTConfig.Entries) do
         if entry.type=="float" then
+		
 
-            -- scalar value
+			-- scalar value
+			 --grab range
+			local minrange=""
+			local maxrange=""
+            local count=0
+			for _, rangegrab in pairs(entry.range) do
+				if count==0 then minrange=rangegrab end
+				if count==1 then maxrange=rangegrab end
+				count=count+1
+			end
+			
             local rect = GUI.RectTransform(Vector2(1, 0.05), list.Content.RectTransform)
-            local textBlock = GUI.TextBlock(rect, entry.name, Color(230,230,170), nil, GUI.Alignment.Center, true, nil, Color(0,0,0))
+            local textBlock = GUI.TextBlock(rect, entry.name.." ("..minrange.."-"..maxrange..")", Color(230,230,170), nil, GUI.Alignment.Center, true, nil, Color(0,0,0))
             if entry.description then textBlock.ToolTip = entry.description end
             local scalar = GUI.NumberInput(GUI.RectTransform(Vector2(1, 0.1), list.Content.RectTransform), NumberType.Float)
             local key2 = key
