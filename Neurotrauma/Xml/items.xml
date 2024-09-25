@@ -1975,9 +1975,12 @@
       <StatusEffect type="OnWearing" target="Character" disabledeltatime="true" stackable="false" duration="1">
         <Affliction identifier="bodybagoverlay" amount="3"/>
       </StatusEffect>
-      <StatusEffect type="OnWearing" target="NearbyCharacters" range="100" stackable="true" setvalue="true">
+    <!--  <StatusEffect type="OnWearing" target="NearbyCharacters" range="100" stackable="true" setvalue="true">
         <Conditional ishuman="true"/>
         <Affliction identifier="stretchers" amount="100" />
+      </StatusEffect> -->
+      <StatusEffect type="OnWearing" target="Character" interval="0.25" disabledeltatime="true">
+        <LuaHook name="bodybag.dragfast" custom="Character" />
       </StatusEffect>
     </Wearable>
     <aitarget maxsightrange="50" />
@@ -2029,8 +2032,11 @@
         <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" />
         <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" />
       </StatusEffect>
-      <StatusEffect type="OnWearing" target="NearbyCharacters" range="150" stackable="true" setvalue="true">
+      <!-- <StatusEffect type="OnWearing" target="NearbyCharacters" range="150" stackable="true" setvalue="true">
         <Affliction identifier="stretchers" amount="100" />
+      </StatusEffect> -->
+      <StatusEffect type="OnWearing" target="Character" interval="0.25" disabledeltatime="true">
+        <LuaHook name="bodybag.dragfast" custom="Character" />
       </StatusEffect>
       <StatusEffect type="OnWearing" target="This" Condition="-0.25" />
       <StatusEffect type="OnBroken" target="This">
