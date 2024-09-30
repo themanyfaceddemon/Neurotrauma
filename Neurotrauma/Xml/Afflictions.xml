@@ -1865,7 +1865,7 @@
   <Affliction name="" identifier="stretchers" isbuff="True" limbspecific="False" type="ambulance"
   showinhealthscannerthreshold="200" showiconthreshold="200" maxstrength="100"
     healableinmedicalclinic="false">
-    <Effect minstrength="0" maxstrength="100" strengthchange="-50">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-100">
       <AbilityFlag flagtype="MoveNormallyWhileDragging" />
     </Effect>
     <icon texture="%ModDir%/Images/AfflictionIcons.png" sourcerect="0,256,128,128" color="139,60,42,255" origin="0,0" />

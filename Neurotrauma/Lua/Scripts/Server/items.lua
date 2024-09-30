@@ -1484,6 +1484,22 @@ NT.ItemStartsWithMethods.bloodpack = function(item, usingCharacter, targetCharac
     InfuseBloodpack(item,packtype,usingCharacter,targetCharacter,limb)
 end
 
+-- make it so that the person dragging the wearer of a body bag can drag fast
+-- fast dragging may start a little late
+Hook.Add("bodybag.dragfast", "bodybag.dragfast", function(effect, deltaTime, item, targets, worldPosition)
+    local target=nil
+	
+	for key in targets do
+		target=key
+	end
+	
+	if target==nil then return end
+
+	local dragger=target.SelectedBy
+	if dragger==nil then return end
+	HF.SetAffliction(dragger,"stretchers",100)
+end)
+
 -- this exists purely for NT metabolism
 Hook.Add("NT.RotOrgan", "NT.RotOrgan", function(effect, deltaTime, item, targets, worldPosition)
     if item then NT.RotOrgan(item) end
