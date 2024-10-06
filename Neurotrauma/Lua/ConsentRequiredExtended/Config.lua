@@ -55,8 +55,7 @@ AffectedItems = {
 "custompill_horsepill", -- 大药丸
 "custompill_tablets", -- 药片
 -- vanilla 原版
-"toyhammer", -- 玩具锤子
-"paralyzant" -- 麻痹剂
+"toyhammer" -- 玩具锤子
 }
 
 --------- Stop editing here ---------
