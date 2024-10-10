@@ -3622,7 +3622,7 @@
       <SuitableTreatment identifier="cardiacarrest" suitability="100"/>
       <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5"
                    handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
-
+				<!-- TODO: move this to Lua -->
         <StatusEffect tags="medical" multiplyafflictionsbymaxvitality="true" type="OnSuccess" target="UseTarget" disabledeltatime="true" allowwhenbroken="true">
           <Affliction identifier="adrenalinerush" amount="8" />
         </StatusEffect>
