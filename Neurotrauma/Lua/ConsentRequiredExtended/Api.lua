@@ -19,7 +19,7 @@ function AddAffectedItem(identifier)
 end
 
 LuaUserData.MakeFieldAccessible(Descriptors['Barotrauma.AbandonedOutpostMission'], 'requireRescue')
--- Character type doesn't have tags we can assign a custom "resquetarget" tag to
+-- Character type doesn't have tags we can assign a custom "rescuetarget" tag to
 -- So instead we just hold characters which need rescue in a table and compare their entity IDs
 -- This table is only resfreshed on roundstart
 local rescuetargets = {}
