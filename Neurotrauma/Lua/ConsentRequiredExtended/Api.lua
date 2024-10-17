@@ -18,6 +18,12 @@ function AddAffectedItem(identifier)
     table.insert(affectedItems, identifier)
 end
 
+LuaUserData.MakeFieldAccessible(Descriptors['Barotrauma.AbandonedOutpostMission'], 'requireRescue')
+-- Character type doesn't have tags we can assign a custom "rescuetarget" tag to
+-- So instead we just hold characters which need rescue in a table and compare their entity IDs
+-- This table is only resfreshed on roundstart
+local rescuetargets = {}
+
 ---Returns a boolean indicating whether a given item is affected or not.
 ---@param identifier string The identifier of the item that we are testing.
 ---@return boolean isAffected True if the item is affected, false otherwise.
@@ -48,17 +54,34 @@ function isOnSameTeam(char1, char2)
     return team1 == team2
 end
 
--- TODO: implement this as a function: params are charTarget (type of Barotrauma_Character). Compares charTarget to characters in mission.requireRescue then tags the character with "consentgiven" and returns True (type of bool) if it finds a matching value, False if otherwise.
--- LuaUserData.MakeFieldAccessible(Descriptors['Barotrauma.AbandonedOutpostMission'], 'requireRescue')
+---Updates current rescue targets list, separate so we dont cycle thru all missions every time we apply item to chacter. Use IsRescueTarget(target) after this.
+function UpdateRescueTargets()
+    rescuetargets = {}
+    for mission in Game.GameSession.Missions do 
+        if mission.Prefab.Type == MissionType.AbandonedOutpost then 
+            for character in mission.requireRescue do 
+                table.insert(rescuetargets, character) 
+            end
+        end
+    end
+    -- print('rescue targets =')
+    -- for char in rescuetargets do print(char.Name) end
+end
+---@param target Barotrauma_Character The character we want to confirm as being rescued
+---@return boolean consent True if target is rescue mission target, false otherwise
+function IsRescueTarget(target)
+    for char in rescuetargets do
+        if target.ID == char.ID then return true end
+    end
+    return false
+end
 
--- lua for mission in  Game.GameSession.Missions do if mission.Prefab.Type == MissionType.AbandonedOutpost then for character in mission.requireRescue do print(character.name) end end end
 ---@param user Barotrauma_Character The character who desires consent.
 ---@param target Barotrauma_Character The character who gives consent
 ---@return boolean consent True if consent is given, false otherwise.
 function hasConsent(user, target)
 	if not NTConfig.Get("NTCRE_ConsentRequired",true) then return true end
-    if user.IsPlayer and CLIENT then return isOnSameTeam(user, target) or target.IsEscorted or target.Info.CrewListIndex ~= -1
-    else return isOnSameTeam(user, target) or target.IsEscorted end -- Heelge: Function call is shared so it must return something, CLIENT does the correct consent decision.
+	return isOnSameTeam(user, target) or target.IsEscorted or IsRescueTarget(target) -- No longer needs to be shared.
 end
 
 ---@param aiChar Barotrauma_Character The (AI but not necessarily) character whose sight is being tested.
