@@ -20,6 +20,12 @@ for _, affectedItem in pairs(Config.AffectedItems) do
     Api.AddAffectedItem(affectedItem)
 end
 
+NTCRE.ConfigData = {
+    NTCRE_header1 = {name='Consent Required',type="category"},
+    NTCRE_ConsentRequired = {name="Enable Consent Required",default=true,type="bool",description="Disable integrated consent required mod.\n(If ticked, bots will not get aggravated by medical interactions.)"}
+}
+NTConfig.AddConfigOptions(NTCRE)
+
 Hook.Add(LUA_EVENT_ITEM_APPLYTREATMENT, HOOK_NAME_ITEM_APPLYTREATMENT, OnItemApplied)
 
 -- damn meleeWeapon
