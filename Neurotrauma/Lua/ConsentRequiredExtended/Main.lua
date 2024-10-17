@@ -25,7 +25,7 @@ end
 
 NTCRE.ConfigData = {
     NTCRE_header1 = {name='Consent Required',type="category"},
-    NTCRE_ConsentRequired = {name="Enable Consent Required",default=true,type="bool",description="Disable integrated consent required mod.\n(If ticked, bots will not get aggravated by medical interactions.)"}
+    NTCRE_ConsentRequired = {name="Enable Consent Required",default=true,type="bool",description="Integrated consent required mod.\n(If disabled, none of NPCs will get aggravated by medical interactions.)"}
 }
 NTConfig.AddConfigOptions(NTCRE)
 
