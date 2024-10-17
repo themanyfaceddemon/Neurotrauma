@@ -15,6 +15,9 @@ local HOOK_NAME_ITEM_APPLYTREATMENT = "ConsentRequiredExtended.onItemApplyTreatm
 local LUA_EVENT_MELEEWEAPON_HANDLEIMPACT = "meleeWeapon.handleImpact"
 local HOOK_NAME_MELEEWEAPON_HANDLEIMPACT = "ConsentRequiredExtended.onMeleeWeaponHandleImpact"
 
+local LUA_EVENT_ROUNDSTART = "roundStart"
+local HOOK_NAME_UPDATE_RESCUETARGETS = "ConsentRequiredExtended.onUpdateRescueTargets"
+
 -- Set up affected items from config.
 for _, affectedItem in pairs(Config.AffectedItems) do
     Api.AddAffectedItem(affectedItem)
@@ -30,3 +33,5 @@ Hook.Add(LUA_EVENT_ITEM_APPLYTREATMENT, HOOK_NAME_ITEM_APPLYTREATMENT, OnItemApp
 
 -- damn meleeWeapon
 Hook.Add(LUA_EVENT_MELEEWEAPON_HANDLEIMPACT, HOOK_NAME_MELEEWEAPON_HANDLEIMPACT, onMeleeWeaponHandleImpact)
+
+Hook.Add(LUA_EVENT_ROUNDSTART, HOOK_NAME_UPDATE_RESCUETARGETS, Api.UpdateRescueTargets)
