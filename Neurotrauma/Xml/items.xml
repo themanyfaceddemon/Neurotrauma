@@ -191,11 +191,7 @@
                     stackable="false"/>
       <StatusEffect type="OnWearing" target="Contained,Character,This" Condition="-0.2" comparison="And">
         <Conditional IsDead="false"/>
-        <RequiredItem items="batterycell" type="Contained"/>
-      </StatusEffect>
-      <StatusEffect type="OnWearing" target="Contained,Character,This" Condition="-0.1" comparison="And">
-        <Conditional IsDead="false"/>
-        <RequiredItem items="fulguriumbatterycell" type="Contained"/>
+        <RequiredItem items="mobilebattery" type="Contained"/>
       </StatusEffect>
       <StatusEffect type="OnWearing" target="Character,This" comparison="Or" disabledeltatime="true">
         <Conditional IsDead="false"/>
