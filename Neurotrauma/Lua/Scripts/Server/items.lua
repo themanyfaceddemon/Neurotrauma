@@ -454,7 +454,8 @@ NT.ItemMethods.streptokinase = function(item, usingCharacter, targetCharacter, l
     HF.GiveItem(targetCharacter,"ntsfx_syringe")
 end
 NT.ItemMethods.adrenaline = function(item, usingCharacter, targetCharacter, limb) 
-    HF.AddAffliction(targetCharacter,"afadrenaline",55,usingCharacter)
+    HF.AddAffliction(targetCharacter,"afadrenaline",55,usingCharacter) 
+    HF.AddAffliction(targetCharacter,"adrenalinerush",8,usingCharacter)
     if HF.HasAffliction(targetCharacter,"cardiacarrest",0.1) then
         HF.AddAffliction(targetCharacter,"cardiacarrest",-100,usingCharacter)
         HF.AddAffliction(targetCharacter,"fibrillation",20,usingCharacter)
