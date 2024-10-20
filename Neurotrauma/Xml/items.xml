@@ -2,8 +2,7 @@
 <Items>
 
   <!-- /// Gear /// -->
-  <!-- TODO: add "bundled" items for crafting and maybe lootable instead of giving items a spawn percentage -->
-  <!-- TODO: give deconstructions a set percentage for heavyweight recipes and no recipes for lightweights: instruments and etc -->
+  <!-- TODO: add "bundled" items for crafting to optimize medfab recipes count -->
   <Item name="" identifier="defibrillator" category="Equipment" cargocontaineridentifier="mediccrate"
         Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.3">
     <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
@@ -16,8 +15,7 @@
         <RequiredItem identifier="aluminium" mincondition="0.5" usecondition="true"/>
     </Fabricate>
     <Deconstruct time="5">
-        <Item identifier="plastic" mincondition="0.1" outcondition="0.5"/>
-        <Item identifier="fpgacircuit" mincondition="0.1"/>
+        <Item identifier="plastic" mincondition="0.1"/>
     </Deconstruct>
     <Price baseprice="100" soldbydefault="false">
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9"/>
@@ -95,7 +93,6 @@
             <RequiredItem identifier="plastic"/>
         </Fabricate>
         <Deconstruct time="5">
-            <Item identifier="plastic" outcondition="0.5"/>
         </Deconstruct>
         <Price baseprice="100" soldbydefault="false">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9"/>
@@ -167,8 +164,7 @@
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9"/>
     </Price>
     <Deconstruct time="10">
-      <Item identifier="plastic" outcondition="0.5"/>
-      <Item identifier="steel" outcondition="0.5"/>
+      <Item identifier="steel"/>
     </Deconstruct>
     <!-- TODO: remove all of this when defibs get better -->
     <Fabricate suitablefabricators="fabricator" requiredtime="30">
@@ -224,7 +220,6 @@
           <RequiredItem identifier="plastic" mincondition="0.25" usecondition="true"/>
       </Fabricate>
       <Deconstruct time="5">
-          <Item identifier="plastic" outcondition="0.25"/>
       </Deconstruct>
       <Price baseprice="50" soldbydefault="true">
           <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9"/>
@@ -258,7 +253,7 @@
       <RequiredItem identifier="titaniumaluminiumalloy" />
     </Fabricate>
     <Deconstruct time="10">
-      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="steel" />
     </Deconstruct>
     <PreferredContainer primary="medcab" />
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.1" />
@@ -290,7 +285,7 @@
     <Price baseprice="200" soldbydefault="false">
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
     </Price>
-    <Deconstruct time="40">
+    <Deconstruct time="10">
       <Item identifier="steel"/>
       <Item identifier="aluminium"/>
     </Deconstruct>
@@ -368,7 +363,6 @@
         <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
       </Fabricate>
       <Deconstruct>
-          <Item identifier="zinc" mincondition="0.1" outcondition="0.25"/>
       </Deconstruct>
       <Price baseprice="35" soldbydefault="true">
           <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
@@ -395,7 +389,6 @@
           <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
         </Fabricate>
         <Deconstruct>
-            <Item identifier="zinc" mincondition="0.1" outcondition="0.25"/>
         </Deconstruct>
         <Price baseprice="35" soldbydefault="true">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
@@ -420,7 +413,6 @@
       <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
     </Fabricate>
     <Deconstruct>
-      <Item identifier="zinc" mincondition="0.1" outcondition="0.25"/>
     </Deconstruct>
     <Price baseprice="35" soldbydefault="true">
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
@@ -447,8 +439,6 @@
         <RequiredItem identifier="fpgacircuit"/>
     </Fabricate>
     <Deconstruct>
-        <Item identifier="steel" outcondition="0.5"/>
-        <Item identifier="zinc" outcondition="0.5"/>
     </Deconstruct>
     <Price baseprice="80" soldbydefault="true">
         <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
@@ -479,7 +469,6 @@
       <RequiredItem identifier="titaniumaluminiumalloy" mincondition="0.5" usecondition="true"/>
     </Fabricate>
     <Deconstruct>
-      <Item identifier="aluminium" outcondition="0.5"/>
     </Deconstruct>
     <Price baseprice="100" soldbydefault="true">
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
@@ -512,7 +501,6 @@
       <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
     </Fabricate>
     <Deconstruct>
-      <Item identifier="zinc" mincondition="0.1" outcondition="0.25"/>
     </Deconstruct>
     <Price baseprice="35" soldbydefault="true">
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
@@ -543,8 +531,6 @@
       <RequiredItem identifier="rubber" mincondition="0.5" usecondition="true"/>
     </Fabricate>
     <Deconstruct>
-      <Item identifier="plastic" outcondition="0.5"/>
-      <Item identifier="rubber" outcondition="0.5"/>
     </Deconstruct>
     <Price baseprice="30" soldbydefault="true">
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
@@ -576,8 +562,6 @@
       <RequiredItem identifier="rubber" mincondition="0.5" usecondition="true"/>
     </Fabricate>
     <Deconstruct>
-      <Item identifier="plastic" outcondition="0.5"/>
-      <Item identifier="rubber" outcondition="0.5"/>
     </Deconstruct>
     <Price baseprice="70" soldbydefault="true">
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
@@ -608,7 +592,6 @@
       <RequiredItem identifier="plastic"/>
     </Fabricate>
     <Deconstruct>
-      <Item identifier="plastic" outcondition="0.5"/>
     </Deconstruct>
     <Price baseprice="25" soldbydefault="true">
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
@@ -640,7 +623,6 @@
       <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
     </Fabricate>
     <Deconstruct>
-      <Item identifier="zinc" mincondition="0.1" outcondition="0.25"/>
     </Deconstruct>
     <Price baseprice="35" soldbydefault="true">
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
@@ -677,7 +659,6 @@
       <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
     </Fabricate>
     <Deconstruct>
-      <Item identifier="zinc" mincondition="0.1" outcondition="0.25"/>
     </Deconstruct>
     <Price baseprice="35" soldbydefault="true">
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
@@ -714,7 +695,6 @@
       <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
     </Fabricate>
     <Deconstruct>
-      <Item identifier="zinc" mincondition="0.1" outcondition="0.25"/>
     </Deconstruct>
     <Price baseprice="35" soldbydefault="true">
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
@@ -751,7 +731,6 @@
       <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
     </Fabricate>
     <Deconstruct>
-      <Item identifier="zinc" mincondition="0.1" outcondition="0.25"/>
     </Deconstruct>
     <Price baseprice="35" soldbydefault="true">
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
@@ -789,8 +768,6 @@
       <RequiredItem identifier="zinc" mincondition="0.25" usecondition="true"/>
     </Fabricate>
     <Deconstruct>
-      <Item identifier="steel" mincondition="0.1" outcondition="0.25"/>
-      <Item identifier="zinc" mincondition="0.1" outcondition="0.25"/>
     </Deconstruct>
     <Price baseprice="200" soldbydefault="true">
       <Price locationtype="research" multiplier="1" sold="true" minavailable="1"/>
@@ -976,7 +953,6 @@
       <RequiredItem identifier="organicfiber"/>
     </Fabricate>
     <Deconstruct time="2">
-      <Item identifier="organicfiber" outcondition="0.25"/>
     </Deconstruct>
     <Price baseprice="60" soldbydefault="true">
       <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="5"/>
@@ -1017,7 +993,6 @@
       <RequiredItem identifier="aluminium" mincondition="0.25" usecondition="true"/>
     </Fabricate>
     <Deconstruct>
-      <RequiredItem identifier="plastic"/>
     </Deconstruct>
     <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="256,128,64,64"
                    origin="0.5,0.5"/>
@@ -1103,7 +1078,7 @@
       <RequiredItem identifier="potassium"/>
       <RequiredItem identifier="carbon"/>
     </Fabricate>
-    <Deconstruct time="20">
+    <Deconstruct time="5">
       <Item identifier="antibloodloss1" copycondition="true" mincondition="0.1"/>
       <Item identifier="potassium" copycondition="true" mincondition="0.1"/>
     </Deconstruct>
@@ -1150,7 +1125,7 @@
         <RequiredItem identifier="liquidoxygenite"/>
         <RequiredItem identifier="stabilozine"/>
     </Fabricate>
-    <Deconstruct time="20">
+    <Deconstruct time="5">
         <Item identifier="adrenaline" copycondition="true" mincondition="0.1"/>
         <Item identifier="liquidoxygenite" copycondition="true" mincondition="0.1"/>
     </Deconstruct>
@@ -1336,7 +1311,7 @@
         <RequiredItem identifier="slimebacteria"/>
         <RequiredItem identifier="stabilozine"/>
     </Fabricate>
-    <Deconstruct time="20">
+    <Deconstruct time="5">
         <Item identifier="stabilozine" copycondition="true" mincondition="0.1"/>
     </Deconstruct>
     <SuitableTreatment identifier="heartattack" suitability="15"/>
@@ -1367,8 +1342,8 @@
             <RequiredItem identifier="stabilozine" amount="2"/>
             <RequiredItem identifier="antibiotics" amount="2"/>
         </Fabricate>
-        <Deconstruct time="20">
-            <Item identifier="stabilozine" mincondition="0.1" outcondition="0.25"/>
+        <Deconstruct time="5">
+            <Item identifier="stabilozine" mincondition="0.1"/>
         </Deconstruct>
         <SuitableTreatment identifier="infectedwound" suitability="20"/>
         <SuitableTreatment identifier="burn" suitability="15"/>
@@ -1402,7 +1377,6 @@
         <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="384,256,128,128"
                 depth="0.55" origin="0.5,0.5"/>
         <Deconstruct time="5">
-            <Item identifier="plastic" outcondition="0.5"/>
         </Deconstruct>
         <Fabricate suitablefabricators="medicalfabricator" requiredtime="10">
             <RequiredItem identifier="plastic"/>
@@ -1449,7 +1423,6 @@
             <RequiredItem identifier="ethanol"/>
         </Fabricate>
         <Deconstruct time="5">
-            <Item identifier="chlorine" copycondition="true" mincondition="0.1"/>
         </Deconstruct>
         <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="192,64,64,64"
                        origin="0.5,0.5"/>
@@ -1514,7 +1487,7 @@
         <Price storeidentifier="merchantmedical" multiplier="0.9"/>
         <Price storeidentifier="merchanthusk" minavailable="0" maxavailable="2"/>
       </Price>
-      <Deconstruct time="20">
+      <Deconstruct time="5">
         <Item identifier="antibloodloss1" copycondition="true" mincondition="0.1"/>
         <Item identifier="stabilozine" copycondition="true" mincondition="0.1"/>
       </Deconstruct>
@@ -1609,8 +1582,7 @@
             <RequiredSkill identifier="medical" level="10"/>
             <RequiredItem identifier="plastic" mincondition="0.5" usecondition="true"/>
         </Fabricate>
-        <Deconstruct time="10">
-          <Item identifier="plastic" mincondition="0.1" outcondition="0.25"/>
+        <Deconstruct time="5">
         </Deconstruct>
         <InventoryIcon texture="%ModDir%/Images/BloodPacksAtlas.png" sourcerect="192,0,64,85"
                        origin="0.5,0.5"/>
@@ -1774,20 +1746,13 @@
     </Price>
     <Deconstruct time="10">
       <Item identifier="steel" />
-      <Item identifier="potassium" />
-      <Item identifier="potassium" />
-      <Item identifier="potassium" />
-      <Item identifier="potassium" />
+      <Item identifier="potassium" amount="4" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredSkill identifier="mechanical" level="20" />
       <Item identifier="steel" />
-      <Item identifier="potassium" />
-      <Item identifier="potassium" />
-      <Item identifier="potassium" />
-      <Item identifier="potassium" />
-      <Item identifier="phosphorus" />
-      <Item identifier="phosphorus" />
+      <Item identifier="potassium" amount="4" />
+      <Item identifier="phosphorus" amount="2" />
     </Fabricate>
     <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" depth="0.54" sourcerect="10,578,146,82" origin="0.5,0.5" />
     <Body width="145" height="85" density="50" />
@@ -1806,14 +1771,12 @@
     </Price>
     <Deconstruct time="10">
       <Item identifier="steel" />
-      <Item identifier="potassium" />
-      <Item identifier="potassium" />
+      <Item identifier="potassium" amount="2" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredSkill identifier="mechanical" level="20" />
       <Item identifier="steel" />
-      <Item identifier="potassium" />
-      <Item identifier="potassium" />
+      <Item identifier="potassium" amount="2" />
       <Item identifier="phosphorus" />
     </Fabricate>
     <Price baseprice="25" >
@@ -1844,6 +1807,7 @@
   <Item name="" identifier="medtoolbox" category="Equipment" tags="smallitem,mobilecontainer,tool,toolbox" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" impactsoundtag="impact_metal_heavy" RequireAimToUse="True"
         description="">
     <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
+    <PreferredContainer primary="supplycab" minamount="1" maxamount="1" spawnprobability="0.3"/>
     <PreferredContainer secondary="wreckstoragecab" spawnprobability="0.05"/>
     <PreferredContainer secondary="locker"/>
     <Deconstruct time="10">
@@ -1942,8 +1906,7 @@
       <RequiredSkill identifier="medical" level="5" />
       <RequiredItem identifier="plastic" />
     </Fabricate>
-    <Deconstruct time="20">
-      <Item identifier="plastic" outcondition="0.5"/>
+    <Deconstruct time="10">
     </Deconstruct>
     <PreferredContainer primary="medcab" minamount="0" maxamount="4" spawnprobability="0.75" />
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.15" />
@@ -1992,7 +1955,7 @@
       <RequiredItem identifier="mannitol" />
       <RequiredItem identifier="potassium" />
     </Fabricate>
-    <Deconstruct time="20">
+    <Deconstruct time="10">
       <Item identifier="plastic" />
       <Item identifier="potassium" />
     </Deconstruct>
@@ -2077,9 +2040,8 @@
         <InventoryIcon texture="%ModDir%/Images/limbs.png" sourcerect="0,0,46,90" origin="0.5,0.5"/>
         <Sprite texture="%ModDir%/Images/limbs.png" sourcerect="0,0,46,90" depth="0.6" origin="0.5,0.5"/>
         <Body width="46" height="90" density="20"/>
-        <Deconstruct time="20">
-          <Item identifier="calcium"/>
-          <Item identifier="calcium"/>
+        <Deconstruct time="10">
+          <Item identifier="calcium" amount="2" />
         </Deconstruct>
         <Price baseprice="50" soldbydefault="false"></Price>
         <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand"
@@ -2110,9 +2072,8 @@
         <InventoryIcon texture="%ModDir%/Images/limbs.png" sourcerect="0,0,46,90" origin="0.5,0.5"/>
         <Sprite texture="%ModDir%/Images/limbs.png" sourcerect="0,0,46,90" depth="0.6" origin="0.5,0.5"/>
         <Body width="46" height="90" density="20"/>
-        <Deconstruct time="20">
-          <Item identifier="calcium"/>
-          <Item identifier="calcium"/>
+        <Deconstruct time="10">
+          <Item identifier="calcium" amount="2" />
         </Deconstruct>
         <Price baseprice="50" soldbydefault="false"></Price>
         <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand"
@@ -2143,9 +2104,8 @@
         <InventoryIcon texture="%ModDir%/Images/limbs.png" sourcerect="57,0,60,90" origin="0.5,0.5"/>
         <Body width="60" height="90" density="20"/>
         <Sprite texture="%ModDir%/Images/limbs.png" sourcerect="57,0,60,90" depth="0.6" origin="0.5,0.5"/>
-        <Deconstruct time="20">
-          <Item identifier="calcium"/>
-          <Item identifier="calcium"/>
+        <Deconstruct time="10">
+          <Item identifier="calcium" amount="2" />
         </Deconstruct>
         <Price baseprice="50" soldbydefault="false"></Price>
         <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand"
@@ -2176,9 +2136,8 @@
         <InventoryIcon texture="%ModDir%/Images/limbs.png" sourcerect="57,0,60,90" origin="0.5,0.5"/>
         <Sprite texture="%ModDir%/Images/limbs.png" sourcerect="57,0,60,90" depth="0.6" origin="0.5,0.5"/>
         <Body width="60" height="90" density="20"/>
-        <Deconstruct time="20">
-          <Item identifier="calcium"/>
-          <Item identifier="calcium"/>
+        <Deconstruct time="10">
+          <Item identifier="calcium" amount="2" />
         </Deconstruct>
         <Price baseprice="50" soldbydefault="false"></Price>
         <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand"
@@ -2499,7 +2458,6 @@
       <RequiredItem identifier="calcium"/>
     </Fabricate>
     <Deconstruct time="5">
-      <Item identifier="calcium" mincondition="0.1" outcondition="0.5"/>
     </Deconstruct>
     <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="64,192,64,64" origin="0.5,0.5"/>
     <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="914,250,86,134" depth="0.6"
@@ -2527,7 +2485,6 @@
         <RequiredItem identifier="plastic"/>
     </Fabricate>
     <Deconstruct time="5">
-        <Item identifier="plastic" mincondition="0.1" outcondition="0.5"/>
     </Deconstruct>
     <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="768,835,256,189" depth="0.55"
             origin="0.5,0.5"/>
@@ -3339,7 +3296,7 @@
         <RequiredSkill identifier="medical" level="18" />
         <RequiredItem identifier="opium" amount="2" />
       </Fabricate>
-      <Deconstruct time="20">
+      <Deconstruct time="10">
         <Item identifier="opium" />
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="256,448,64,64" origin="0.5,0.5"/>
@@ -3414,7 +3371,7 @@
         <RequiredItem identifier="adrenaline" />
         <RequiredItem identifier="ethanol" />
       </Fabricate>
-      <Deconstruct time="20">
+      <Deconstruct time="10">
         <Item identifier="opium" mincondition="0.9" />
         <Item identifier="adrenaline" mincondition="0.9" />
       </Deconstruct>
@@ -3485,7 +3442,7 @@
         <RequiredItem identifier="opium" />
         <RequiredItem identifier="stabilozine" />
       </Fabricate>
-      <Deconstruct time="20">
+      <Deconstruct time="10">
         <Item identifier="stabilozine" />
       </Deconstruct>
       <SuitableTreatment identifier="opiateaddiction" suitability="60" />
@@ -3920,7 +3877,7 @@
         <RequiredItem identifier="antidama2" />
         <RequiredItem identifier="liquidoxygenite" />
       </Fabricate>
-      <Deconstruct time="20">
+      <Deconstruct time="10">
         <Item identifier="antibleeding3" />
         <Item identifier="opium" />
         <Item identifier="liquidoxygenite" />
@@ -3996,7 +3953,7 @@
         <RequiredItem identifier="antibiotics" amount="2" />
         <RequiredItem identifier="elastin" amount="1" />
       </Fabricate>
-      <Deconstruct time="20">
+      <Deconstruct time="10">
         <Item identifier="antibiotics" />
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,448,64,64" origin="0.5,0.5" />
@@ -4056,7 +4013,7 @@
         <RequiredItem identifier="chlorine" amount="2" />
         <RequiredItem identifier="carbon" amount="2" />
       </Fabricate>
-      <Deconstruct time="20">
+      <Deconstruct time="10">
         <Item identifier="phosphorus" />
         <Item identifier="chlorine" />
         <Item identifier="carbon" />
@@ -4128,7 +4085,7 @@
         <RequiredItem identifier="meth" />
         <RequiredItem identifier="steroids" />
       </Fabricate>
-      <Deconstruct time="20">
+      <Deconstruct time="10">
         <Item identifier="steroids" />
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,448,64,64" origin="0.5,0.5" />
@@ -4258,7 +4215,7 @@
         <RequiredItem identifier="carbon" amount="2" />
         <RequiredItem identifier="chlorine" amount="2" />
       </Fabricate>
-      <Deconstruct time="20">
+      <Deconstruct time="10">
         <Item identifier="lithium" />
         <Item identifier="carbon" />
         <Item identifier="chlorine" />
@@ -4321,7 +4278,7 @@
         <RequiredItem identifier="paralyzant" />
         <RequiredItem identifier="stabilozine" />
       </Fabricate>
-      <Deconstruct time="20">
+      <Deconstruct time="10">
         <Item identifier="stabilozine" />
       </Deconstruct>
       <SuitableTreatment identifier="paralysis" suitability="100" />
@@ -4415,7 +4372,7 @@
         <RequiredItem identifier="zinc" amount="3" />
         <RequiredItem identifier="potassium" amount="3" />
       </Fabricate>
-      <Deconstruct time="20">
+      <Deconstruct time="10">
         <Item identifier="calcium" />
         <Item identifier="potassium" />
         <Item identifier="zinc" />
