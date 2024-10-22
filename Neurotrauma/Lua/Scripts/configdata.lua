@@ -87,7 +87,7 @@ NT.ConfigData = {
     NT_organRejection =                 {name="Organ rejection",default=false,type="bool",          difficultyCharacteristics={multiplier=0.5},description="When transplanting an organ, there is a chance that the organ gets rejected.\nThe higher the patients immunity at the time of the transplant, the higher the chance."},
     NT_fracturesRemoveCasts =           {name="Fractures remove casts",default=true,type="bool",    difficultyCharacteristics={multiplier=0.5},description="When receiving damage that would cause a fracture, remove plaster casts on the limb"},
     NTCRE_header1 = {name='Consent Required',type="category"},
-    NTCRE_ConsentRequired = {name="Enable Consent Required",default=true,type="bool",description="Integrated consent required mod.\n(If disabled, none of NPCs will get aggravated by medical interactions.)"}
+    NTCRE_ConsentRequired = {name="Enable Consent Required",default=true,type="bool",description="Integrated consent required mod. Requires C# scripting enabled.\n(If disabled, none of NPCs will get aggravated by medical interactions.)"}
 }
 NTConfig.AddConfigOptions(NT)
 
