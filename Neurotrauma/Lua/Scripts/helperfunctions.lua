@@ -306,7 +306,7 @@ end
 -- the main "mess with afflictions" function
 function HF.SetAfflictionLimb(character,identifier,limbtype,strength,aggressor,prevstrength)
     local prefab = AfflictionPrefab.Prefabs[identifier]
-    local resistance = character.CharacterHealth.GetResistance(prefab)
+    local resistance = character.CharacterHealth.GetResistance(prefab, limbtype)
     if resistance >= 1 then return end
 
     local strength = strength*character.CharacterHealth.MaxVitality/100/(1-resistance)
@@ -390,10 +390,11 @@ function HF.AddAfflictionResisted(character,identifier,strength,aggressor)
     aggressor,prevstrength)
 end
 
-function HF.GetResistance(character,identifier)
+function HF.GetResistance(character,identifier,limbtype)
+    local limbtype = limbtype or LimbType.None
     local prefab = AfflictionPrefab.Prefabs[identifier]
     if character == nil or character.CharacterHealth == nil or prefab==nil then return 0 end
-    return character.CharacterHealth.GetResistance(prefab)
+    return character.CharacterHealth.GetResistance(prefab, limbtype)
 end
 
 -- /// misc ///
