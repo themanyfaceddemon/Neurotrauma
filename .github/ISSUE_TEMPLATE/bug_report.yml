@@ -19,6 +19,7 @@ body:
     attributes:
       label: LuaForBarotrauma version
       options:
+        - 1.0.97
         - 1.0.96
         - 1.0.95
         - 1.0.94
@@ -31,7 +32,6 @@ body:
         - 1.0.87
         - 1.0.86
         - 1.0.85
-        - 1.0.84
     validations:
       required: true
   - type: dropdown
