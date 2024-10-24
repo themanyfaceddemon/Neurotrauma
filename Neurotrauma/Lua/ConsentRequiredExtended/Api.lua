@@ -20,6 +20,7 @@ end
 
 LuaUserData.MakeFieldAccessible(Descriptors['Barotrauma.AbandonedOutpostMission'], 'requireRescue')
 
+
 -- Character type doesn't have tags we can assign a custom "rescuetarget" tag to
 -- So instead we just hold characters which need rescue in a table and compare their entity IDs
 -- This table is only resfreshed on roundstart
@@ -84,8 +85,7 @@ end
 ---@param target Barotrauma_Character The character who gives consent
 ---@return boolean consent True if consent is given, false otherwise.
 function hasConsent(user, target)
-	if not NTConfig.Get("NTCRE_ConsentRequired",true) then return true end
-	return isOnSameTeam(user, target) or target.IsEscorted or IsRescueTarget(target) -- No longer needs to be shared.
+    return isOnSameTeam(user, target) or target.IsEscorted or IsRescueTarget(target) -- No longer needs to be shared.
 end
 
 ---@param aiChar Barotrauma_Character The (AI but not necessarily) character whose sight is being tested.
