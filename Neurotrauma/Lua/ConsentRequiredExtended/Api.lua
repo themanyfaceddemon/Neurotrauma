@@ -19,6 +19,7 @@ function AddAffectedItem(identifier)
 end
 
 LuaUserData.MakeFieldAccessible(Descriptors['Barotrauma.AbandonedOutpostMission'], 'requireRescue')
+
 -- Character type doesn't have tags we can assign a custom "rescuetarget" tag to
 -- So instead we just hold characters which need rescue in a table and compare their entity IDs
 -- This table is only resfreshed on roundstart
@@ -58,21 +59,24 @@ end
 function UpdateRescueTargets()
     rescuetargets = {}
     for mission in Game.GameSession.Missions do 
-        if mission.Prefab.Type == MissionType.AbandonedOutpost then 
-            for character in mission.requireRescue do 
-                table.insert(rescuetargets, character) 
+        if LuaUserData.IsTargetType(mission.Prefab.MissionClass, "Barotrauma.AbandonedOutpostMission") then 
+            for character in mission.requireRescue do
+                rescuetargets[character.ID] = character
+                --table.insert(rescuetargets, character)
             end
         end
     end
     -- print('rescue targets =')
     -- for char in rescuetargets do print(char.Name) end
 end
+
 ---@param target Barotrauma_Character The character we want to confirm as being rescued
 ---@return boolean consent True if target is rescue mission target, false otherwise
 function IsRescueTarget(target)
-    for char in rescuetargets do
-        if target.ID == char.ID then return true end
-    end
+    -- for char in rescuetargets do
+    --     if target.ID == char.ID then return true end
+    -- end
+    if rescuetargets[target.ID] ~= nil then return true end
     return false
 end
 
