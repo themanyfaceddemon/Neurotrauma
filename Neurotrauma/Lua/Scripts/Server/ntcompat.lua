@@ -172,16 +172,22 @@ function NTC.AddSuturedAffliction(identifier,surgeryskillgain,requiredaffliction
 end
 
 NTC.AfflictionsAffectingVitality = {
+    bleeding = true,
+    bleedingnonstop = true,
+    burn = true,
+    acidburn = true,
+    lacerations = true,
+    gunshotwound = true,
+    bitewounds = true,
+    explosiondamage = true,
+    blunttrauma = true,
+    internaldamage = true,
+    organdamage = true,
     cerebralhypoxia = true,
     gangrene = true,
     th_amputation = true,
     sh_amputation = true,
     suturedw = true,
-    internaldamage = true,
-    blunttrauma = true,
-    organdamage = true,
-    burn = true,
-    acidburn = true,
     alcoholaddiction = true,
     opiateaddiction = true,
 }
