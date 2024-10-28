@@ -3,12 +3,12 @@ NTCyb.AllowInHealthInterface = {
     -- general compatability if anything has a higher mod load order than us
     "crowbar",
     "screwdriver",
+    "repairpack",
     "steel",
     "fpgacircuit",
     -- Immersive Repairs compatibility
     "weldingtool",
     "weldingstinger",
-    "repairpack",
     "halligantool",
     -- EK Mods compatibility
     "ekutility_metalfoam_gun",
@@ -67,6 +67,7 @@ NTCyb.ExtraSkillRequirementHints = {
     [[
         <ExtraSkillRequirementHints identifier="repairpack">
             <SkillRequirementHint identifier="mechanical" level="40" />
+            <SkillRequirementHint identifier="medical" level="60"/>
         </ExtraSkillRequirementHints>
     ]],
     [[
@@ -165,6 +166,10 @@ NTCyb.ExtraTreatmentSuitability = {
     [[
         <ExtraTreatmentSuitability identifier="repairpack">
             <SuitableTreatment identifier="ntc_loosescrews" suitability="50"/>
+            <SuitableTreatment identifier="dislocation1" suitability="50"/>
+            <SuitableTreatment identifier="dislocation2" suitability="50"/>
+            <SuitableTreatment identifier="dislocation3" suitability="50"/>
+            <SuitableTreatment identifier="dislocation4" suitability="50"/>
         </ExtraTreatmentSuitability>
     ]],
     [[

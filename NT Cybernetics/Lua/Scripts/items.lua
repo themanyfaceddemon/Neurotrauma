@@ -403,6 +403,11 @@ NTCyb.ItemStartsWithMethods.screwdriver = function(item, usingCharacter, targetC
     HF.GiveItem(targetCharacter,"ntcsfx_screwdriver")
 end
 
+NTCyb.ItemStartsWithMethods.repairpack = function(item, usingCharacter, targetCharacter, limb)
+    NTCyb.ItemStartsWithMethods.screwdriver(item, usingCharacter, targetCharacter, limb)
+    NT.ItemStartsWithMethods.wrench(item, usingCharacter, targetCharacter, limb)
+end
+
 local function possiblyRejectOrgan(targetCharacter, usingCharacter, organName)
     local rejectionchance = HF.Clamp((HF.GetAfflictionStrength(targetCharacter,"immunity",0)-10)/150*NTC.GetMultiplier(usingCharacter,"organrejectionchance"),0,1)
     if HF.Chance(rejectionchance) and NTConfig.Get("NT_organRejection",false) and not HF.HasAfflictionLimb(targetCharacter,"ntc_cyberkidney",LimbType.Torso,0.1) then
@@ -512,7 +517,6 @@ end
 
 -- Immersive Repairs compatibility
 NTCyb.ItemMethods.weldingstinger = NTCyb.ItemMethods.weldingtool
-NTCyb.ItemStartsWithMethods.repairpack = NTCyb.ItemStartsWithMethods.screwdriver
 NTCyb.ItemMethods.halligantool = NTCyb.ItemStartsWithMethods.crowbar
 
 Timer.Wait(function()
