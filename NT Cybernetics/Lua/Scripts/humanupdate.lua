@@ -105,8 +105,8 @@ function NTCyb.UpdateHuman(character)
         NTC.SetMultiplier(character, "hypoxemia", 1 - HF.GetAfflictionStrengthLimb(character, LimbType.Torso, "ntc_cyberlung", 0) / 200) -- 0.25 (augmented) or 0.5 (cybernetic)
     end
     if HF.HasAfflictionLimb(character, "ntc_cyberheart", LimbType.Torso, 1) then
+        -- NT.Afflictions.ntc_cyberheart below also boosts blood pressure normalization rate
         NTC.SetMultiplier(character, "heartdamagegain", 1 - HF.GetAfflictionStrengthLimb(character, LimbType.Torso, "ntc_cyberheart", 0) / 200) -- 0.25 (augmented) or 0.5 (cybernetic)
-        NTC.SetMultiplier(character, "bloodpressurerate", 1 + HF.GetAfflictionStrengthLimb(character, LimbType.Torso, "ntc_cyberheart", 0) / 200) -- 0.25 (augmented) or 0.5 (cybernetic)
     end
     if HF.HasAfflictionLimb(character, "ntc_cyberbrain", LimbType.Torso, 1) then
         NTC.SetMultiplier(character, "neurotraumagain", 1 - HF.GetAfflictionStrengthLimb(character, LimbType.Torso, "ntc_cyberbrain", 0) / 200) -- 0.25 (augmented) or 0.5 (cybernetic)
@@ -269,4 +269,18 @@ Timer.Wait(function()
     end
     }
 
+    NT.Afflictions.ntc_cyberheart={update=function(c,i)
+        if c.stats.stasis then return end
+        if c.afflictions.cardiacarrest.strength < 0.1 then
+            -- grant an extra 50-100% of the natural BP stabilization rate
+            -- this helps BP restore to normal faster after bloodloss is fixed, and can reduce/slow the negative impact of the many BP modifying effects
+            if (c.stats.bloodamount > c.afflictions.bloodpressure.strength and c.afflictions.bloodpressure.strength < 100)
+            or (c.stats.bloodamount < c.afflictions.bloodpressure.strength and c.afflictions.bloodpressure.strength > 100) then
+                local cyberorganQuality = c.afflictions.ntc_cyberheart.strength / 100 -- 0.5 for augmented, 1 for cybernetic
+                c.afflictions.bloodpressure.strength = HF.Clamp(HF.Round(
+                    HF.Lerp(c.afflictions.bloodpressure.strength, c.stats.bloodamount, 0.2 * cyberorganQuality * NT.Deltatime)
+                ,2),5,200)
+            end
+        end
+    end}
 end,100)
