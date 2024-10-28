@@ -59,6 +59,20 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
     dofile(NT.Path.."/Lua/Scripts/testing.lua")
 end
 
+-- server-side code only
+if SERVER then
+    Networking.Receive("NT.ConfigUpdate", function(msg, sender)
+        if not sender.HasPermission(ClientPermissions.ManageSettings) then return end
+        NTConfig.ReceiveConfig(msg)
+        NTConfig.SaveConfig()
+    end)
+
+    Networking.Receive("NT.ConfigRequest", function(msg, sender)
+        if not sender then return end
+        NTConfig.SendConfig(sender)
+    end)
+end
+
 -- client-side code
 if CLIENT then
     dofile(NT.Path.."/Lua/Scripts/Client/configgui.lua")
