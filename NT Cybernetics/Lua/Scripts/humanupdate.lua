@@ -109,6 +109,7 @@ function NTCyb.UpdateHuman(character)
         NTC.SetMultiplier(character, "heartdamagegain", 1 - HF.GetAfflictionStrengthLimb(character, LimbType.Torso, "ntc_cyberheart", 0) / 200) -- 0.25 (augmented) or 0.5 (cybernetic)
     end
     if HF.HasAfflictionLimb(character, "ntc_cyberbrain", LimbType.Torso, 1) then
+        -- NT.Afflictions.ntc_cyberbrain below also boosts neurotrauma healing rate
         NTC.SetMultiplier(character, "neurotraumagain", 1 - HF.GetAfflictionStrengthLimb(character, LimbType.Torso, "ntc_cyberbrain", 0) / 200) -- 0.25 (augmented) or 0.5 (cybernetic)
     end
 
@@ -282,5 +283,37 @@ Timer.Wait(function()
                 ,2),5,200)
             end
         end
+    end}
+    NT.Afflictions.ntc_cyberbrain={update=function(c,i)
+        if c.stats.stasis then return end
+
+        -- calculate (using base NT formula) new neurotrauma
+        local gain =
+            ( -0.1*c.stats.healingrate +                        -- passive regen
+            c.afflictions.hypoxemia.strength/100 +              -- from hypoxemia
+            HF.Clamp(c.afflictions.stroke.strength,0,20)*0.1 +  -- from stroke
+            c.afflictions.sepsis.strength/100*0.4 +             -- from sepsis
+            c.afflictions.liverdamage.strength/800 +            -- from liverdamage
+            c.afflictions.kidneydamage.strength/1000 +          -- from kidneydamage
+            c.afflictions.traumaticshock.strength/100           -- from traumatic shock
+        ) * NT.Deltatime
+
+        local cyberorganQuality = c.afflictions.ntc_cyberbrain.strength / 100 -- 0.5 for augmented, 1 for cybernetic
+        local healingByMannitol = 0
+        local healingNatural = 0
+        if c.afflictions.hypoxemia.strength <= 30 and c.afflictions.bloodpressure.strength >= 70 then
+            -- double healing rate of mannitol (1)
+            healingByMannitol = (c.afflictions.afmannitol.strength / 100)
+        end
+        if gain < 0 then
+            -- they're naturally getting better, triple natural healing rate
+            healingNatural = 0.2 * c.stats.healingrate
+        end
+        local healing = (healingByMannitol > healingNatural and healingByMannitol or healingNatural)
+        if c.afflictions.cerebralhypoxia.strength > 100 then
+            -- they're unconcious due to neurotrauma, which is really annoying, and they're getting better so lets just double that again hahahaha
+            healing = healing * 2
+        end
+        c.afflictions.cerebralhypoxia.strength = c.afflictions.cerebralhypoxia.strength - healing * cyberorganQuality * NT.Deltatime
     end}
 end,100)

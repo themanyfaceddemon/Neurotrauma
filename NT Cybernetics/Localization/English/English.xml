@@ -25,7 +25,7 @@
 <entityname.augmentedlung>Cyber-Augmented Lungs</entityname.augmentedlung>
 <entitydescription.augmentedlung>A partially synthetic set of lungs. Improves muscle speed, oxygen capacity, and brief pressure resistance. Use after removal of the original lungs to install.</entitydescription.augmentedlung>
 <entityname.augmentedbrain>Cyber-Augmented Brain Implant</entityname.augmentedbrain>
-<entitydescription.augmentedbrain>A neural augment chip for the brain. Improves skills, and removes the need for analgesia in surgery. Install into the patient's existing brain.</entitydescription.augmentedbrain>
+<entitydescription.augmentedbrain>A neural augment chip for the brain. Improves skills, neurotrauma recovery, and removes the need for analgesia in surgery. Install into the patient's existing brain.</entitydescription.augmentedbrain>
 
 <entityname.cyberliver>Cyberliver</entityname.cyberliver>
 <entitydescription.cyberliver>A completely synthetic liver. A top of the line blood filtration system capable of removing toxins and improving the immune system, ready for transplant. </entitydescription.cyberliver>
@@ -36,7 +36,7 @@
 <entityname.cyberlung>Cyberlungs</entityname.cyberlung>
 <entitydescription.cyberlung>A completely synthetic set of lungs. A top of the line respiratory system, improving muscle speed, oxygen capacity, and partial pressure resistance. Use after removal of the original lungs to install.</entitydescription.cyberlung>
 <entityname.cyberbrain>Cyberbrain Positronic Implant</entityname.cyberbrain>
-<entitydescription.cyberbrain>A positronic cyberbrain implant chipset. Top of the line, supercharges skills and removes the need for analgesia in surgery. Install into the patient's existing brain.</entitydescription.cyberbrain>
+<entitydescription.cyberbrain>A positronic cyberbrain implant chipset. Top of the line, supercharges skills, neurotrauma recovery, and removes the need for analgesia in surgery. Install into the patient's existing brain.</entitydescription.cyberbrain>
 
 
 <entityname.bloodpackabcplus>Blood Pack C+</entityname.bloodpackabcplus>
