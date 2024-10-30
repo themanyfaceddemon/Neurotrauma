@@ -31,7 +31,7 @@ local rescuetargets = {}
 ---@return boolean isAffected True if the item is affected, false otherwise.
 function IsItemAffected(identifier)
     for _, item in pairs(affectedItems) do
-        if item == identifier then
+        if item == identifier or HF.StartsWith(identifier, item) then
             return true
         end
     end
