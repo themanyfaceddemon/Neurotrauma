@@ -129,8 +129,9 @@
     showinhealthscannerthreshold="1"
     iconcolors="76,102,145,255;76,102,145,255">
     <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" />
-    <!-- Poison, Toxin, Nausea resistance -->
-    <Effect minstrength="0" maxstrength="100" strengthchange="0" resistancefor="poison,debuff,nausea" minresistance="0" maxresistance="0.6"></Effect>
+    <!-- in humanupdate.lua, also applies faster recovery rate for most poisons/debuffs/nausea, and resists liver damage-->
+    <!-- Overdose / Nausea resistance -->
+    <Effect minstrength="0" maxstrength="100" strengthchange="0" resistancefor="opiateoverdose,nausea" minresistance="0" maxresistance="0.5"></Effect>
     <PeriodicEffect mininterval="300" maxinterval="1200"> <!-- Cyberpsychosis -->
       <StatusEffect target="Character" multiplybymaxvitality="true" comparison="and">
         <Conditional immunity="gte 90"/>
@@ -362,7 +363,7 @@
     showinhealthscannerthreshold="1"
     iconcolors="76,102,145,255;76,102,145,255">
     <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" />
-    <!-- in humanupdate: Neurotrauma (cerebralhypoxia) resistance + improved Neurotrauma recovery rate -->
+    <!-- in humanupdate: Neurotrauma (cerebralhypoxia) resistance, improved Neurotrauma/Coma recovery rate, and improved withdrawal/addiction recovery rates -->
     <Effect minstrength="0" maxstrength="100" strengthchange="0">
       <!-- Stat buffs -->
       <StatValue stattype="ElectricalSkillBonus" minvalue="0" maxvalue="10" />

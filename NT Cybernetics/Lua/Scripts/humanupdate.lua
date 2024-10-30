@@ -94,6 +94,7 @@ function NTCyb.UpdateHuman(character)
     updateLimb(character,LimbType.RightArm)
 
     if HF.HasAfflictionLimb(character, "ntc_cyberliver", LimbType.Torso, 1) then
+        -- NT.Afflictions.ntc_cyberliver below also boosts toxin/poison normalization rate
         NTC.SetMultiplier(character, "liverdamagegain", 1 - HF.GetAfflictionStrengthLimb(character, LimbType.Torso, "ntc_cyberliver", 0) / 200) -- 0.25 (augmented) or 0.5 (cybernetic)
     end
     if HF.HasAfflictionLimb(character, "ntc_cyberkidney", LimbType.Torso, 1) then
@@ -269,17 +270,60 @@ Timer.Wait(function()
         return res
     end
     }
-
+    NTC.CyberliverRecoveryRates = {
+        -- these numbers are mostly "the natural recovery rate", so having the Cyberliver at 100% strength doubles the natural rate.
+        radiationsickness = 0.03, -- half the normal recovery rate since I'm not sure how much a liver can help with that
+        opiateoverdose = 0.3, -- 75% of the natural rate since there's also Resistance
+        nausea = 1,
+        drunk = 0.3, -- 150% natural rate, because liver is the funny alcohol organ :)
+        alcoholaddiction = 0.015, -- half liver, half brain (mental)
+        alcoholwithdrawal = 0.05, -- half liver, half brain (mental)
+        mannaoverdose = 0.03, -- Real Sonar
+        anesthesia = -0.3, -- Propofol grows until it hits 100 strength and resets
+        incrementalstun = 1, -- aka chloralhydrate; this one normally falls at -5 below 90, then at -1 above 90 (during which they're stunned), so this should halve how long they're stunned for
+        -- these poison recoveries are not enough to save them after strength > 10, but halves the rate of increase at least
+        morbusinepoisoning = 0.5,
+        cyanidepoisoning = 0.5,
+        sufforinpoisoning = 0.3, -- slower than the others < 50%
+        deliriuminepoisoning = 0.5,
+    }
+    NTC.CyberbrainRecoveryRates = {
+        opiateaddiction = 0.1,
+        opiatewithdrawal = 0.1,
+        chemaddiction = 0.05,
+        chemwithdrawal = 0.1,
+        alcoholaddiction = 0.015, -- half liver, half brain (mental)
+        alcoholwithdrawal = 0.05, -- half liver, half brain (mental)
+    }
+    NT.Afflictions.ntc_cyberliver={update=function(c,i)
+        if c.stats.stasis then return end
+        local cyberorganQuality = c.afflictions.ntc_cyberliver.strength / 100 -- 0.5 for augmented, 1 for cybernetic
+        local organHealth = (100 - c.afflictions.liverdamage.strength) / 100
+        if organHealth < 0.1 then return end -- its barely functioning as is
+        for afflictionId, rate in pairs(NTC.CyberliverRecoveryRates) do
+            if c.afflictions[afflictionId] then
+                if c.afflictions[afflictionId].strength > 0.1 then
+                    c.afflictions[afflictionId].strength = c.afflictions[afflictionId].strength - rate * cyberorganQuality * organHealth * NT.Deltatime
+                end
+            else
+                -- not a NT humanupdate-managed affliction
+                if HF.HasAffliction(c.character, afflictionId, 0.1) then
+                    HF.AddAffliction(c.character, afflictionId, -rate * cyberorganQuality * organHealth * NT.Deltatime)
+                end
+            end
+        end
+    end}
     NT.Afflictions.ntc_cyberheart={update=function(c,i)
         if c.stats.stasis then return end
-        if c.afflictions.cardiacarrest.strength < 0.1 then
+        local organHealth = (100 - c.afflictions.heartdamage.strength) / 100
+        if c.afflictions.cardiacarrest.strength < 0.1 and organHealth > 0.1 then
             -- grant an extra 50-100% of the natural BP stabilization rate
             -- this helps BP restore to normal faster after bloodloss is fixed, and can reduce/slow the negative impact of the many BP modifying effects
             if (c.stats.bloodamount > c.afflictions.bloodpressure.strength and c.afflictions.bloodpressure.strength < 100)
             or (c.stats.bloodamount < c.afflictions.bloodpressure.strength and c.afflictions.bloodpressure.strength > 100) then
                 local cyberorganQuality = c.afflictions.ntc_cyberheart.strength / 100 -- 0.5 for augmented, 1 for cybernetic
                 c.afflictions.bloodpressure.strength = HF.Clamp(HF.Round(
-                    HF.Lerp(c.afflictions.bloodpressure.strength, c.stats.bloodamount, 0.2 * cyberorganQuality * NT.Deltatime)
+                    HF.Lerp(c.afflictions.bloodpressure.strength, c.stats.bloodamount, 0.2 * cyberorganQuality * organHealth * NT.Deltatime)
                 ,2),5,200)
             end
         end
@@ -315,5 +359,28 @@ Timer.Wait(function()
             healing = healing * 2
         end
         c.afflictions.cerebralhypoxia.strength = c.afflictions.cerebralhypoxia.strength - healing * cyberorganQuality * NT.Deltatime
+
+        if c.afflictions.coma.strength > 0 then
+            if not ( not NTC.GetSymptomFalse(c.character,"triggersym_coma") and
+                (NTC.GetSymptom(c.character,"triggersym_coma")
+                    or (c.afflictions.cardiacarrest.strength > 1) or (c.afflictions.stroke.strength > 1)
+                    or (c.afflictions.acidosis.strength > 60))) then
+                -- triple natural healing rate of coma, once the causes are treated
+                c.afflictions[i].strength = c.afflictions[i].strength - 0.4 * cyberorganQuality * NT.Deltatime
+            end
+        end
+
+        for afflictionId, rate in pairs(NTC.CyberbrainRecoveryRates) do
+            if c.afflictions[afflictionId] then
+                if c.afflictions[afflictionId].strength > 0.1 then
+                    c.afflictions[afflictionId].strength = c.afflictions[afflictionId].strength - rate * cyberorganQuality * NT.Deltatime
+                end
+            else
+                -- not a NT humanupdate-managed affliction
+                if HF.HasAffliction(c.character, afflictionId, 0.1) then
+                    HF.AddAffliction(c.character, afflictionId, -rate * cyberorganQuality * NT.Deltatime)
+                end
+            end
+        end
     end}
 end,100)
