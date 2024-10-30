@@ -50,6 +50,7 @@ local function ConstructUI(parent)
     local list = easySettings.BasicList(parent)
 
     --info text
+    local userBlock = GUI.TextBlock(GUI.RectTransform(Vector2(1, 0.2), list.Content.RectTransform), "Server config can be changed by owner or a client with manage settings permission. If the server doesn't allow writing into the config folder, then it must be edited manually.", Color(200,255,255), nil, GUI.Alignment.Center, true, nil, Color(0,0,0))
     local difficultyBlock = GUI.TextBlock(GUI.RectTransform(Vector2(1, 0.1), list.Content.RectTransform), "", Color(200,255,255), nil, GUI.Alignment.Center, true, nil, Color(0,0,0))
 
     --set difficulty text (why does this even exist in the first place)
