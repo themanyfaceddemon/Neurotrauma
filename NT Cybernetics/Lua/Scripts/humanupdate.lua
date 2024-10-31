@@ -313,6 +313,17 @@ Timer.Wait(function()
             end
         end
     end}
+    NT.Afflictions.ntc_cyberlung={update=function(c,i)
+        if c.stats.stasis or c.afflictions.respiratoryarrest.strength >= 1 or c.afflictions.lungdamage.strength > 90 then return end
+        local cyberorganQuality = c.afflictions.ntc_cyberlung.strength / 100 -- 0.5 for augmented, 1 for cybernetic
+        local organHealth = (100 - c.afflictions.lungdamage.strength) / 100
+        local threshold = HF.Clamp(HF.Lerp(38, 0, organHealth * cyberorganQuality), 5, 30) -- fully healed, augmented, should keep below 19 (20 acidosis starts to cause bad fibrillation)
+        if c.afflictions.alkalosis.strength > threshold then
+            c.afflictions.hypoventilation.strength = HF.BoolToNum(HF.Chance(cyberorganQuality * organHealth), 2)
+        elseif c.afflictions.acidosis.strength > threshold then
+            c.afflictions.hyperventilation.strength = HF.BoolToNum(HF.Chance(cyberorganQuality * organHealth), 2)
+        end
+    end}
     NT.Afflictions.ntc_cyberheart={update=function(c,i)
         if c.stats.stasis then return end
         local organHealth = (100 - c.afflictions.heartdamage.strength) / 100

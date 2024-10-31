@@ -198,7 +198,7 @@
     showinhealthscannerthreshold="1"
     iconcolors="76,102,145,255;76,102,145,255">
     <icon texture="%ModDir%/Images/AfflictionIcons.png" sheetindex="7,0" sheetelementsize="128,128" origin="0,0" />
-    <!-- in humanupdate.lua lungs also grant reduced pneumothoraxchance and hypoxemia -->
+    <!-- in humanupdate.lua lungs also grant reduced pneumothoraxchance and hypoxemia, and hypo/hyperventilates to balance PH -->
     <!-- Oxygen low resistance -->
     <Effect minstrength="0" maxstrength="100" strengthchange="0" resistancefor="oxygenlow" minresistance="0" maxresistance="0.6">
       <!-- Faster movement/attack. Raises Vigor up to 75/150/225/300 if Tier 2/3 Lung + if Tier 2/3 Heart active -->
