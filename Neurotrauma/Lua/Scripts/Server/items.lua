@@ -26,7 +26,7 @@ Hook.Add("item.applyTreatment", "NT.itemused", function(item, usingCharacter, ta
     end
 
 end)
-
+-- TODO: some items trigger afflictions after a single human update, to fix, trigger them immediately for consistency
 -- storing all of the item-specific functions in a table
 NT.ItemMethods = {} -- with the identifier as the key
 NT.ItemStartsWithMethods = {} -- with the start of the identifier as the key
@@ -515,7 +515,7 @@ NT.ItemMethods.defibrillator = function(item, usingCharacter, targetCharacter, l
     local containedItem = item.OwnInventory.GetItemAt(0)
     if containedItem==nil then return end
     local hasVoltage = containedItem.Condition > 0
-
+    -- if defib user in water = shock the user with 93 strength electricshock aff (3 second stun) + electrocution vanilla sound effect
     if hasVoltage then 
         HF.GiveItem(targetCharacter,"ntsfx_manualdefib")
         containedItem.Condition = containedItem.Condition-10
