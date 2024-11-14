@@ -2,6 +2,13 @@
 <contentpackage name="NT Cybernetics" path="%ModDir%/filelist.xml" corepackage="false" gameversion="0.16.7.0" steamworkshopid="2788543375" installtime="1648956413">
   <Afflictions file="%ModDir%/Xml/Afflictions.xml" />
   <Item file="%ModDir%/Xml/items.xml" />
+  <Item file="%ModDir%/Xml/Override.xml" />
+  <Item file="%ModDir%/Xml/SFX.xml" />
+  <Item file="%ModDir%/Xml/VFX.xml" />
+  <Item file="%ModDir%/Xml/Augmentations/Limbs/Basic.xml" />
+  <Item file="%ModDir%/Xml/Augmentations/Limbs/Waterproof.xml" />
+  <Item file="%ModDir%/Xml/Augmentations/Organs/T2.xml" />
+  <Item file="%ModDir%/Xml/Augmentations/Organs/T3.xml" />
   <Text file="%ModDir%/Localization/English/English.xml" />
   <Text file="%ModDir%/Localization/Russian/Russian.xml" />
   <Text file="%ModDir%/Localization/Polish/Polish.xml" />

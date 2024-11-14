@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+    <!-- Arms -->
+    <Item name="" identifier="waterproofcyberarm" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4" variantof="cyberarm">
+        <Price baseprice="2000" soldbydefault="false" minleveldifficulty="15">
+            <Price storeidentifier="merchantmedical" sold="true" />
+            <Price storeidentifier="merchantengineering" sold="true" multiplier="0.9" minavailable="1" />
+            <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
+        </Price>
+        <PreferredContainer primary="toxcontainer" spawnprobability="0.1" />
+        <PreferredContainer secondary="wreckmedcab,abandonedmedcab,wrecktoxcontainer" minamount="0" maxamount="2" spawnprobability="0.1" />
+        <Fabricate suitablefabricators="fabricator" requiredtime="20">
+            <RequiredSkill identifier="mechanical" level="70" />
+            <RequiredSkill identifier="medical" level="35" />
+            <RequiredItem identifier="cyberarm" />
+            <RequiredItem identifier="fulgurium" amount="1" />
+            <RequiredItem identifier="plastic" amount="3"/>
+            <RequiredItem identifier="rubber" amount="4" />
+        </Fabricate>
+        <Deconstruct time="30">
+            <Item identifier="titaniumaluminiumalloy" />
+            <Item identifier="steel" amount="3" />
+            <Item identifier="fpgacircuit" amount="3" />
+            <Item identifier="fulgurium" amount="2" />
+            <Item identifier="plastic" amount="2"/>
+            <Item identifier="rubber" amount="2"/>
+        </Deconstruct>
+    </Item>
+
+    <!-- Legs -->
+    <Item name="" identifier="waterproofcyberleg" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4" variantof="cyberleg">
+        <Price baseprice="2000" soldbydefault="false" minleveldifficulty="15">
+            <Price storeidentifier="merchantmedical" sold="true" />
+            <Price storeidentifier="merchantengineering" sold="true" multiplier="0.9" minavailable="1" />
+            <Price storeidentifier="merchantresearch" sold="true" minavailable="1" />
+        </Price>
+        <PreferredContainer primary="toxcontainer" spawnprobability="0.1"/>
+        <PreferredContainer secondary="wreckmedcab,abandonedmedcab,wrecktoxcontainer" minamount="0" maxamount="2" spawnprobability="0.1" />
+        <Fabricate suitablefabricators="fabricator" requiredtime="20">
+            <RequiredSkill identifier="mechanical" level="70" />
+            <RequiredSkill identifier="medical" level="35" />
+            <RequiredItem identifier="cyberleg" />
+            <RequiredItem identifier="fulgurium" amount="1" />
+            <RequiredItem identifier="plastic" amount="3" />
+            <RequiredItem identifier="rubber" amount="4" />
+        </Fabricate>
+        <Deconstruct time="30">
+            <Item identifier="titaniumaluminiumalloy"/>
+            <Item identifier="steel" amount="3"/>
+            <Item identifier="fpgacircuit" amount="3"/>
+            <Item identifier="fulgurium" amount="2"/>
+            <Item identifier="plastic" amount="2"/>
+            <Item identifier="rubber" amount="2"/>
+        </Deconstruct>
+    </Item>
+</Items>
