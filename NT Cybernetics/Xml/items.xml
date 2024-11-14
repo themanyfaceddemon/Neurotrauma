@@ -18,7 +18,7 @@
         <Holdable slots="Any" msg="ItemMsgPickUpSelect"/>
         <Deconstruct/>
     </Item>
-    
+
     <Item name="" identifier="immunosuppressantinhaler" description="" impactsoundtag="impact_soft" useinhealthinterface="True" category="Medical" cargocontaineridentifier="mediccrate" Tags="smallitem,medical" maxstacksize="32" maxstacksizecharacterinventory="3" scale="0.2">
         <Price baseprice="60" soldbydefault="false">
             <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="3"/>

@@ -51,7 +51,7 @@
             </StatusEffect>
         </ItemComponent>
     </Item>
-    
+
     <Item name="." identifier="ntcsfx_cyberdeath" description="." hideinmenus="true">
         <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5"/>
         <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5"/>
