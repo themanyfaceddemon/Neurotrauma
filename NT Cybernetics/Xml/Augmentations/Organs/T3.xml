@@ -21,8 +21,7 @@
             <Item identifier="fpgacircuit" amount="2" />
             <Item identifier="plastic" amount="3" />
         </Deconstruct>
-        <Throwable characterusable="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-        </Throwable>
+        <Throwable characterusable="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect" />
         <SkillRequirementHint identifier="medical" level="70"/>
         <SkillRequirementHint identifier="mechanical" level="60" />
         <SuitableTreatment identifier="liverremoved" suitability="100"/>
@@ -49,8 +48,7 @@
             <Item identifier="fpgacircuit" amount="2" />
             <Item identifier="plastic" amount="3" />
         </Deconstruct>
-        <Throwable characterusable="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-        </Throwable>
+        <Throwable characterusable="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect" />
         <SkillRequirementHint identifier="medical" level="70"/>
         <SkillRequirementHint identifier="mechanical" level="60" />
         <SuitableTreatment identifier="kidneyremoved" suitability="100"/>
@@ -77,8 +75,7 @@
             <Item identifier="fpgacircuit" amount="2" />
             <Item identifier="plastic" amount="3" />
         </Deconstruct>
-        <Throwable characterusable="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-        </Throwable>
+        <Throwable characterusable="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect" />
         <SkillRequirementHint identifier="medical" level="70"/>
         <SkillRequirementHint identifier="mechanical" level="60" />
         <SuitableTreatment identifier="lungremoved" suitability="100"/>
@@ -105,8 +102,7 @@
             <Item identifier="fpgacircuit" amount="2" />
             <Item identifier="plastic" amount="3" />
         </Deconstruct>
-        <Throwable characterusable="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-        </Throwable>
+        <Throwable characterusable="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect" />
         <SkillRequirementHint identifier="medical" level="70"/>
         <SkillRequirementHint identifier="mechanical" level="60" />
         <SuitableTreatment identifier="heartremoved" suitability="100"/>
@@ -132,8 +128,7 @@
             <Item identifier="fulgurium" amount="3" />
             <Item identifier="fpgacircuit" amount="4" />
         </Deconstruct>
-        <Throwable characterusable="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-        </Throwable>
+        <Throwable characterusable="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect" />
         <SkillRequirementHint identifier="medical" level="80"/>
         <SkillRequirementHint identifier="electrical" level="60" />
     </Item>
