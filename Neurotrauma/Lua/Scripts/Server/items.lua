@@ -45,6 +45,7 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
         HF.GiveItem(targetCharacter,"ntsfx_selfscan")
         containedItem.Condition = containedItem.Condition-5
         HF.AddAffliction(targetCharacter,"radiationsickness",1,usingCharacter)
+        HF.AddAffliction(usingCharacter,"radiationsickness",0.6)
 
         -- print readout of afflictions
         local readoutstring = "Affliction readout for "..targetCharacter.Name.." on limb "..HF.LimbTypeToString(limbtype)..":\n"
