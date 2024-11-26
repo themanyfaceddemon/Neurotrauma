@@ -222,6 +222,11 @@ function HF.FindDepth(item)
 	end
 end
 
+function HF.PlaySound(filePath, position, range, volume)
+    local sound = Sound(filePath)
+    sound:Play(position, range, volume)
+end
+
 -- /// affliction magic ///
 ------------------------------
 function HF.GetAfflictionStrength(character,identifier,defaultvalue)
