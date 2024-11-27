@@ -6,7 +6,6 @@
     </meta>
 
     <dependencies>
-        <requirement name="Lua For Barotrauma" steamID="2559634234" ID="EvilFactory.LuaForBarotrauma" />
-        <conflict name="Neurotrauma" steamID="2776270649" ID="Mannatu.Neurotrauma" />
+        <conflict name="Neurotrauma" steamID="2776270649" message="Mods do not combine, please remove Neurotrauma by Mannatu, as it is no longer supported"/>
     </dependencies>
 </metadata>
