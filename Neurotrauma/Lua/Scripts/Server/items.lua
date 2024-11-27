@@ -42,7 +42,7 @@ NT.ItemMethods.healthscanner = function(item, usingCharacter, targetCharacter, l
     local hasVoltage = containedItem.Condition > 0
 
     if hasVoltage then 
-        HF.GiveItem(targetCharacter,"ntsfx_selfscan")
+        HF.PlaySound("selfscan", targetCharacter.WorldPosition, 400, 0.5)
         containedItem.Condition = containedItem.Condition-5
         HF.AddAffliction(targetCharacter,"radiationsickness",1,usingCharacter)
         HF.AddAffliction(usingCharacter,"radiationsickness",0.6)
@@ -160,7 +160,7 @@ NT.ItemMethods.traumashears = function(item, usingCharacter, targetCharacter, li
 
     if canCut then
         if(HF.GetSkillRequirementMet(usingCharacter,"medical",10)) then
-            HF.GiveItem(targetCharacter,"ntsfx_scissors")
+            HF.PlaySound("scissors", targetCharacter.WorldPosition, 500, 0.75)
 
             -- remove 8% fracture so that they dont scream again
             if(NT.LimbIsBroken(targetCharacter,limbtype) and HF.HasAfflictionLimb(targetCharacter,"gypsumcast",limbtype,0.1)) then 
@@ -205,7 +205,7 @@ NT.ItemStartsWithMethods.divingknife = function(item, usingCharacter, targetChar
     
     if canCut then
         if(HF.GetSkillRequirementMet(usingCharacter,"medical",30)) then
-            HF.GiveItem(targetCharacter,"ntsfx_bandage")
+            HF.PlaySound("bandage", targetCharacter.WorldPosition, 500)
             -- remove cuttables
             for val in NT.CuttableAfflictions do
                 local prefab = AfflictionPrefab.Prefabs[val]
@@ -417,7 +417,7 @@ NT.ItemMethods.emptybloodpack = function(item, usingCharacter, targetCharacter, 
         HF.GiveItemPlusFunction(bloodpackIdentifier,postSpawnFunc,params,usingCharacter)
         item.Condition = 0
         --HF.RemoveItem(item)
-        HF.GiveItem(targetCharacter,"ntsfx_syringe")
+        HF.PlaySound("syringe", targetCharacter.WorldPosition, 500)
     end
 end
 NT.ItemMethods.propofol = function(item, usingCharacter, targetCharacter, limb) 
@@ -435,7 +435,7 @@ NT.ItemMethods.propofol = function(item, usingCharacter, targetCharacter, limb)
     end
 
     HF.RemoveItem(item)
-    HF.GiveItem(targetCharacter,"ntsfx_syringe")
+    HF.PlaySound("syringe", targetCharacter.WorldPosition, 500)
 end
 NT.ItemMethods.streptokinase = function(item, usingCharacter, targetCharacter, limb) 
     local limbtype = limb.type
@@ -452,7 +452,7 @@ NT.ItemMethods.streptokinase = function(item, usingCharacter, targetCharacter, l
     end
 
     HF.RemoveItem(item)
-    HF.GiveItem(targetCharacter,"ntsfx_syringe")
+    HF.PlaySound("syringe", targetCharacter.WorldPosition, 500)
 end
 NT.ItemMethods.adrenaline = function(item, usingCharacter, targetCharacter, limb) 
     HF.AddAffliction(targetCharacter,"afadrenaline",55,usingCharacter) 
@@ -462,7 +462,7 @@ NT.ItemMethods.adrenaline = function(item, usingCharacter, targetCharacter, limb
         HF.AddAffliction(targetCharacter,"fibrillation",20,usingCharacter)
     end
     HF.RemoveItem(item)
-    HF.GiveItem(targetCharacter,"ntsfx_syringe")
+    HF.PlaySound("syringe", targetCharacter.WorldPosition, 500)
 end
 local function limbHasThirdDegreeBurns(char,limbtype)
     return HF.GetAfflictionStrengthLimb(char,limbtype,"burn",0) > 50
@@ -479,7 +479,7 @@ NT.ItemMethods.ointment = function(item, usingCharacter, targetCharacter, limb)
 
     -- HF.RemoveItem(item)
     item.Condition = item.Condition - 12.5
-    HF.GiveItem(targetCharacter,"ntsfx_ointment")
+    HF.PlaySound("ointment", targetCharacter.WorldPosition, 500)
 end
 NT.ItemMethods.antibleeding1 = function(item, usingCharacter, targetCharacter, limb) 
     local limbtype = limb.type
@@ -490,7 +490,7 @@ NT.ItemMethods.antibleeding1 = function(item, usingCharacter, targetCharacter, l
     HF.AddAfflictionLimb(targetCharacter,"bleeding",limbtype,-18-success*6-hasmedexp*6,usingCharacter)
     HF.AddAfflictionLimb(targetCharacter,"bleedingnonstop",limbtype,-18-success*6-hasmedexp*6,usingCharacter)
     HF.RemoveItem(item)
-    HF.GiveItem(targetCharacter,"ntsfx_bandage")
+    HF.PlaySound("bandage", targetCharacter.WorldPosition, 500)
 end
 NT.ItemMethods.antibleeding2 = function(item, usingCharacter, targetCharacter, limb) 
     local limbtype = limb.type
@@ -507,7 +507,7 @@ NT.ItemMethods.antibleeding2 = function(item, usingCharacter, targetCharacter, l
         HF.AddAfflictionLimb(targetCharacter,"burn",limbtype,-12-success*12,usingCharacter)
     end
     HF.RemoveItem(item)
-    HF.GiveItem(targetCharacter,"ntsfx_bandage")
+    HF.PlaySound("bandage", targetCharacter.WorldPosition, 500)
 end
 
 NT.ItemMethods.defibrillator = function(item, usingCharacter, targetCharacter, limb)
@@ -518,7 +518,7 @@ NT.ItemMethods.defibrillator = function(item, usingCharacter, targetCharacter, l
     local hasVoltage = containedItem.Condition > 0
     -- if defib user in water = shock the user with 93 strength electricshock aff (3 second stun) + electrocution vanilla sound effect
     if hasVoltage then 
-        HF.GiveItem(targetCharacter,"ntsfx_manualdefib")
+        HF.PlaySound("manualdefib", targetCharacter.WorldPosition, 800)
         containedItem.Condition = containedItem.Condition-10
         if containedItem.Prefab.Identifier.Value ~= "fulguriumbatterycell" then containedItem.Condition = containedItem.Condition-10 end
 
@@ -554,9 +554,9 @@ NT.ItemMethods.aed = function(item, usingCharacter, targetCharacter, limb)
             or HF.HasAffliction(targetCharacter,"cardiacarrest") 
 
         if not actionRequired then
-            HF.GiveItem(targetCharacter,"ntsfx_defib2")
+            HF.PlaySound("defib2", targetCharacter.WorldPosition, 800)
         else
-            HF.GiveItem(targetCharacter,"ntsfx_defib1")
+            HF.PlaySound("defib1", targetCharacter.WorldPosition, 800)
 
             containedItem.Condition = containedItem.Condition-10
             if containedItem.Prefab.Identifier.Value ~= "fulguriumbatterycell" then containedItem.Condition = containedItem.Condition-10 end
@@ -575,7 +575,7 @@ NT.ItemMethods.aed = function(item, usingCharacter, targetCharacter, limb)
     end
 end
 NT.ItemMethods.blahaj = function(item, usingCharacter, targetCharacter, limb)
-    -- HF.GiveItem(targetCharacter,"ntsfx_squeak") -- this seems to be unnecessary due to the sound effect already being triggered by the xml side of things
+    -- HF.PlaySound("squeak", targetCharacter.WorldPosition, 500) -- this seems to be unnecessary due to the sound effect already being triggered by the xml side of things
     HF.AddAffliction(targetCharacter,"psychosis",-2,usingCharacter)
 end
 
@@ -598,7 +598,7 @@ NT.ItemMethods.advscalpel = function(item, usingCharacter, targetCharacter, limb
             HF.AddAfflictionLimb(targetCharacter,"lacerations",limbtype,10,usingCharacter)
         end
 
-        HF.GiveItem(targetCharacter,"ntsfx_slash")
+        HF.PlaySound("slash", targetCharacter.WorldPosition, 500)
     end
 end
 NT.ItemMethods.advhemostat = function(item, usingCharacter, targetCharacter, limb) 
@@ -774,7 +774,7 @@ NT.ItemMethods.organscalpel_liver = function(item, usingCharacter, targetCharact
                 HF.AddAffliction(targetCharacter,"liverdamage",20,usingCharacter)
             end
 
-            HF.GiveItem(targetCharacter,"ntsfx_slash")
+            HF.PlaySound("slash", targetCharacter.WorldPosition, 500)
         end
     end
 end
@@ -829,7 +829,7 @@ NT.ItemMethods.organscalpel_lungs = function(item, usingCharacter, targetCharact
                 HF.AddAffliction(targetCharacter,"lungdamage",20,usingCharacter)
             end
 
-            HF.GiveItem(targetCharacter,"ntsfx_slash")
+            HF.PlaySound("slash", targetCharacter.WorldPosition, 500)
 
         end
     end
@@ -885,7 +885,7 @@ NT.ItemMethods.organscalpel_heart = function(item, usingCharacter, targetCharact
                 HF.AddAffliction(targetCharacter,"heartdamage",20,usingCharacter)
             end
 
-            HF.GiveItem(targetCharacter,"ntsfx_slash")
+            HF.PlaySound("slash", targetCharacter.WorldPosition, 500)
 
         end
     end
@@ -964,7 +964,7 @@ NT.ItemMethods.organscalpel_kidneys = function(item, usingCharacter, targetChara
                 HF.AddAffliction(targetCharacter,"kidneydamage",20,usingCharacter)
             end
 
-            HF.GiveItem(targetCharacter,"ntsfx_slash")
+            HF.PlaySound("slash", targetCharacter.WorldPosition, 500)
 
         end
     end
@@ -1019,7 +1019,7 @@ NT.ItemMethods.organscalpel_brain = function(item, usingCharacter, targetCharact
                 HF.AddAffliction(targetCharacter,"cerebralhypoxia",50,usingCharacter)
             end
 
-            HF.GiveItem(targetCharacter,"ntsfx_slash")
+            HF.PlaySound("slash", targetCharacter.WorldPosition, 500)
 
         end
     end
@@ -1298,7 +1298,7 @@ local function InfuseBloodpack(item, packtype, usingCharacter, targetCharacter, 
     item.Condition = 0
     --HF.RemoveItem(item)
     HF.GiveItem(usingCharacter,"emptybloodpack")
-    HF.GiveItem(targetCharacter,"ntsfx_syringe")
+    HF.PlaySound("syringe", targetCharacter.WorldPosition, 500)
 end
 NT.ItemMethods.antibloodloss2 = function(item, usingCharacter, targetCharacter, limb) 
     if item.Condition <= 0 then return end
@@ -1312,7 +1312,7 @@ NT.ItemMethods.stasisbag = function(item, usingCharacter, targetCharacter, limb)
     local targetInventory = targetCharacter.Inventory
     if targetInventory~=nil then
         if targetInventory.TryPutItem(item,4,false,true,usingCharacter,true,true) then
-            HF.GiveItem(targetCharacter,"ntsfx_zipper")
+            HF.PlaySound("zipper", targetCharacter.WorldPosition, 500)
         else
             local userInventory = usingCharacter.Inventory
             local targetItem = HF.GetOuterWear(targetCharacter)
@@ -1322,7 +1322,7 @@ NT.ItemMethods.stasisbag = function(item, usingCharacter, targetCharacter, limb)
             if lhand ~= nil then userInventory.TryPutItem(lhand, nil, {InvSlotType.Any}) end
             userInventory.TryPutItem(targetItem, 5, true, true, usingCharacter, true, true)
             if targetInventory.TryPutItem(item,4,true,true,usingCharacter,true,true) then
-                HF.GiveItem(targetCharacter,"ntsfx_zipper")
+                HF.PlaySound("zipper", targetCharacter.WorldPosition, 500)
             end
         end
     end
@@ -1334,7 +1334,7 @@ NT.ItemMethods.autocpr = function(item, usingCharacter, targetCharacter, limb)
     local targetInventory = targetCharacter.Inventory
     if targetInventory~=nil then
         if targetInventory.TryPutItem(item,4,true,true,usingCharacter,true,true) then
-            HF.GiveItem(targetCharacter,"ntsfx_zipper")
+            HF.PlaySound("zipper", targetCharacter.WorldPosition, 500)
         else
             local userInventory = usingCharacter.Inventory
             local targetItem = HF.GetOuterWear(targetCharacter)
@@ -1344,7 +1344,7 @@ NT.ItemMethods.autocpr = function(item, usingCharacter, targetCharacter, limb)
             if lhand ~= nil then userInventory.TryPutItem(lhand, nil, {InvSlotType.Any}) end
             userInventory.TryPutItem(targetItem, 5, true, true, usingCharacter, true, true)
             if targetInventory.TryPutItem(item,4,true,true,usingCharacter,true,true) then
-                HF.GiveItem(targetCharacter,"ntsfx_zipper")
+                HF.PlaySound("zipper", targetCharacter.WorldPosition, 500)
             end
         end
     end
@@ -1356,7 +1356,7 @@ NT.ItemMethods.gelipack = function(item, usingCharacter, targetCharacter, limb)
     local limbtype = limb.type
     local success = HF.BoolToNum(HF.GetSkillRequirementMet(usingCharacter,"medical",5),1)
     HF.AddAfflictionLimb(targetCharacter,"iced",limbtype,5+success*100,usingCharacter)
-    HF.GiveItem(targetCharacter,"ntsfx_bandage")
+    HF.PlaySound("bandage", targetCharacter.WorldPosition, 500)
 
     item.Condition = item.Condition - 35
 end
@@ -1466,7 +1466,7 @@ NT.ItemStartsWithMethods.wrench = function(item, usingCharacter, targetCharacter
             local usingInventory = usingCharacter.Inventory
             local equippedOuterItem = HF.GetOuterWear(targetCharacter)
             if usingInventory.TryPutItem(equippedOuterItem, nil, {InvSlotType.Any}) then
-                HF.GiveItem(targetCharacter,"ntsfx_velcro")
+                HF.PlaySound("velcro", targetCharacter.WorldPosition, 500)
             end
         end
     end

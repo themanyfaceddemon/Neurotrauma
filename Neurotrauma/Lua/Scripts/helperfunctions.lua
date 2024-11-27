@@ -222,9 +222,27 @@ function HF.FindDepth(item)
 	end
 end
 
-function HF.PlaySound(filePath, position, range, volume)
-    local sound = Sound(filePath)
-    sound:Play(position, range, volume)
+-- I'm not sure about the basics, but it feels like a client check is probably needed? TheManyFacedDemon
+--[[ 
+    HF.PlaySound(soundTag, position, range, volume)
+    Plays a sound at a specified position in the game world, with optional range and volume.
+
+    Parameters:
+    - soundTag (Sound): The sound object or tag to be played.
+    - position (Vector2): The position in the game world where the sound will originate.
+    - range (number, optional): The radius in which the sound will be audible. By default it uses the value from the xml file.
+    - volume (number, optional): The volume multiplier for the sound (from 0.0 to 1.0). By default it uses the value from the xml file.
+
+    Usage:
+    HF.PlaySound(soundTag, position)           -- Plays sound at full volume and default range.
+    HF.PlaySound(soundTag, position, 500)      -- Plays sound with default volume and 500 range.
+    HF.PlaySound(soundTag, position, 500, 0.5) -- Plays sound with 50% volume and 500 range.
+
+    Returns:
+    None.
+]]
+function HF.PlaySound(soundTag, position, range, volume)
+    SoundPlayer.PlaySound(soundTag, position, volume, range)
 end
 
 -- /// affliction magic ///

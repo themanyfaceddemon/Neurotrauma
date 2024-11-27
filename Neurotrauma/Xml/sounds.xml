@@ -1,23 +1,66 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <sounds>
+	<selfscan file="%ModDir%/Sound/selfscan.ogg"/>
+
+	<scissors file="%ModDir%/Sound/scissors1.ogg"/>
+	<scissors file="%ModDir%/Sound/scissors2.ogg"/>
+
+	<bandage file="Content/Items/Medical/Bandage1.ogg"/>
+	<bandage file="Content/Items/Medical/Bandage2.ogg"/>
+
+	<pills file="%ModDir%/Sound/pills1.ogg"/>
+	<pills file="%ModDir%/Sound/pills2.ogg"/>
+	<pills file="%ModDir%/Sound/pills3.ogg"/>
+
+	<syringe file="Content/Items/Medical/Syringe.ogg"/>
+
+	<manualdefib file="%ModDir%/Sound/manualdefib.ogg"/>
+
+	<defib1 file="%ModDir%/Sound/Defib1.ogg"/>
+	<defib2 file="%ModDir%/Sound/Defib2.ogg"/>
+
+	<ointment file="%ModDir%/Sound/ointment.ogg"/>
+
+	<squeak file="%ModDir%/Sound/squeak1.ogg"/>
+	<squeak file="%ModDir%/Sound/squeak2.ogg"/>
+	<squeak file="%ModDir%/Sound/squeak3.ogg"/>
+	<squeak file="%ModDir%/Sound/squeak4.ogg"/>
+	<squeak file="%ModDir%/Sound/squeak5.ogg"/>
+
+	<slash file="Content/Sounds/Damage/LimbSlash1.ogg"/>
+	<slash file="Content/Sounds/Damage/LimbSlash2.ogg"/>
+	<slash file="Content/Sounds/Damage/LimbSlash3.ogg"/>
+	<slash file="Content/Sounds/Damage/LimbSlash4.ogg"/>
+	<slash file="Content/Sounds/Damage/LimbSlash5.ogg"/>
+	<slash file="Content/Sounds/Damage/LimbSlash6.ogg"/>
+
+	<velcro file="%ModDir%/Sound/velcro_tape1.ogg"/>
+	<velcro file="%ModDir%/Sound/velcro_tape2.ogg"/>
+	<velcro file="%ModDir%/Sound/velcro_tape3.ogg"/>
+
+	<zipper file="%ModDir%/Sound/zipper_1.ogg"/>
+	<zipper file="%ModDir%/Sound/zipper_2.ogg"/>
+
 	<ecg1 file="%ModDir%/Sound/BHUI/ecg1.ogg"/>
 	<ecg2 file="%ModDir%/Sound/BHUI/ecg2.ogg"/>
+
 	<flatline1 file="%ModDir%/Sound/BHUI/flatline1.ogg"/>
 	<flatline2 file="%ModDir%/Sound/BHUI/flatline2.ogg"/>
+
 	<impact_squeak file="%ModDir%/Sound/squeak1.ogg" range="500"/>
 	<impact_squeak file="%ModDir%/Sound/squeak2.ogg" range="500"/>
 	<impact_squeak file="%ModDir%/Sound/squeak3.ogg" range="500"/>
 	<impact_squeak file="%ModDir%/Sound/squeak4.ogg" range="500"/>
 	<impact_squeak file="%ModDir%/Sound/squeak5.ogg" range="500"/>
-	
+
 	<!-- override to remove oxygenlow heartbeat sound -->
 	<Override>
-	  <heartbeatdiastole file="%ModDir%/Sound/silent.ogg"/>
-	  <heartbeatdiastole file="%ModDir%/Sound/silent.ogg"/>
-	  <heartbeatdiastole file="%ModDir%/Sound/silent.ogg"/>
-	  <heartbeatsystole file="%ModDir%/Sound/silent.ogg"/>
-	  <heartbeatsystole file="%ModDir%/Sound/silent.ogg"/>
-	  <heartbeatsystole file="%ModDir%/Sound/silent.ogg"/>
-	</Override>	
-	
+		<heartbeatdiastole file="%ModDir%/Sound/silent.ogg"/>
+		<heartbeatdiastole file="%ModDir%/Sound/silent.ogg"/>
+		<heartbeatdiastole file="%ModDir%/Sound/silent.ogg"/>
+		<heartbeatsystole file="%ModDir%/Sound/silent.ogg"/>
+		<heartbeatsystole file="%ModDir%/Sound/silent.ogg"/>
+		<heartbeatsystole file="%ModDir%/Sound/silent.ogg"/>
+	</Override>
+
 </sounds>

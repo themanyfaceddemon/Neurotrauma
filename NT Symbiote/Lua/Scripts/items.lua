@@ -180,7 +180,7 @@ Timer.Wait(function()
                 local hasVoltage = containedItem.Condition > 0
 
                 if hasVoltage then 
-                    HF.GiveItem(targetCharacter,"ntsfx_manualdefib")
+                    HF.PlaySound("manualdefib", targetCharacter.WorldPosition, 800)
                     containedItem.Condition = containedItem.Condition-10
                     if containedItem.Prefab.Identifier.Value ~= "fulguriumbatterycell" then containedItem.Condition = containedItem.Condition-10 end
 

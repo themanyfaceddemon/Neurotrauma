@@ -89,7 +89,7 @@ Hook.Add("OnInsertedIntoBloodAnalyzer", "NT.BloodAnalyzer", function(effect, del
 
     -- NT adds bloodbag; NT Blood Work or 'Real Sonar Medical Item Recipes Patch for Neurotrauma' add allblood, lets check for either
     if contained ~= nil and (contained.HasTag("bloodbag") or contained.HasTag("allblood")) then
-        HF.GiveItem(character,"ntsfx_syringe")
+        HF.PlaySound("syringe", character.WorldPosition, 500)
         Timer.Wait(function()
             if item == nil or character == nil or item.OwnInventory.GetItemAt(0) ~= contained then
                 return

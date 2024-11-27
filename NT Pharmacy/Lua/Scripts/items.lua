@@ -12,7 +12,7 @@ NT.ItemStartsWithMethods.custompill = function(item, usingCharacter, targetChara
     end
 
     HF.RemoveItem(item)
-    HF.GiveItem(targetCharacter,"ntsfx_pills")
+    HF.PlaySound("pills", targetCharacter.WorldPosition, 500)
 end
 
 end,1)

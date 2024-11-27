@@ -156,7 +156,7 @@ NT.ItemMethods.multiscalpel = function(item, usingCharacter, targetCharacter, li
                 if not open then
                     HF.AddAfflictionLimb(targetCharacter,"bleeding",limbtype,6+math.random()*4,usingCharacter)
                     HF.AddAfflictionLimb(targetCharacter,"lacerations",limbtype,2.5+math.random()*5,usingCharacter)
-                    HF.GiveItem(targetCharacter,"ntsfx_slash")
+                    HF.PlaySound("slash", targetCharacter.WorldPosition, 500)
                 else
                     if istorso then
                         -- stabbing an open torso (not good for the organs therein!)
@@ -194,7 +194,7 @@ NT.ItemMethods.multiscalpel = function(item, usingCharacter, targetCharacter, li
                         end
                     end
 
-                    HF.GiveItem(targetCharacter,"ntsfx_slash")
+                    HF.PlaySound("slash", targetCharacter.WorldPosition, 500)
                 end
             end
 

@@ -90,7 +90,7 @@ NT.ItemMethods.experimentaltreatment = function(item, usingCharacter, targetChar
     
     
     HF.RemoveItem(item)
-    HF.GiveItem(targetCharacter,"ntsfx_syringe")
+    HF.PlaySound("syringe", targetCharacter.WorldPosition, 500)
 end
 
 -- Triage tags
