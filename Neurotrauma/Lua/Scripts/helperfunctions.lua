@@ -228,7 +228,7 @@ end
     Plays a sound at a specified position in the game world, with optional range and volume.
 
     Parameters:
-    - soundTag (Sound): The sound object or tag to be played.
+    - soundTag (string): The sound object or tag to be played.
     - position (Vector2): The position in the game world where the sound will originate.
     - range (number, optional): The radius in which the sound will be audible. By default it uses the value from the xml file.
     - volume (number, optional): The volume multiplier for the sound (from 0.0 to 1.0). By default it uses the value from the xml file.
