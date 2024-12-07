@@ -237,7 +237,7 @@ NT.ConfigData = {
 		name = "Enable Consent Required",
 		default = true,
 		type = "bool",
-		description = "Integrated consent required mod. Requires C# scripting enabled.\n(If disabled, none of NPCs will get aggravated by medical interactions.)",
+		description = "Integrated consent required mod.\nIf disabled, none of NPCs will get aggravated by medical interactions.",
 	},
 }
 NTConfig.AddConfigOptions(NT)
