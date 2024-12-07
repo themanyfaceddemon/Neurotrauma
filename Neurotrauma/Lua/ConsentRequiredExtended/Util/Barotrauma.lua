@@ -37,7 +37,7 @@ AttackResult = {}
 ---Initialise AttackResults without needing to register system.type and reflections
 local function Init_AttackResult()
     -- Registrations.
-    --LuaUserData.MakePropertyAccessible(Descriptors['Barotrauma.AttackResult'], 'Damage')
+    LuaUserData.MakePropertyAccessible(Descriptors['Barotrauma.AttackResult'], 'Damage')
 
     ---Instantiates a new AttackResult with damage and empty afflictions.
     ---@param damage number An amount of damage.
@@ -45,10 +45,10 @@ local function Init_AttackResult()
         -- I have not noticed any NREs from affliction list being null
         -- but just in case here is version which intializes with empty list
         -- Also uncomment MakePropertyAccessible Damage above
-        -- local attackResult = _G.AttackResult({}, nil, {})
-        -- attackResult.Damage = damage
+        local attackResult = _G.AttackResult({}, nil, {})
+        attackResult.Damage = damage
 
-        local attackResult = _G.AttackResult(damage)
+        --local attackResult = _G.AttackResult(damage)
 
         return attackResult
     end
