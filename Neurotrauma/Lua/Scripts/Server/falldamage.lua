@@ -164,10 +164,11 @@ Hook.Add("changeFallDamage", "NT.falldamage", function(impactDamage, character, 
 	for type, dotResult in pairs(limbDotResults) do
 		local relativeWeight = dotResult / weightsum
 
-		local damageInflictedToThisLimb = relativeWeight
-			* math.max(0, velocityMagnitude - 10) ^ 1.5
-			* NTConfig.Get("NT_falldamage", 1)
-			* 0.5
+		-- lets limit the numbers to the max value of blunttrauma so that resistances make sense
+		local damageInflictedToThisLimb = math.min(
+			relativeWeight * math.max(0, velocityMagnitude - 10) ^ 1.5 * NTConfig.Get("NT_falldamage", 1) * 0.5,
+			200
+		)
 		NT.CauseFallDamage(character, type, damageInflictedToThisLimb)
 	end
 
@@ -194,6 +195,19 @@ NT.CauseFallDamage = function(character, limbtype, strength)
 		)
 	end
 	HF.AddAfflictionLimb(character, "blunttrauma", limbtype, strength)
+
+	-- additionally calculate the affliction reduced damage
+	local prefab = AfflictionPrefab.Prefabs["blunttrauma"]
+	local resistance = character.CharacterHealth.GetResistance(prefab, limbtype)
+	if resistance >= 1 then
+		return
+	end
+	strength = strength * (1 - resistance)
+
+	-- return earlier if the strength value is not high enough for damage checks
+	if strength < 1 then
+		return
+	end
 
 	local fractureImmune = false
 

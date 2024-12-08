@@ -379,7 +379,7 @@ function HF.SetAfflictionLimb(character, identifier, limbtype, strength, aggress
 		return
 	end
 
-	local strength = strength * character.CharacterHealth.MaxVitality / 100 / (1 - resistance)
+	local strength = strength * (1 - resistance) * character.CharacterHealth.MaxVitality / 100
 	local affliction = prefab.Instantiate(strength, aggressor)
 	local recalculateVitality = NTC.AfflictionsAffectingVitality[identifier] ~= nil
 
