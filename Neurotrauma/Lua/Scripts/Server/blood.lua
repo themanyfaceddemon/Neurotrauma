@@ -108,22 +108,28 @@ Hook.Add("OnInsertedIntoBloodAnalyzer", "NT.BloodAnalyzer", function(effect, del
 			local readoutString = "Bloodpack: " .. bloodTypeDisplay
 			-- check if acidosis, alkalosis or sepsis
 			local tags = HF.SplitString(contained.Tags, ",")
+			local defects = ""
 			for tag in tags do
 				if tag == "sepsis" then
-					readoutString = readoutString .. "\nSepsis detected"
+					defects = defects .. "\nSepsis detected"
 				end
 
 				if HF.StartsWith(tag, "acid") then
 					local split = HF.SplitString(tag, ":")
 					if split[2] ~= nil then
-						readoutString = readoutString .. "\nAcidosis: " .. tonumber(split[2]) .. "%"
+						defects = defects .. "\nAcidosis: " .. tonumber(split[2]) .. "%"
 					end
 				elseif HF.StartsWith(tag, "alkal") then
 					local split = HF.SplitString(tag, ":")
 					if split[2] ~= nil then
-						readoutString = readoutString .. "\nAlkalosis: " .. tonumber(split[2]) .. "%"
+						defects = defects .. "\nAlkalosis: " .. tonumber(split[2]) .. "%"
 					end
 				end
+			end
+			if defects ~= "" then 
+				readoutString = readoutString .. defects
+			else
+				readoutString = readoutString .. "/nNo blood defects"
 			end
 
 			HF.DMClient(HF.CharacterToClient(character), readoutString, Color(127, 255, 255, 255))
