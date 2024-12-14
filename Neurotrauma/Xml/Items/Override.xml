@@ -103,7 +103,7 @@
                     <RequiredItem excludedidentifiers="batterycell,fulguriumbatterycell" type="Contained" />
                 </StatusEffect>
 
-                <StatusEffect type="OnUse" target="NearbyCharacters" range="50">
+                <StatusEffect type="OnUse" target="NearbyCharacters" range="65">
                     <Affliction identifier="radiationsickness" amount="0.5"/>
                 </StatusEffect>
                 <StatusEffect type="OnUse" target="Character">
