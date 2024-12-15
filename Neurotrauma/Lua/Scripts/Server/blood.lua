@@ -129,7 +129,7 @@ Hook.Add("OnInsertedIntoBloodAnalyzer", "NT.BloodAnalyzer", function(effect, del
 			if defects ~= "" then 
 				readoutString = readoutString .. defects
 			else
-				readoutString = readoutString .. "/nNo blood defects"
+				readoutString = readoutString .. "\nNo blood defects"
 			end
 
 			HF.DMClient(HF.CharacterToClient(character), readoutString, Color(127, 255, 255, 255))
