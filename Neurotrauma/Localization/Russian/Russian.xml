@@ -133,10 +133,10 @@
 <entitydescription.ringerssolution>Водный раствор нескольких солей, предназначенный для лечения низкого кровяного давления или потери жидкости. Изотоничен крови.</entitydescription.ringerssolution>
 
 <entityname.antiseptic>Антисептик</entityname.antiseptic>
-<!-- <entitydescription.antiseptic></entitydescription.antiseptic> -->
+<entitydescription.antiseptic>Используется для лечения заражения ран, распыляя его при помощи антисептического спрея.</entitydescription.antiseptic>
 
 <entityname.antisepticspray>Антисептический спрей</entityname.antisepticspray>
-<!-- <entitydescription.antisepticspray></entitydescription.antisepticspray> -->
+<entitydescription.antisepticspray>Используется для нанесения антисептика на зараженные раны.</entitydescription.antisepticspray>
 
 <entityname.propofol>Пропофол</entityname.propofol>
 <entitydescription.propofol>Препарат кратковременного действия, приводящий к депривации сознания и вызывающий потерю памяти о произошедших событиях. Использования включают в себя введение в общую анестезию и её поддержание.</entitydescription.propofol>
