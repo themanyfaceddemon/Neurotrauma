@@ -10,3 +10,4 @@
 - autocpr: remove all of this when defibs get better (<Fabricate>?)
 - add some effect for adrenaline, sticktocharacters false until there is an effect.
 - hyperzine: should this be any affliction of type damage? (for <StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="60.0">)
+- add bag container to the hotbar slots for bodybags and stasis bags
