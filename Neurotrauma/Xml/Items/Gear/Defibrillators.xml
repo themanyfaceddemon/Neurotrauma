@@ -44,13 +44,13 @@
     <Item name="" identifier="aed" category="Equipment" cargocontaineridentifier="mediccrate" Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.3">
         <PreferredContainer primary="medcab"/>
 
-		    <Fabricate suitablefabricators="fabricator" requiredtime="40">
-		        <RequiredSkill identifier="electrical" level="50"/>
-		        <RequiredSkill identifier="medical" level="40"/>
-		        <RequiredItem identifier="plastic"/>
-		        <RequiredItem identifier="fpgacircuit"/>
-		        <RequiredItem identifier="fulgurium"/>
-		    </Fabricate>
+        <Fabricate suitablefabricators="fabricator" requiredtime="40">
+            <RequiredSkill identifier="electrical" level="50"/>
+            <RequiredSkill identifier="medical" level="40"/>
+            <RequiredItem identifier="plastic"/>
+            <RequiredItem identifier="fpgacircuit"/>
+            <RequiredItem identifier="fulgurium"/>
+        </Fabricate>
 
         <Deconstruct time="5">
             <Item identifier="plastic"/>
