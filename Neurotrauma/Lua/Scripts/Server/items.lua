@@ -684,7 +684,6 @@ NT.ItemMethods.suture = function(item, usingCharacter, targetCharacter, limb)
 		HF.AddAfflictionLimb(targetCharacter, "explosiondamage", limbtype, -20, usingCharacter)
 		HF.AddAfflictionLimb(targetCharacter, "gunshotwound", limbtype, -20, usingCharacter)
 		HF.AddAfflictionLimb(targetCharacter, "bleeding", limbtype, -40, usingCharacter)
-		HF.AddAfflictionLimb(targetCharacter, "bleedingnonstop", limbtype, -40, usingCharacter)
 		HF.AddAfflictionLimb(targetCharacter, "suturedw", limbtype, healeddamage)
 
 		HF.GiveSkillScaled(usingCharacter, "medical", healeddamage)
@@ -900,13 +899,6 @@ NT.ItemMethods.antibleeding1 = function(item, usingCharacter, targetCharacter, l
 	HF.AddAfflictionLimb(targetCharacter, "dirtybandage", limbtype, -100, usingCharacter)
 	HF.AddAfflictionLimb(targetCharacter, "bandaged", limbtype, 36 + success * 12 + hasmedexp * 12, usingCharacter)
 	HF.AddAfflictionLimb(targetCharacter, "bleeding", limbtype, -18 - success * 6 - hasmedexp * 6, usingCharacter)
-	HF.AddAfflictionLimb(
-		targetCharacter,
-		"bleedingnonstop",
-		limbtype,
-		-18 - success * 6 - hasmedexp * 6,
-		usingCharacter
-	)
 	HF.RemoveItem(item)
 	HF.GiveItem(targetCharacter, "ntsfx_bandage")
 end
@@ -916,7 +908,6 @@ NT.ItemMethods.antibleeding2 = function(item, usingCharacter, targetCharacter, l
 	HF.AddAfflictionLimb(targetCharacter, "dirtybandage", limbtype, -100, usingCharacter)
 	HF.AddAfflictionLimb(targetCharacter, "bandaged", limbtype, 50 + success * 50, usingCharacter)
 	HF.AddAfflictionLimb(targetCharacter, "bleeding", limbtype, -24 - success * 24, usingCharacter)
-	HF.AddAfflictionLimb(targetCharacter, "bleedingnonstop", limbtype, -24 - success * 24, usingCharacter)
 	if HF.HasAfflictionLimb(targetCharacter, "retractedskin", limbtype) then
 		-- remove all burn if applied during surgery
 		HF.AddAfflictionLimb(targetCharacter, "burn", limbtype, -100 - success * 100, usingCharacter)

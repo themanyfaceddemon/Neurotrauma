@@ -449,6 +449,16 @@ function HF.ApplySymptomLimb(character, limbtype, identifier, hassymptom, remove
 end
 
 function HF.AddAfflictionLimb(character, identifier, limbtype, strength, aggressor)
+	if strength < 0 then
+		character.CharacterHealth.ReduceAfflictionOnLimb(
+			character.AnimController.GetLimb(limbtype),
+			identifier,
+			-strength,
+			nil,
+			aggressor
+		)
+		return
+	end
 	local prevstrength = HF.GetAfflictionStrengthLimb(character, limbtype, identifier, 0)
 	HF.SetAfflictionLimb(character, identifier, limbtype, strength + prevstrength, aggressor, prevstrength)
 end

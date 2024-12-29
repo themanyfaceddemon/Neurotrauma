@@ -63,7 +63,8 @@
   <Other file="%ModDir%/Lua/Scripts/Server/onfire.lua" />
   <Other file="%ModDir%/Lua/Scripts/configdata.lua" />
   <Other file="%ModDir%/Lua/Scripts/Server/ondamaged.lua" />
-	<Other file="%ModDir%/Lua/Scripts/Server/surgerytable.lua" />
+	<Other file="%ModDir%/Lua/Scripts/Shared/surgerytable.lua" />
+	<Other file="%ModDir%/Lua/Scripts/Shared/pronecolliderfix.lua" />
 	<Other file="%ModDir%/Lua/Scripts/Server/lootcrates.lua" />
 	<Other file="%ModDir%/Lua/Scripts/Server/falldamage.lua" />
 	<Other file="%ModDir%/Lua/Scripts/Server/screams.lua" />
