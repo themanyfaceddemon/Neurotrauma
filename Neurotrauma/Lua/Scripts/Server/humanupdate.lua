@@ -390,7 +390,7 @@ NT.Afflictions = {
 			end
 			c.afflictions[i].strength = NT.organDamageCalc(
 				c,
-				c.afflictions[i].strength
+				c.afflictions.heartdamage.strength
 					+ NTC.GetMultiplier(c.character, "heartdamagegain")
 						* (c.stats.neworgandamage + HF.Clamp(c.afflictions.heartattack.strength, 0, 0.5) * NT.Deltatime)
 			)
@@ -484,9 +484,8 @@ NT.Afflictions = {
 			if c.stats.stasis then
 				return
 			end
-			c.afflictions[i].strength = c.afflictions[i].strength
-				+ c.stats.neworgandamage
-				- 0.03 * c.stats.healingrate * NT.Deltatime
+			c.afflictions[i].strength =
+				NT.organDamageCalc(c, c.afflictions.organdamage.strength + c.stats.neworgandamage)
 		end,
 	},
 	-- Blood
