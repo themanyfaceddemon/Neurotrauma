@@ -83,8 +83,8 @@ local function limbLockedInitial(c, limbtype, key)
 			)
 		)
 end
-NT.organDamageCalc = function(c, damagevalue)
-	if damagevalue >= 99 then
+NT.organDamageCalc = function(c, damagevalue, nomaxstrength)
+	if damagevalue >= 99 and not nomaxstrength ~= nil then
 		return 100
 	end
 	return damagevalue - 0.01 * c.stats.healingrate * c.stats.specificOrganDamageHealMultiplier * NT.Deltatime
@@ -485,7 +485,7 @@ NT.Afflictions = {
 				return
 			end
 			c.afflictions[i].strength =
-				NT.organDamageCalc(c, c.afflictions.organdamage.strength + c.stats.neworgandamage)
+				NT.organDamageCalc(c, c.afflictions.organdamage.strength + c.stats.neworgandamage, true)
 		end,
 	},
 	-- Blood
