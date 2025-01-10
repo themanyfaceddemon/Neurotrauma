@@ -1486,37 +1486,45 @@ NT.LimbAfflictions = {
 	lacerations = {
 		max = 200,
 		update = function(c, limbaff, i)
-			limbaff[i].strength = limbaff[i].strength
-				- (c.afflictions.immunity.prev / 3000 + HF.Clamp(limbaff.bandaged.strength, 0, 1) * 0.1)
-					* c.stats.healingrate
-					* NT.Deltatime
+			if limbaff[i].strength < 50 then
+				limbaff[i].strength = limbaff[i].strength
+					- (c.afflictions.immunity.prev / 3000 + HF.Clamp(limbaff.bandaged.strength, 0, 1) * 0.1)
+						* c.stats.healingrate
+						* NT.Deltatime
+			end
 		end,
 	},
 	gunshotwound = {
 		max = 200,
 		update = function(c, limbaff, i)
-			limbaff[i].strength = limbaff[i].strength
-				- (c.afflictions.immunity.prev / 3000 + HF.Clamp(limbaff.bandaged.strength, 0, 1) * 0.1)
-					* c.stats.healingrate
-					* NT.Deltatime
+			if limbaff[i].strength < 50 then
+				limbaff[i].strength = limbaff[i].strength
+					- (c.afflictions.immunity.prev / 3000 + HF.Clamp(limbaff.bandaged.strength, 0, 1) * 0.1)
+						* c.stats.healingrate
+						* NT.Deltatime
+			end
 		end,
 	},
 	bitewounds = {
 		max = 200,
 		update = function(c, limbaff, i)
-			limbaff[i].strength = limbaff[i].strength
-				- (c.afflictions.immunity.prev / 3000 + HF.Clamp(limbaff.bandaged.strength, 0, 1) * 0.1)
-					* c.stats.healingrate
-					* NT.Deltatime
+			if limbaff[i].strength < 100 then
+				limbaff[i].strength = limbaff[i].strength
+					- (c.afflictions.immunity.prev / 3000 + HF.Clamp(limbaff.bandaged.strength, 0, 1) * 0.1)
+						* c.stats.healingrate
+						* NT.Deltatime
+			end
 		end,
 	},
 	explosiondamage = {
 		max = 200,
 		update = function(c, limbaff, i)
-			limbaff[i].strength = limbaff[i].strength
-				- (c.afflictions.immunity.prev / 3000 + HF.Clamp(limbaff.bandaged.strength, 0, 1) * 0.1)
-					* c.stats.healingrate
-					* NT.Deltatime
+			if limbaff[i].strength < 50 then
+				limbaff[i].strength = limbaff[i].strength
+					- (c.afflictions.immunity.prev / 3000 + HF.Clamp(limbaff.bandaged.strength, 0, 1) * 0.1)
+						* c.stats.healingrate
+						* NT.Deltatime
+			end
 		end,
 	},
 	blunttrauma = {
@@ -1526,7 +1534,7 @@ NT.LimbAfflictions = {
 				- (
 						c.afflictions.immunity.prev / 8000
 						+ HF.Clamp(limbaff.bandaged.strength, 0, 1) * 0.1
-						+ HF.Clamp(limbaff.iced.strength, 0, 1) * 0.33
+						+ HF.Clamp(limbaff.iced.strength, 0, 1) * 0.3
 					)
 					* c.stats.healingrate
 					* NT.Deltatime
@@ -1537,7 +1545,7 @@ NT.LimbAfflictions = {
 		update = function(c, limbaff, i, type)
 			limbaff[i].strength = limbaff[i].strength
 				+ (
-						-0.05 * c.stats.healingrate
+						-HF.BoolToNum(limbaff[i].strength < 50, 0.05 * c.stats.healingrate)
 						+ HF.BoolToNum(
 							not c.stats.sedated
 								and limbaff.gypsumcast.strength <= 0
