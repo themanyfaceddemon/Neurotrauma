@@ -930,29 +930,60 @@ NT.ItemMethods.defibrillator = function(item, usingCharacter, targetCharacter, l
 	end
 	local hasVoltage = containedItem.Condition > 0
 	-- if defib user in water = shock the user with 93 strength electricshock aff (3 second stun) + electrocution vanilla sound effect
-	if hasVoltage then
+	if hasVoltage and targetCharacter.InWater then
+		-- shock therapy the surrounding characters
 		HF.GiveItem(targetCharacter, "ntsfx_manualdefib")
 		containedItem.Condition = containedItem.Condition - 10
 		if containedItem.Prefab.Identifier.Value ~= "fulguriumbatterycell" then
 			containedItem.Condition = containedItem.Condition - 10
 		end
-
-		local successChance = (HF.GetSkillLevel(usingCharacter, "medical") / 100) ^ 2
-		local arrestSuccessChance = (HF.GetSkillLevel(usingCharacter, "medical") / 100) ^ 4
-		local arrestFailChance = (1 - (HF.GetSkillLevel(usingCharacter, "medical") / 100)) ^ 2 * 0.3
-
 		Timer.Wait(function()
-			HF.AddAffliction(targetCharacter, "stun", 2, usingCharacter)
-			if HF.Chance(successChance) then
-				HF.SetAffliction(targetCharacter, "tachycardia", 0, usingCharacter)
-				HF.SetAffliction(targetCharacter, "fibrillation", 0, usingCharacter)
-			end
-			if HF.Chance(arrestSuccessChance) then
-				HF.SetAffliction(targetCharacter, "cardiacarrest", 0, usingCharacter)
-			elseif HF.Chance(arrestFailChance) then
-				HF.SetAffliction(targetCharacter, "cardiacarrest", 100, usingCharacter)
+			for _, character in pairs(Character.CharacterList) do
+				local distance = HF.DistanceBetween(item.worldPosition, character.worldPosition)
+				if distance <= 300 and character.CanSeeTarget(usingCharacter) then
+					local limbtypes = {
+						LimbType.Torso,
+						LimbType.Head,
+						LimbType.LeftArm,
+						LimbType.RightArm,
+						LimbType.LeftLeg,
+						LimbType.RightLeg,
+					}
+					for type in limbtypes do
+						if math.random() < 0.5 then
+							HF.AddAfflictionLimb(character, "burn", type, math.random(5, 25), usingCharacter)
+							HF.AddAfflictionLimb(character, "spasm", type, 10)
+						end
+					end
+					HF.SetAffliction(character, "electricshock", 93, usingCharacter)
+				end
 			end
 		end, 2000)
+	else
+		if hasVoltage then
+			HF.GiveItem(targetCharacter, "ntsfx_manualdefib")
+			containedItem.Condition = containedItem.Condition - 10
+			if containedItem.Prefab.Identifier.Value ~= "fulguriumbatterycell" then
+				containedItem.Condition = containedItem.Condition - 10
+			end
+
+			local successChance = (HF.GetSkillLevel(usingCharacter, "medical") / 100) ^ 2
+			local arrestSuccessChance = (HF.GetSkillLevel(usingCharacter, "medical") / 100) ^ 4
+			local arrestFailChance = (1 - (HF.GetSkillLevel(usingCharacter, "medical") / 100)) ^ 2 * 0.3
+
+			Timer.Wait(function()
+				HF.AddAffliction(targetCharacter, "stun", 2, usingCharacter)
+				if HF.Chance(successChance) then
+					HF.SetAffliction(targetCharacter, "tachycardia", 0, usingCharacter)
+					HF.SetAffliction(targetCharacter, "fibrillation", 0, usingCharacter)
+				end
+				if HF.Chance(arrestSuccessChance) then
+					HF.SetAffliction(targetCharacter, "cardiacarrest", 0, usingCharacter)
+				elseif HF.Chance(arrestFailChance) then
+					HF.SetAffliction(targetCharacter, "cardiacarrest", 100, usingCharacter)
+				end
+			end, 2000)
+		end
 	end
 end
 NT.ItemMethods.aed = function(item, usingCharacter, targetCharacter, limb)
@@ -967,9 +998,11 @@ NT.ItemMethods.aed = function(item, usingCharacter, targetCharacter, limb)
 	local hasVoltage = containedItem.Condition > 0
 
 	if hasVoltage then
-		local actionRequired = HF.HasAffliction(targetCharacter, "tachycardia", 5)
+		local actionRequired = (
+			HF.HasAffliction(targetCharacter, "tachycardia", 5)
 			or HF.HasAffliction(targetCharacter, "fibrillation", 1)
 			or HF.HasAffliction(targetCharacter, "cardiacarrest")
+		) and not targetCharacter.InWater
 
 		if not actionRequired then
 			HF.GiveItem(targetCharacter, "ntsfx_defib2")
@@ -1944,6 +1977,7 @@ NT.ItemMethods.gelipack = function(item, usingCharacter, targetCharacter, limb)
 	local limbtype = limb.type
 	local success = HF.BoolToNum(HF.GetSkillRequirementMet(usingCharacter, "medical", 5), 1)
 	HF.AddAfflictionLimb(targetCharacter, "iced", limbtype, 5 + success * 100, usingCharacter)
+	HF.SetAffliction(targetCharacter, "internalbleeding", 0, usingCharacter)
 	HF.GiveItem(targetCharacter, "ntsfx_bandage")
 
 	item.Condition = item.Condition - 35
