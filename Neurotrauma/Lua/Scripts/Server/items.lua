@@ -930,7 +930,9 @@ NT.ItemMethods.defibrillator = function(item, usingCharacter, targetCharacter, l
 	end
 	local hasVoltage = containedItem.Condition > 0
 	-- if defib user in water = shock the user with 93 strength electricshock aff (3 second stun) + electrocution vanilla sound effect
-	if hasVoltage and targetCharacter.InWater then
+	if not hasVoltage then
+		return
+	elseif targetCharacter.InWater then
 		-- shock therapy the surrounding characters
 		HF.GiveItem(targetCharacter, "ntsfx_manualdefib")
 		containedItem.Condition = containedItem.Condition - 10
@@ -960,30 +962,28 @@ NT.ItemMethods.defibrillator = function(item, usingCharacter, targetCharacter, l
 			end
 		end, 2000)
 	else
-		if hasVoltage then
-			HF.GiveItem(targetCharacter, "ntsfx_manualdefib")
+		HF.GiveItem(targetCharacter, "ntsfx_manualdefib")
+		containedItem.Condition = containedItem.Condition - 10
+		if containedItem.Prefab.Identifier.Value ~= "fulguriumbatterycell" then
 			containedItem.Condition = containedItem.Condition - 10
-			if containedItem.Prefab.Identifier.Value ~= "fulguriumbatterycell" then
-				containedItem.Condition = containedItem.Condition - 10
-			end
-
-			local successChance = (HF.GetSkillLevel(usingCharacter, "medical") / 100) ^ 2
-			local arrestSuccessChance = (HF.GetSkillLevel(usingCharacter, "medical") / 100) ^ 4
-			local arrestFailChance = (1 - (HF.GetSkillLevel(usingCharacter, "medical") / 100)) ^ 2 * 0.3
-
-			Timer.Wait(function()
-				HF.AddAffliction(targetCharacter, "stun", 2, usingCharacter)
-				if HF.Chance(successChance) then
-					HF.SetAffliction(targetCharacter, "tachycardia", 0, usingCharacter)
-					HF.SetAffliction(targetCharacter, "fibrillation", 0, usingCharacter)
-				end
-				if HF.Chance(arrestSuccessChance) then
-					HF.SetAffliction(targetCharacter, "cardiacarrest", 0, usingCharacter)
-				elseif HF.Chance(arrestFailChance) then
-					HF.SetAffliction(targetCharacter, "cardiacarrest", 100, usingCharacter)
-				end
-			end, 2000)
 		end
+
+		local successChance = (HF.GetSkillLevel(usingCharacter, "medical") / 100) ^ 2
+		local arrestSuccessChance = (HF.GetSkillLevel(usingCharacter, "medical") / 100) ^ 4
+		local arrestFailChance = (1 - (HF.GetSkillLevel(usingCharacter, "medical") / 100)) ^ 2 * 0.3
+
+		Timer.Wait(function()
+			HF.AddAffliction(targetCharacter, "stun", 2, usingCharacter)
+			if HF.Chance(successChance) then
+				HF.SetAffliction(targetCharacter, "tachycardia", 0, usingCharacter)
+				HF.SetAffliction(targetCharacter, "fibrillation", 0, usingCharacter)
+			end
+			if HF.Chance(arrestSuccessChance) then
+				HF.SetAffliction(targetCharacter, "cardiacarrest", 0, usingCharacter)
+			elseif HF.Chance(arrestFailChance) then
+				HF.SetAffliction(targetCharacter, "cardiacarrest", 100, usingCharacter)
+			end
+		end, 2000)
 	end
 end
 NT.ItemMethods.aed = function(item, usingCharacter, targetCharacter, limb)
